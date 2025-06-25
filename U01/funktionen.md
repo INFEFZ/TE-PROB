@@ -13,21 +13,16 @@
     - [1.6.2. Definition von call-by-reference](#162-definition-von-call-by-reference)
     - [1.6.3. Beispiel call-by-value](#163-beispiel-call-by-value)
     - [1.6.4. Beispiel call-by-reference (Zeiger)](#164-beispiel-call-by-reference-zeiger)
-  - [1.7. Rekursive Funktionen](#17-rekursive-funktionen)
-  - [1.8. Variablenbereich (Scope)](#18-variablenbereich-scope)
-  - [1.9. Standardbibliotheken und Funktionen](#19-standardbibliotheken-und-funktionen)
-  - [1.10. Beispielprogramm mit Funktion](#110-beispielprogramm-mit-funktion)
-  - [1.11. Beispielprogramm mit mehreren Funktionen](#111-beispielprogramm-mit-mehreren-funktionen)
-  - [1.12. Vorwärtsdeklarationen von Fuktionen](#112-vorwärtsdeklarationen-von-fuktionen)
-  - [1.13. Module mit Header Dateien](#113-module-mit-header-dateien)
-    - [1.13.1. Beispiel](#1131-beispiel)
-    - [1.13.2. Build mit mehreren Dateien](#1132-build-mit-mehreren-dateien)
+  - [1.7. Variablenbereich (Scope)](#17-variablenbereich-scope)
+  - [1.8. Standardbibliotheken und Funktionen](#18-standardbibliotheken-und-funktionen)
+  - [1.9. Beispielprogramm mit Funktion](#19-beispielprogramm-mit-funktion)
+  - [1.10. Beispielprogramm mit mehreren Funktionen](#110-beispielprogramm-mit-mehreren-funktionen)
+  - [1.11. Vorwärtsdeklarationen von Fuktionen](#111-vorwärtsdeklarationen-von-fuktionen)
 - [2. Aufgaben](#2-aufgaben)
   - [2.1. Trennstriche](#21-trennstriche)
-  - [2.2. Separates Module für Trennstrich-Funktionen](#22-separates-module-für-trennstrich-funktionen)
-  - [2.3. Ersatzwiderstand](#23-ersatzwiderstand)
-  - [2.4. Blöcke](#24-blöcke)
-  - [2.5. Swap-Funktion](#25-swap-funktion)
+  - [2.2. Ersatzwiderstand](#22-ersatzwiderstand)
+  - [2.3. Blöcke](#23-blöcke)
+  - [2.4. Swap-Funktion](#24-swap-funktion)
 
 ---
 
@@ -147,12 +142,12 @@ In C gibt es zwei Hauptmethoden, um Parameter an eine Funktion zu übergeben: **
 
 ### 1.6.1. Definition von call-by-value
 
-- **call-by-value** ist ein Übergabemechanismus von Parametern in Funktionen oder Methoden, bei dem der Wert der Argumente **kopiert** und in die aufrufende Funktion eingefügt wird. 
+- **call-by-value** ist ein Übergabemechanismus von Parametern in Funktionen oder Methoden, bei dem der Wert der Argumente **kopiert** und in die aufrufende Funktion eingefügt wird.
 - Dies bedeutet, dass Änderungen an den Parametern innerhalb der Funktion die ursprünglichen Variablen ausserhalb der Funktion **nicht** beeinflussen.
 
 ### 1.6.2. Definition von call-by-reference
 
-- Bei **call-by-reference** wird im Gegensatz zum **call-by-value** die **Adresse** einer Variablen übergeben. 
+- Bei **call-by-reference** wird im Gegensatz zum **call-by-value** die **Adresse** einer Variablen übergeben.
 - Dies ermöglicht es der aufgerufenen Funktion oder Methode, direkt auf die übergebene Variable zuzugreifen und ihre Werte zu modifizieren.
 - Folglich sind alle Änderungen an der Variable in der Funktion auch ausserhalb dieser sichtbar.
 
@@ -225,30 +220,7 @@ int main() {
 }
 ```
 
-## 1.7. Rekursive Funktionen
-
-- Eine Funktion kann sich selbst aufrufen, was als **Rekursion** bezeichnet wird.
-- Rekursive Funktionen werden verwendet, um Probleme zu lösen, die sich in kleinere Teilprobleme zerlegen lassen.
-
-**Beispiel: Berechnung der Fakultät (n!):**
-
-```c
-int fakultät(int n) {
-    if (n <= 1) {
-        return 1;  // Basisfall
-    } else {
-        return n * fakultät(n - 1);  // Rekursiver Aufruf
-    }
-}
-
-int main() {
-    int result = fakultät(5);  // Berechnet 5! = 120
-    printf("%d\n", result);  // Ausgabe: 120
-    return 0;
-}
-```
-
-## 1.8. Variablenbereich (Scope)
+## 1.7. Variablenbereich (Scope)
 
 - Der **Scope** einer Variablen gibt an, in welchem Bereich des Programms sie **sichtbar** und **verfügbar** ist.
 - Variablen, die innerhalb einer Funktion deklariert werden, haben nur in dieser Funktion Gültigkeit (lokaler Scope).
@@ -266,7 +238,7 @@ int main() {
 }
 ```
 
-## 1.9. Standardbibliotheken und Funktionen
+## 1.8. Standardbibliotheken und Funktionen
 
 Die C-Standardbibliothek enthält viele nützliche Funktionen, die in Programmen verwendet werden können, z. B. Funktionen zur Eingabe/Ausgabe, String-Manipulation oder mathematische Funktionen.
 
@@ -299,7 +271,7 @@ int main() {
 }
 ```
 
-## 1.10. Beispielprogramm mit Funktion
+## 1.9. Beispielprogramm mit Funktion
 
 ```c
 #include <stdio.h>
@@ -323,7 +295,7 @@ void main(void)
 
 ---
 
-## 1.11. Beispielprogramm mit mehreren Funktionen
+## 1.10. Beispielprogramm mit mehreren Funktionen
 
 ```c
 #include <stdio.h>
@@ -369,121 +341,13 @@ void main(void) {
 }
 ```
 
-## 1.12. Vorwärtsdeklarationen von Fuktionen
+## 1.11. Vorwärtsdeklarationen von Fuktionen
 
 - Der Compiler kennt dank Vorwärtsdeklaration der Rumpf (Funktionsprototyp) der Funktion
 - Die Funktion wird erst nach dem Aufruf implementiert.
 - Ohne Vorwärtsdeklaration gibt es einen Compilerfehler
 
 ![Vorwärtsdeklarationen](./x_gitres/funktionen-vorwärtsdeklarationen.png)
-
-## 1.13. Module mit Header Dateien
-
-Das Definieren eigener Module in C ist sinnvoll aus mehreren Gründen:
-
-- **Wiederverwendbarkeit**: Code kann in verschiedenen Projekten wiederverwendet werden, ohne ihn neu schreiben zu müssen.
-- **Modularität**: Der Code wird in logische Einheiten unterteilt, die leichter zu verstehen und zu warten sind.
-- **Kapselung**: Interne Implementierungsdetails werden verborgen, nur die notwendigen Schnittstellen werden offengelegt.
-- **Wartbarkeit**: Änderungen in einem Modul haben weniger Auswirkungen auf andere Teile des Programms.
-- **Lesbarkeit**: Der Code wird klarer und strukturierter, was das Verständnis und die Zusammenarbeit erleichtert.
-- **Fehlervermeidung**: Modularer Code fördert eine klare Trennung der Verantwortlichkeiten, was die Wahrscheinlichkeit von Fehlern reduziert.
-- **Kompilierungszeit**: Änderungen in einem Modul erfordern nur die Neukompilierung dieses Moduls und nicht des gesamten Projekts.
-- **Testbarkeit**: Einzelne Module können isoliert getestet werden, was die Fehlerfindung und -behebung vereinfacht.
-- **Teamarbeit**: Verschiedene Teammitglieder können an unterschiedlichen Modulen gleichzeitig arbeiten, ohne Konflikte zu verursachen.
-- **Erweiterbarkeit**: Neue Funktionen können durch Hinzufügen neuer Module einfach integriert werden, ohne den bestehenden Code wesentlich zu ändern. 
-
-
-### 1.13.1. Beispiel
-
-Aufteilen bestehendes Beispiel in mehrere Module
-
-![Funktion in Modulen](./x_gitres/funktion-module.png)
-
-Headerdatei: `funktion.h`
-
-```c
-#ifndef _FUNKTION_H_H
-
-// Vorwärtsdeklaration
-extern void funktion(int *y);
-
-#endif
-```
-
-Implementierungsdatei: `funktion.c`
-
-```c
-#include "funktion.h"
-
-// Vorwärtsdeklaration
-void funktion(int *y)
-{
-  *y = 5;
-}
-```
-
-Hauptprogramm: `main.c`
-
-```c
-#include <stdio.h>
-#include "funktion.h"
-
-void main(void) 
-{
-  // Deklaration und Initialisierung der Variable y
-  int y = 3;
-
-  // Ausgabe des Wertes und der Adresse der Variable y vor dem Funktionsaufruf
-  printf("Wert von y vor dem Funktionsaufruf: %d\n", y);
-  printf("Adresse von y: %p\n", (void*)&y);
-
-  // Aufruf der Funktion mit der Adresse von y
-  funktion(&y);
-
-  // Ausgabe des Wertes von y nach dem Funktionsaufruf
-  printf("Wert von y nach dem Funktionsaufruf: %d\n", y);
-}
-```
-
-### 1.13.2. Build mit mehreren Dateien
-
-```console
-gcc *.c -o main.exe & ./main.exe
-```
-
-Beispiel Visual Studio Code (tasks.json)
-
-```json
-{
-    "tasks": [
-        {
-            "type": "cppbuild",
-            "label": "C/C++: gcc Aktive Datei kompilieren",
-            "command": "/usr/bin/gcc",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${fileDirname}/*.c",
-                "${fileDirname}/*.h",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "detail": "Vom Debugger generierte Aufgabe."
-        }
-    ],
-    "version": "2.0.0"
-}
-```
 
 ---
 
@@ -515,27 +379,7 @@ Das Programm soll die Funktion trennstriche() implementieren.
 
 ---
 
-## 2.2. Separates Module für Trennstrich-Funktionen
-
-| **Vorgabe**         | **Beschreibung**                                                        |
-| :------------------ | :---------------------------------------------------------------------- |
-| **Lernziele**       | Kennt die Möglichkeiten zur Modularisierung und Strukturierung von Code |
-|                     | Kann Funktionen in separate Dateien auslagern                           |
-|                     | Kann Funktionen korrekt aufrufen                                        |
-| **Sozialform**      | Einzelarbeit                                                            |
-| **Auftrag**         | siehe unten                                                             |
-| **Hilfsmittel**     |                                                                         |
-| **Zeitbedarf**      | 30min                                                                   |
-| **Lösungselemente** | Funktionierendes Programm                                               |
-
-Lagere die beiden Trennstrich-Funtionen (siehe Aufgabe oben) in einem separates Modul aus z.B. `func.c`.
-Erstelle für die beiden Funktionen ein Headerdatei z.B. `func.h`
-Rufe die die beiden Funktionen im `main` Programm auf.
-
----
-
-
-## 2.3. Ersatzwiderstand
+## 2.2. Ersatzwiderstand
 
 | **Vorgabe**         | **Beschreibung**                                                        |
 | :------------------ | :---------------------------------------------------------------------- |
@@ -549,7 +393,7 @@ Rufe die die beiden Funktionen im `main` Programm auf.
 | **Zeitbedarf**      | 20min                                                                   |
 | **Lösungselemente** | Funktionierendes Programm                                               |
 
-Schreiben Sie eine Funktion, welche den Ersatzwiderstand R einer Parallelschaltung aus zwei Widerständen R1 und R2 bestimmt. 
+Schreiben Sie eine Funktion, welche den Ersatzwiderstand `R` einer Parallelschaltung aus zwei Widerständen `R1` und `R2` bestimmt.
 Die Funktion soll in der main-Funktion aufgerufen und dort das Resultat ausgegeben werden.
 
 Die Formel lautet:
@@ -568,7 +412,7 @@ Schreiben Sie die Funktion mehrmals mit unterschiedlicher Signatur:
 
 ---
 
-## 2.4. Blöcke
+## 2.3. Blöcke
 
 | **Vorgabe**         | **Beschreibung**                                                        |
 | :------------------ | :---------------------------------------------------------------------- |
@@ -614,7 +458,7 @@ int main(void)
 
 ---
 
-## 2.5. Swap-Funktion
+## 2.4. Swap-Funktion
 
 | **Vorgabe**         | **Beschreibung**                                                        |
 | :------------------ | :---------------------------------------------------------------------- |

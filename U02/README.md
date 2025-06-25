@@ -2,7 +2,22 @@
 | --------------------------- | ------------------------ | -------------------------------------- |
 | **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
 
-# Lernziele
+# Agenda Unit 2
 
-- [ ] Sie kennen die Vorteile der Modularisierung von Programmen und können diese in Programmierprojekten anwenden.
-- [ ] Sie  kennen das Prinzip der einfachen Rekursion und können das Prinzip an einem Beispiel erklären.
+## [Lernziele](./lernziele.md)
+
+- Was lernen wir?
+
+## [Module](./module.md)
+
+- Sinn und Zweck
+- Vorteile
+- Vorwärtsdeklaration
+- Header Dateien
+- Übungsaufgaben
+
+## [Rekursion](./rekursion.md)
+
+- Einleitung
+- Speicherbereich Stack
+- Übungsaufgaben
