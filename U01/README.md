@@ -19,12 +19,18 @@
 - Struktur
 - Schachtelung
 - Gültigkeiten/Sichtbarkeiten (Scope)
+- Übungsaufgaben
 
-## [Funktionen](./funktionen.md)
+## [Gruppenarbeit Speicherbereiche u. Übergabemechanismen](./gruppenarbeit-speicherbereiche.md)
+
+- 3 Gruppenarbeiten
+- Kurzpräsentationen
+
+## [Funktionen Übergabemechanismen](./funktionen.md)
 
 - Defintion
 - Aufruf
-- Parameter
-- call by value / call by reference
+- Parameter- call by value / call by reference / call by pointer
 - Vorwärtsdeklaration
 - Gültigkeitsbereiche
+- Übungsaufgaben
