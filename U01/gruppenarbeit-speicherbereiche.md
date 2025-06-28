@@ -54,4 +54,4 @@ Die Lernenden sollen verstehen, wie der Speicher in C verwaltet wird, welche Gef
 
 ## Arbeitszeit
 
-- 60 Minuten Gruppenarbeit + 3 × 3 Minuten Präsentation + kurze Nachbesprechung
+- 60 Minuten Gruppenarbeit + 3 × 15 Minuten Präsentation + kurze Nachbesprechung
