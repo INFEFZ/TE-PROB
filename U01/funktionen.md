@@ -17,7 +17,7 @@
   - [1.8. Standardbibliotheken und Funktionen](#18-standardbibliotheken-und-funktionen)
   - [1.9. Beispielprogramm mit Funktion](#19-beispielprogramm-mit-funktion)
   - [1.10. Beispielprogramm mit mehreren Funktionen](#110-beispielprogramm-mit-mehreren-funktionen)
-  - [1.11. Vorwärtsdeklarationen von Fuktionen](#111-vorwärtsdeklarationen-von-fuktionen)
+  - [1.11. Vorwärtsdeklarationen von Funktionen](#111-vorwärtsdeklarationen-von-funktionen)
 - [2. Aufgaben](#2-aufgaben)
   - [2.1. Trennstriche](#21-trennstriche)
   - [2.2. Ersatzwiderstand](#22-ersatzwiderstand)
@@ -345,7 +345,7 @@ void main(void) {
 }
 ```
 
-## 1.11. Vorwärtsdeklarationen von Fuktionen
+## 1.11. Vorwärtsdeklarationen von Funktionen
 
 - Der Compiler kennt dank Vorwärtsdeklaration der Rumpf (Funktionsprototyp) der Funktion
 - Die Funktion wird erst nach dem Aufruf implementiert.
