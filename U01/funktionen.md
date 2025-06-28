@@ -390,7 +390,7 @@ Das Programm soll die Funktion trennstriche() implementieren.
 | **Lernziele**       | Kennt die Möglichkeiten zur Modularisierung und Strukturierung von Code |
 |                     | Kann Funktionen mit und ohne Parameter implementieren                   |
 |                     | Kann Funktionen korrekt aufrufen                                        |
-|                     | Kann zwischen "call by value" und "call by reference" unterscheiden     |
+|                     | Kann zwischen "call by value" und "call by pointer" unterscheiden       |
 | **Sozialform**      | Einzelarbeit                                                            |
 | **Auftrag**         | siehe unten                                                             |
 | **Hilfsmittel**     |                                                                         |
@@ -423,7 +423,7 @@ Schreiben Sie die Funktion mehrmals mit unterschiedlicher Signatur:
 | **Lernziele**       | Kennt die Möglichkeiten zur Modularisierung und Strukturierung von Code |
 |                     | Kann Funktionen mit und ohne Parameter implementieren                   |
 |                     | Kann Funktionen korrekt aufrufen                                        |
-|                     | Kann zwischen "call by value" und "call by reference" unterscheiden     |
+|                     | Kann zwischen "call by value" und "call by pointer" unterscheiden       |
 | **Sozialform**      | Einzelarbeit                                                            |
 | **Auftrag**         | siehe unten                                                             |
 | **Hilfsmittel**     |                                                                         |
@@ -469,7 +469,7 @@ int main(void)
 | **Lernziele**       | Kennt die Möglichkeiten zur Modularisierung und Strukturierung von Code |
 |                     | Kann Funktionen mit und ohne Parameter implementieren                   |
 |                     | Kann Funktionen korrekt aufrufen                                        |
-|                     | Kann zwischen "call by value" und "call by reference" unterscheiden     |
+|                     | Kann zwischen "call by value" und "call by pointer" unterscheiden       |
 | **Sozialform**      | Einzelarbeit                                                            |
 | **Auftrag**         | siehe unten                                                             |
 | **Hilfsmittel**     |                                                                         |
