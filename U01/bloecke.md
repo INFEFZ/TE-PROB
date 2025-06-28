@@ -10,10 +10,6 @@
 - [3. Aufgaben](#3-aufgaben)
   - [3.1. Sichbarkeit von lokalen Variablen](#31-sichbarkeit-von-lokalen-variablen)
   - [3.2. Zugriff auf globale Variablen](#32-zugriff-auf-globale-variablen)
-  - [Einfacher Taschenrechner in C programmieren](#einfacher-taschenrechner-in-c-programmieren)
-    - [Anforderungen](#anforderungen)
-    - [Beispielablauf](#beispielablauf)
-    - [Bonus (optional)](#bonus-optional)
 
 ---
 
@@ -32,6 +28,8 @@ Anweisung2;
 
 }
 ```
+
+![E-Book K11-Blöcke und Funktionen](./x_gitres/k11-blöcke-und-funktionen.pdf)
 
 ## 2.1. Schachtelung von Codeblöcken in C
 
