@@ -19,7 +19,7 @@ Die Lernenden sollen verstehen, wie der Speicher in C verwaltet wird, welche Gef
 - Zeigt ein einfaches Beispielprogramm in C, in dem sowohl **Stack** als auch **Heap** verwendet werden (z. B. lokale Variable vs. malloc).
 - Bonus: Was passiert beim Beenden einer Funktion mit Stack-Variablen und wie lange bleibt Speicher im Heap erhalten?
 
-> **Ergebnis: Kurze Erklärung (max. 3 Minuten), inklusive einfachem Beispiel und ggf. Skizze.**
+> **Ergebnis: Kurze Erklärung (max. 15 Minuten), inklusive einfachem Beispiel und ggf. Skizze.**
 
 ---
 
@@ -32,7 +32,7 @@ Die Lernenden sollen verstehen, wie der Speicher in C verwaltet wird, welche Gef
 - Beschreibt die typischen Auswirkungen eines **Stack Overflows** im Programm.
 - Bonus: Wie unterscheiden sich Stack Overflows von anderen Speicherfehlern wie z. B. Speicherlecks?
 
-> **Ergebnis: Kurze Erklärung (max. 3 Minuten) mit Beispielcode und Erläuterung.**
+> **Ergebnis: Kurze Erklärung (max. 15 Minuten) mit Beispielcode und Erläuterung.**
 
 ---
 
@@ -48,7 +48,7 @@ Die Lernenden sollen verstehen, wie der Speicher in C verwaltet wird, welche Gef
 - Erklärt, wann welcher Mechanismus sinnvoll ist.
 - Bonus: Erklärt typische Fehler, die bei der Verwendung von Pointern passieren können.
 
-> **Ergebnis: Kurze Erklärung (max. 3 Minuten) mit jeweils einem Beispiel pro Mechanismus.**
+> **Ergebnis: Kurze Erklärung (max. 15 Minuten) mit jeweils einem Beispiel pro Mechanismus.**
 
 ---
 
