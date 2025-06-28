@@ -41,6 +41,7 @@ Headerdatei: `funktion.h`
 
 ```c
 #ifndef _FUNKTION_H_H
+#define _FUNKTION_H_H
 
 // Vorwärtsdeklaration
 extern void funktion(int *y);
