@@ -14,12 +14,14 @@
 
 ## Curriculum
 
-| **Vorgabe**   | **Beschreibung** |
-| :------------ | :--------------- |
-| **Fachcode**  | PROB.TI1A        |
-| **Lektionen** | 60               |
-| **Semester**  | D                |
-| **Prüfung**   | 1 x Teilprüfung  |
+| **Vorgabe**   | **Beschreibung**    |
+| :------------ | :------------------ |
+| **Fachcode**  | PROB.TI1A           |
+| **Lektionen** | 60                  |
+| **Semester**  | D                   |
+| **Prüfung**   | 1 x Teilprüfung     |
+|               | 1 FP (Fachprüfung)  |
+|               | 1 PA (Praxisarbeit) |
 
 ![Curriculum](../X01/Programmiertechnik%20B.pdf)
 

@@ -23,6 +23,10 @@
   - [2.2. Ersatzwiderstand](#22-ersatzwiderstand)
   - [2.3. Blöcke](#23-blöcke)
   - [2.4. Swap-Funktion](#24-swap-funktion)
+  - [2.5. Einfacher Taschenrechner in C programmieren](#25-einfacher-taschenrechner-in-c-programmieren)
+    - [2.5.1. Anforderungen](#251-anforderungen)
+    - [2.5.2. Beispielablauf](#252-beispielablauf)
+    - [2.5.3. Bonus (optional)](#253-bonus-optional)
 
 ---
 
@@ -499,3 +503,59 @@ void main(void)
   printf("Nach Swap(): Zahl1=%d, Zahl2=%d\n", Zahl1, Zahl2);
 }
 ```
+
+## 2.5. Einfacher Taschenrechner in C programmieren
+
+| **Vorgabe**         | **Beschreibung**                                                      |
+| :------------------ | :-------------------------------------------------------------------- |
+| **Lernziele**       | Kennt die Ablaufstrukturen in Programmiersprache C                    |
+|                     | Kann einige Ablaufstruktur nach Vorgabe implementieren                |
+|                     | Kann eine effiziente Ablaufstrukturen problemlösungsbezogen bestimmen |
+| **Sozialform**      | Einzelarbeit                                                          |
+| **Auftrag**         | siehe unten                                                           |
+| **Hilfsmittel**     |                                                                       |
+| **Zeitbedarf**      | 40min                                                                 |
+| **Lösungselemente** | Korrekte und lauffähige Implementation                                |
+
+- Erstelle ein C-Programm, das als einfacher **Taschenrechner** dient.
+- Das Programm soll zwei Zahlen sowie einen Rechenoperator vom Benutzer einlesen, die entsprechende Rechenoperation ausführen und das Ergebnis anzeigen.
+
+### 2.5.1. Anforderungen
+
+1. **Benutzereingabe:**
+
+   - Eine **erste Zahl** (Gleitkommazahl, z. B. `12.5`)
+   - Ein **Operator** (`+`, `-`, `*`, `/`)
+   - Eine **zweite Zahl** (ebenfalls Gleitkommazahl)
+
+2. **Verarbeitung:**
+
+   - Das Programm soll abhängig vom eingegebenen Operator die entsprechende mathematische Operation durchführen:
+
+     - `+` → Addition
+     - `-` → Subtraktion
+     - `*` → Multiplikation
+     - `/` → Division (Achte auf Division durch 0!)
+
+3. **Ausgabe:**
+
+   - Das Ergebnis der Berechnung soll auf der Konsole ausgegeben werden.
+   - Beispiel: `12.5 + 3.2 = 15.7`
+
+4. **Fehlerbehandlung:**
+
+   - Gib eine Fehlermeldung aus, wenn ein ungültiger Operator eingegeben wurde.
+   - Verhindere eine Division durch 0 mit einer entsprechenden Meldung.
+
+### 2.5.2. Beispielablauf
+
+```console
+Geben Sie die erste Zahl ein: 10.0
+Geben Sie den Operator ein (+, -, *, /): /
+Geben Sie die zweite Zahl ein: 2.0
+Ergebnis: 10.0 / 2.0 = 5.0
+```
+
+### 2.5.3. Bonus (optional)
+
+- Wiederhole den Rechenvorgang, bis der Benutzer den Taschenrechner beenden möchte.
