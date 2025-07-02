@@ -20,7 +20,7 @@
 
 ## 1.1. E-Book
 
-![Einführung in Pointer und Arrays](./x_gitres/K08-einführung-in-pointer-und-arrays.pdf)
+![Einführung in Pointer und Arrays](./x_gitres/k08-einführung-in-pointer-und-arrays.pdf)
 
 ## 1.2. Definition von Arrays
 
