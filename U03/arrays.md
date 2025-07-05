@@ -257,10 +257,10 @@ Schreiben Sie ein C-Programm, das die Tageshöchsttemperaturen für eine Woche (
 
 - Deklariere ein Array von 7 Gleitkommazahlen (float), das die Temperaturen speichert.
 - Lasse den Benutzer über die Konsole die Temperaturen für jeden Wochentag eingeben.
-- Geb alle eingegebenen Temperaturen in einer Zeile aus.
+- Gebe alle eingegebenen Temperaturen in einer Zeile aus.
 - Berechne den Durchschnitt der Temperaturen.
 - Gebe die höchste und die niedrigste Temperatur aus.
-- Hinweise: Verwende eine Schleife zur Eingabe und zur Ausgabe.
+- **Hinweise**: Verwende eine Schleife zur Eingabe und zur Ausgabe.
 - Benutze Variablen für die `Summe`, das `Maximum` und das `Minimum`.
 - Nutze eine Initialisierung von `max` mit einem sehr kleinen Wert und von `min` mit einem sehr grossen Wert.
 
