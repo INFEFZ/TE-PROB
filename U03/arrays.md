@@ -25,8 +25,8 @@
 ## 1.2. Definition von Arrays
 
 - Arrays sind in C ein grundlegender Datentyp, mit dem sich mehrere Werte des gleichen Typs unter einem gemeinsamen Namen speichern lassen.
-- Sie sind besonders nützlich, wenn man eine Sammlung von Daten bearbeiten oder strukturieren möchte – z.B. eine Liste von Zahlen oder Zeichen.
-- Ein Array ist eine Sammlung von Daten gleichen Typs, die im zusammenhängenden Speicherbereich abgelegt sind.
+- Sie sind besonders nützlich, wenn man eine **Sammlung von Daten** bearbeiten oder strukturieren möchte – z.B. eine Liste von Zahlen oder Zeichen.
+- Ein Array ist eine Sammlung von Daten **gleichen Typs**, die im zusammenhängenden Speicherbereich abgelegt sind.
 - Jedes Element im Array ist über einen **Index** zugreifbar, wobei die Zählung bei **0** beginnt.
 
 ```c
@@ -61,7 +61,7 @@ for (int index = 1 ; index < 5 ; index++)
 
 ## 1.3. Deklaration von Arrays
 
-Ein Array wird deklariert, indem der Datentyp, der Name des Arrays und die Größe in eckigen Klammern angegeben werden.
+Ein Array wird deklariert, indem der Datentyp, der Name des Arrays und die Grösse in eckigen Klammern angegeben werden.
 
 Allgemeine Syntax: `<Datentyp> <Arrayname>[<Grösse>];`
 
@@ -73,7 +73,7 @@ float noten[5];         // Array aus 5 float-Werten
 char buchstaben[26];    // Array aus 26 Zeichen
 ```
 
-> **Hinweis: Die Größe muss zur Kompilierzeit bekannt sein (es sei denn, du nutzt dynamische Arrays mit malloc)**
+> **Hinweis: Die Grösse muss zur Kompilierzeit bekannt sein (es sei denn, du nutzt dynamische Arrays mit malloc)**
 
 ## 1.4. Initialisierung von Arrays
 
@@ -83,7 +83,7 @@ Ein Array kann direkt bei der Deklaration initialisiert werden.
 int zahlen[5] = {10, 20, 30, 40, 50};
 ```
 
-**Automatische Größenbestimmung:**
+**Automatische Grössenbestimmung:**
 
 ```c
 int zahlen[] = {4, 8, 12};  // Compiler setzt Grösse auf 3

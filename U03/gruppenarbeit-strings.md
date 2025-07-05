@@ -8,7 +8,7 @@
 
 ## Ziel der Gruppenarbeit
 
-In dieser Gruppenarbeit sollt ihr die Grundlagen und weiterführende Aspekte der **Zeichenkettenverarbeitung** (Strings) in C kennenlernen. Dazu gehören die Deklaration, Verarbeitung, typische Funktionen sowie der Umgang mit Strings bei der Funktionsübergabe. Die Arbeit ist praktisch orientiert und soll in Form einer **Präsentation** abschliessend vorgestellt werden.
+In dieser Gruppenarbeit sollt ihr die Grundlagen und weiterführende Aspekte der **Zeichenkettenverarbeitung** (Strings) in C kennenlernen. Dazu gehören die Deklaration, Verarbeitung, typische Funktionen sowie der Umgang mit Strings bei der Funktionsübergabe. Die Arbeit ist praktisch orientiert und soll in Form einer **Präsentation (PowerPoint oder Markdown)** abschliessend vorgestellt werden.
 
 ## Gruppe 1: Grundlagen von Strings in C
 
@@ -46,7 +46,7 @@ In dieser Gruppenarbeit sollt ihr die Grundlagen und weiterführende Aspekte der
 **Codebeispiele:**
 
 - Einlesen eines Strings mit `scanf()` und Vergleich mit `fgets()`
-- Entfernen des `\n` bei `fgets() `und Erklärungen dazu
+- Entfernen des `\n` bei `fgets()` und Erklärungen dazu
 
 **Fragen:**
 
