@@ -10,7 +10,7 @@
   - [1.5. Zugriff auf ein Element](#15-zugriff-auf-ein-element)
   - [1.6. Arrays und Schleifen](#16-arrays-und-schleifen)
 - [2. Aufgaben](#2-aufgaben)
-  - [2.1. Aufgabe Pointer](#21-aufgabe-pointer)
+  - [2.1. Aufgabe Analyse von Array's](#21-aufgabe-analyse-von-arrays)
   - [2.2. Fehlende Überprüfung auf Überschreitung der Feldgrenzen bei Arrays](#22-fehlende-überprüfung-auf-überschreitung-der-feldgrenzen-bei-arrays)
   - [2.3. Aufgabe Temperaturstatistik](#23-aufgabe-temperaturstatistik)
 
@@ -154,7 +154,7 @@ int main() {
 
 # 2. Aufgaben
 
-## 2.1. Aufgabe Pointer
+## 2.1. Aufgabe Analyse von Array's
 
 | **Vorgabe**         | **Beschreibung**                                          |
 | :------------------ | :-------------------------------------------------------- |
