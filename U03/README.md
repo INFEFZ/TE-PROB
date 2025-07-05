@@ -26,12 +26,14 @@
 
 ## [Eindimensionales Array (Datenfelder)](arrays.md)
 
+- [Gruppenarbeit](gruppenarbeit-arrays.md)
 - Array mit Pointer
 - Array Übergabe
 - Übungsaufgaben
 
 ## [Strings (Zeichenketten)](strings.md)
 
+- [Gruppenarbeit](gruppenarbeit-strings.md)
 - Stringvergleich
 - String-Copy
 - Übungsaufgaben

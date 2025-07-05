@@ -190,7 +190,7 @@ Pointer sind ein zentrales Konzept in C, das viele Leistungsfähigkeiten bietet:
 - Direkter Speicherzugriff
 - Effiziente Datenmanipulation
 - Flexible Datenstrukturen (z. B. verkettete Listen, Arrays, Funktionen als Parameter)
-- > Gleichzeitig erfordern sie sorgfältigen Umgang, da Fehler schwerwiegende Folgen haben können (Abstürze, Speicherlecks, undefiniertes Verhalten).
+- > **Gleichzeitig erfordern sie sorgfältigen Umgang, da Fehler schwerwiegende Folgen haben können (Abstürze, Speicherlecks, undefiniertes Verhalten).**
 
 ---
 

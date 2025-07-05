@@ -3,6 +3,7 @@
 | **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
 
 - [1. String (Zeichenketten)](#1-string-zeichenketten)
+  - [1.1. E-Book](#11-e-book)
   - [1.1. Definition von Strings in C](#11-definition-von-strings-in-c)
   - [1.2. Deklaration von Strings](#12-deklaration-von-strings)
   - [1.3. Initialisierung von Strings](#13-initialisierung-von-strings)
@@ -23,6 +24,10 @@
 
 - In der Programmiersprache C gibt es **keine** eigene String-Datentypen wie in modernen Sprachen (z. B. String in Java).
 - Stattdessen werden Zeichenketten (Strings) in C als **Arrays von Zeichen (char)**dargestellt, die mit einem speziellen **Abschlusszeichen** `'\0'` (Null-Byte) terminiert werden.
+
+## 1.1. E-Book
+
+![Fortgeschrittene Programmierung mit Pointern](./x_gitres/k12-fortgeschrittene-programmierung-mit-pointern)
 
 ## 1.1. Definition von Strings in C
 
@@ -168,7 +173,6 @@ Viele Standardfunktionen wie `strcpy()` oder `strcat()` sind unsicher, da sie be
 
 ## 2.1. Zeichenketten Länge
 
-
 | **Vorgabe**         | **Beschreibung**                                                 |
 | :------------------ | :--------------------------------------------------------------- |
 | **Lernziele**       | Verstehen wie Strings deklariert und initialisiert werden können |
@@ -188,7 +192,6 @@ Schreiben Sie ein C-Programm, das Folgendes tut:
 ---
 
 ## 2.2. Zeichenketten rückwärts
-
 
 | **Vorgabe**         | **Beschreibung**                                                 |
 | :------------------ | :--------------------------------------------------------------- |
@@ -212,7 +215,6 @@ Schreiben Sie ein C-Programm, das Folgendes tut:
 
 ## 2.3. Zeichenketten vergleichen
 
-
 | **Vorgabe**         | **Beschreibung**                                                 |
 | :------------------ | :--------------------------------------------------------------- |
 | **Lernziele**       | Verstehen wie Strings deklariert und initialisiert werden können |
@@ -234,7 +236,6 @@ Schreiben Sie ein C-Programm, das Folgendes tut:
 ---
 
 ## 2.4. Zeichenketten verarbeiten
-
 
 | **Vorgabe**         | **Beschreibung**                                                 |
 | :------------------ | :--------------------------------------------------------------- |

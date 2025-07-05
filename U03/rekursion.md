@@ -235,8 +235,8 @@ void eingabe (float * ptr_alpha, float * ptr_beta, int * ptr_hoch)
 | **Zeitbedarf**      | 30min                                              |
 | **Lösungselemente** | Funktionierendes Programm                          |
 
-- Schreibe ein C-Programm, wo ich eine Ganzahl eingeben muss und mir die Summe der ganzen Zahlen von 0 bis zu dieser Ganzahl berechnet.
-- Mache für die Summenrechnung zuerst eine iterative Funktion und dann eine Rekursive.
+- Schreibe ein C-Programm, wo ich eine Ganzzahl eingeben muss und mir die Summe der ganzen Zahlen von 0 bis zu dieser Ganzzahl berechnet.
+- Mache für die Summenberechnung zuerst eine iterative Funktion und dann eine Rekursive.
 - Schaue, dass das Ergebnis von beiden Funktionen gleich ist.
 
 ![Summe Rekursiv berechnen](./x_gitres/function-summe-rekursiv.png)
