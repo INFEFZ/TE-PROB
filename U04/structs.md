@@ -8,6 +8,7 @@
   - [1.3. Vorteile und Einsatzbereiche](#13-vorteile-und-einsatzbereiche)
   - [1.4. Einsatzbereiche](#14-einsatzbereiche)
   - [1.5. Definition und Deklaration von Strukturen](#15-definition-und-deklaration-von-strukturen)
+    - [1.5.1. Beispiel struct Point](#151-beispiel-struct-point)
   - [1.6. Initialisierung und Zugriff](#16-initialisierung-und-zugriff)
   - [1.7. Zeiger auf Strukturen](#17-zeiger-auf-strukturen)
   - [1.8. Struktur innerhalb einer Struktur (verschachtelte Strukturen)](#18-struktur-innerhalb-einer-struktur-verschachtelte-strukturen)
@@ -84,6 +85,36 @@ struct Buch meinBuch;
 ```
 
 > **Mit meinBuch existiert jetzt eine Instanz der Struktur Buch.**
+
+### 1.5.1. Beispiel struct Point
+
+```c
+#include <stdio.h>
+
+// Definition der struct für einen Punkt im 2D-Raum
+struct Point 
+{
+    int x;
+    int y;
+};
+
+// Funktion zur Ausgabe der Koordinaten eines Punktes
+void printPoint(struct Point p) 
+{
+    printf("Punktkoordinaten: (%d, %d)\n", p.x, p.y);
+}
+
+void main() 
+{
+    // Deklaration und Initialisierung eines Punktes
+    struct Point point1;
+    point1.x = 5;
+    point1.y = 10;
+
+    // Ausgabe der Koordinaten des Punktes
+    printPoint(point1);
+}
+```
 
 ## 1.6. Initialisierung und Zugriff
 

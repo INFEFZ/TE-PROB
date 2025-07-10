@@ -8,6 +8,13 @@
 
 - Was lernen wir?
 
+## [Strings (Zeichenketten)](strings.md)
+
+- [Gruppenarbeit](gruppenarbeit-strings.md)
+- Stringvergleich
+- String-Copy
+- Übungsaufgaben
+
 ## [Strukturen](./structs.md)
 
 - Einleitung u. Einsatzbereich
