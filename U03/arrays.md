@@ -167,7 +167,7 @@ int main() {
 | **Zeitbedarf**      | 10min                                                     |
 | **Lösungselemente** | Ausgabeliste der Zahlen                                   |
 
-Überlegen Sie, was das folgende Programm ausgibt. Überzeugen Sie sich durch einen Programmlauf.
+Überlege, was das folgende Programm ausgibt. Überzeuge dich durch einen Programmlauf.
 
 ```c
 #include <stdio.h>
@@ -203,8 +203,8 @@ int main(void) {
 | **Zeitbedarf**      | 10min                                                     |
 | **Lösungselemente** | Ergebnis Analyse                                          |
 
-- Führen Sie einen Programmlauf mit dem folgenden Programm durch.
-- Analysieren Sie das Ergebnis!
+- Führe einen Programmlauf mit dem folgenden Programm durch.
+- Analysieren das Ergebnis!
 
 ```c
 #include <stdio.h>
@@ -253,7 +253,7 @@ int main(void) {
 | **Zeitbedarf**      | 30min                                                     |
 | **Lösungselemente** | Lauffähiges Programm                                      |
 
-Schreiben Sie ein C-Programm, das die Tageshöchsttemperaturen für eine Woche (7 Tage) in einem Array speichert und folgende Anforderungen erfüllt:
+Schreibe ein C-Programm, das die Tageshöchsttemperaturen für eine Woche (7 Tage) in einem Array speichert und folgende Anforderungen erfüllt:
 
 - Deklariere ein Array von 7 Gleitkommazahlen (float), das die Temperaturen speichert.
 - Lasse den Benutzer über die Konsole die Temperaturen für jeden Wochentag eingeben.

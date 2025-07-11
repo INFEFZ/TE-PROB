@@ -69,7 +69,7 @@ Wenn eine Funktion aufgerufen wird, erweitert der Compiler den Stack um einen Da
 
 | **Vorgabe**         | **Beschreibung**                                   |
 | :------------------ | :------------------------------------------------- |
-| **Lernziele**       | Vershehen wie eine Rekursion programmiert wird     |
+| **Lernziele**       | Verstehen wie eine Rekursion programmiert wird     |
 |                     | Kann ein rekursiver Code analysieren und erläutern |
 |                     | Keine eine Logik rekursiv implementieren           |
 | **Sozialform**      | Einzelarbeit                                       |
@@ -78,7 +78,7 @@ Wenn eine Funktion aufgerufen wird, erweitert der Compiler den Stack um einen Da
 | **Zeitbedarf**      | 20min                                              |
 | **Lösungselemente** | Funktionierendes Programm                          |
 
-Studieren Sie das folgende Programm:
+Studiere das folgende Programm:
 
 ```c
 #include <stdio.h>
@@ -100,9 +100,9 @@ int main(void)
 }
 ```
 
-- Welche Ausgabe erwarten Sie von dem Programm, wenn Sie 123 eintippen?
-- Schreiben Sie das Ergebnis auf.
-- Testen Sie anschließend das Programm.
+- Welche Ausgabe wird erwartet, wenn 123 eingetippt wird?
+- Schreibe das Ergebnis auf.
+- Teste anschliessend das Programm.
 
 ---
 
@@ -110,7 +110,7 @@ int main(void)
 
 | **Vorgabe**         | **Beschreibung**                                   |
 | :------------------ | :------------------------------------------------- |
-| **Lernziele**       | Vershehen wie eine Rekursion programmiert wird     |
+| **Lernziele**       | Verstehen wie eine Rekursion programmiert wird     |
 |                     | Kann ein rekursiver Code analysieren und erläutern |
 |                     | Keine eine Logik rekursiv implementieren           |
 | **Sozialform**      | Einzelarbeit                                       |
@@ -119,8 +119,8 @@ int main(void)
 | **Zeitbedarf**      | 30min                                              |
 | **Lösungselemente** | Funktionierendes Programm                          |
 
-- Schreibe ein C-Programm, wo ich eine Ganzahl eingeben muss und mir die Summe der ganzen Zahlen von 0 bis zu dieser Ganzahl berechnet.
-- Mache für die Summenrechnung zuerst eine iterative Funktion und dann eine Rekursive.
+- Schreibe ein C-Programm, wo ich eine Ganzzahl eingeben muss und mir die Summe der ganzen Zahlen von 0 bis zu dieser Ganzzahl berechnet.
+- Mache für die `Summenrechnung` zuerst eine iterative Funktion und dann eine Rekursive.
 - Schaue, dass das Ergebnis von beiden Funktionen gleich ist.
 
 ![Summe Rekursiv berechnen](./x_gitres/function-summe-rekursiv.png)
@@ -131,7 +131,7 @@ int main(void)
 
 | **Vorgabe**         | **Beschreibung**                                   |
 | :------------------ | :------------------------------------------------- |
-| **Lernziele**       | Vershehen wie eine Rekursion programmiert wird     |
+| **Lernziele**       | Verstehen wie eine Rekursion programmiert wird     |
 |                     | Kann ein rekursiver Code analysieren und erläutern |
 |                     | Keine eine Logik rekursiv implementieren           |
 | **Sozialform**      | Einzelarbeit                                       |
@@ -142,15 +142,15 @@ int main(void)
 
 Die Potenz an soll für ein reellwertiges `a` und ein ganzzahliges positives `n` berechnet werden.
 
-- Schreiben Sie eine Funktion, welche die Potenz mittels der `pow()`-Funktion berechnet.
-- Berechnen Sie die Potenz mittels einer **Schleife**.
-- Berechnen Sie die Potenz mittels einer **Rekursion**.
+- Schreibe eine Funktion, welche die Potenz mittels der `pow()`-Funktion berechnet.
+- Berechne die Potenz mittels einer **Schleife**.
+- Berechne die Potenz mittels einer **Rekursion**.
 
 Alle drei Funktionen sollten dasselbe Resultat ergeben.
-Nehmen Sie die Funktion mit der `pow()`-Funktion als Referenz, sie gibt das korrekte Resultat zurück.
+Nehme die Funktion mit der `pow()`-Funktion als Referenz, sie gibt das korrekte Resultat zurück.
 
-Testen Sie Ihr Programm mit folgenden Eingabewerten:
+Teste das Programm mit folgenden Eingabewerten:
 
 - 5^2  2.5^8  1000^3  3^1000  7^1  1^7  1^777777  0^1  1^0  0^0
-- Wenn die Resultate der Funktionen nicht übereinstimmen, überlegen Sie sich wieso.
+- Wenn die Resultate der Funktionen nicht übereinstimmen, überlege wieso.
 - Es könnte sogar sein, dass etwas gänzlich unerwartetes passiert.

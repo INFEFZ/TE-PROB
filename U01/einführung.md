@@ -6,8 +6,8 @@
 
 ## Handlungskompetenz
 
-- Die Dipl. Elektrotechniker/-in HF müssen sich bei Diskussionen im Fachgebiet Programmiertechnik kompetent einbringen können. 
-- Sie können den technischen Argumentationen folgen und sie verstehen die technischen Zusammenhänge. Damit sind sie in der Lage, Grundlagen für Entscheidungen zu erarbeiten. 
+- Sie müssen sich bei Diskussionen im Fachgebiet Programmiertechnik kompetent einbringen können.
+- Sie können den technischen Argumentationen folgen und sie verstehen die technischen Zusammenhänge. Damit sind sie in der Lage, Grundlagen für Entscheidungen zu erarbeiten.
 - Sie entwerfen, programmieren und bauen neue Geräte, Anlagen und Systeme.
 
 ---
@@ -41,7 +41,7 @@
   - Einzelarbeiten
   - Gemeinsames lösen von Aufgaben
 - Prüfungen
-  - 1 TP (Teilpfrüfung)
+  - 1 TP (Teilprüfung)
   - 1 FP (Fachprüfung)
   - 1 PA (Praxisarbeit)
 - Hausaufgaben

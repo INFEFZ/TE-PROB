@@ -2,12 +2,12 @@
 | --------------------------- | ------------------------ | -------------------------------------- |
 | **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
 
-- [1. Forgeschrittene Programmierung mit Pointern](#1-forgeschrittene-programmierung-mit-pointern)
+- [1. Fortgeschrittene Programmierung mit Pointer](#1-fortgeschrittene-programmierung-mit-pointer)
   - [1.1. E-Book](#11-e-book)
-  - [1.2. Was ist ein Array von Pointern?](#12-was-ist-ein-array-von-pointern)
+  - [1.2. Was ist ein Array von Pointer?](#12-was-ist-ein-array-von-pointer)
   - [1.3. Deklaration u. Initialisierung](#13-deklaration-u-initialisierung)
-  - [1.4. Eindimensionale Arrays von Pointern](#14-eindimensionale-arrays-von-pointern)
-  - [1.5. Zugriff auf Elemente im Array von Pointern](#15-zugriff-auf-elemente-im-array-von-pointern)
+  - [1.4. Eindimensionale Arrays von Pointer](#14-eindimensionale-arrays-von-pointer)
+  - [1.5. Zugriff auf Elemente im Array von Pointer](#15-zugriff-auf-elemente-im-array-von-pointer)
   - [1.6. Typische Einsatzzwecke](#16-typische-einsatzzwecke)
   - [1.7. Pointer auf Pointer](#17-pointer-auf-pointer)
     - [1.7.1. Deklaration und Initialisierung](#171-deklaration-und-initialisierung)
@@ -20,15 +20,15 @@
 
 ---
 
-# 1. Forgeschrittene Programmierung mit Pointern
+# 1. Fortgeschrittene Programmierung mit Pointer
 
 ## 1.1. E-Book
 
-![Fortgeschrittene Programmierung mit Pointern](./x_gitres/k12-fortgeschrittene-programmierung-mit-pointern.pdf)
+![Fortgeschrittene Programmierung mit Pointer](./x_gitres/k12-fortgeschrittene-programmierung-mit-pointern.pdf)
 
-## 1.2. Was ist ein Array von Pointern?
+## 1.2. Was ist ein Array von Pointer?
 
-- Ein Array von Pointern ist ein Array, dessen Elemente **Zeiger (Pointer)** auf **Daten** sind – meist auf andere Variablen oder Strings.
+- Ein Array von Pointer ist ein Array, dessen Elemente **Zeiger (Pointer)** auf **Daten** sind – meist auf andere Variablen oder Strings.
 - Jeder Eintrag im Array enthält also die **Adresse eines Objekts**, nicht das Objekt selbst.
 
 ```c
@@ -53,18 +53,18 @@ Hier zeigt:
 - `farben[2]` auf "Blau"
 - Jeder Eintrag ist ein Zeiger auf den Anfang eines Stringliterals im Speicher (also auf ein char-Array mit `'\0`-Terminierung).
 
-## 1.4. Eindimensionale Arrays von Pointern
+## 1.4. Eindimensionale Arrays von Pointer
 
-- Array von Pointervariablen zeigen alle Pointer auf bestimmte Speicheradresse
+- Array von Pointer-Variablen zeigen alle Pointer auf bestimmte Speicheradresse
 - Erlaubt einfache Sortierung von Strings (Häufigster Anwendungsfall) – Keine Kopie nötig
 
 ```c
 char *pointer[3];
 ```
 
-![Array von Pointervariablen](./x_gitres/array-pointers.png)
+![Array von Pointer-Variablen](./x_gitres/array-pointers.png)
 
-## 1.5. Zugriff auf Elemente im Array von Pointern
+## 1.5. Zugriff auf Elemente im Array von Pointer
 
 ```c
 // Zugriff auf die Werte:
@@ -106,7 +106,7 @@ for (int i = 0; i < 3; i++) {
 }
 ```
 
-**Beispielprogramm: Wörterliste mit Zeigerarray:**
+**Beispielprogramm: Wörterliste mit Zeiger-Array:**
 
 ```c
 #include <stdio.h>
@@ -127,7 +127,7 @@ int main() {
 }
 ```
 
-**Beispiel Array von Pointervariablen – Sortieren:**
+**Beispiel Array von Pointer-Variablen – Sortieren:**
 
 ```c
 #include <stdio.h>
@@ -175,9 +175,9 @@ void main()
 
 ## 1.7. Pointer auf Pointer
 
-- Ein Pointer auf Pointer (oder Doppelzeiger) ist ein Zeiger auf einen Zeiger, also eine Variable, die die Adresse eines anderen Zeigers speichert.
+- Ein **Pointer** auf **Pointer** (oder Doppelzeiger) ist ein Zeiger auf einen Zeiger, also eine Variable, die die Adresse eines anderen Zeigers speichert.
 - Während ein normaler Zeiger auf eine Speicheradresse eines Wertes zeigt, zeigt ein Pointer auf Pointer auf die Adresse eines anderen Zeigers.
-- Nützlich für komplexe Datenstrukturen für eine allgemeine Definition, erlaubt höhere Flexibilität – Verwendet bei Listen, Bäumen anderen dynamischen Datenstrukturen
+- Nützlich für komplexe Datenstrukturen für eine allgemeine Definition, **erlaubt höhere Flexibilität – Verwendet bei Listen, Bäumen anderen dynamischen Datenstrukturen**
 
 ![Pointer auf Pointer](./x_gitres/pointer-auf-pointer.png)
 
@@ -293,7 +293,7 @@ void main()
 | **Zeitbedarf**      | 30min                                                                |
 | **Lösungselemente** | Funktionierendes Programm                                            |
 
-- Ändere das vorherige Beispiel (Array von Pointervariablen – Sortieren) so ab, dass die Strings nicht alphabetisch sondern nach der Länge sortiert werden.
+- Ändere das vorherige Beispiel (Array von Pointer-Variablen – Sortieren) so ab, dass die Strings nicht alphabetisch sondern nach der Länge sortiert werden.
 
 ---
 
@@ -314,7 +314,7 @@ void main()
 
 - Erstelle ein C-Programm, das eine Liste von **5 Wochentagen** mit Hilfe eines Arrays von Zeigern auf char speichert.
 - Gebe alle Tage in einer nummerierten Liste aus.
-- Ermittle mit einer Schleife die Länge jedes Tagesnamens (mit `strlen`) und geben Sie diese mit aus.
+- Ermittle mit einer Schleife die Länge jedes Tagesnamens (mit `strlen`) und gebe diese mit aus.
 - Schreibe eine Funktion `drucke_tag_info(char *tag)`, die den Namen des Tages und dessen ersten Buchstaben und die Länge des Strings ausgibt.
 - Rufe diese Funktion für alle Wochentage aus dem Array auf.
 

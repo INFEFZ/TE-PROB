@@ -338,7 +338,7 @@ void main(void) {
     ergebnisProdukt = produkt(zahl1, zahl2);
 
     // Ausgabe der Ergebnisse
-    printf("Die Summerechnung von %d und %d:\n", zahl1, zahl2);
+    printf("Die Summenrechnung von %d und %d:\n", zahl1, zahl2);
     ausgabe(ergebnisSumme);
     printf("Das Produktrechnung von %d und %d:\n", zahl1, zahl2);
     ausgabe(ergebnisProdukt);
@@ -349,7 +349,7 @@ void main(void) {
 
 - Der Compiler kennt dank Vorwärtsdeklaration der Rumpf (Funktionsprototyp) der Funktion
 - Die Funktion wird erst nach dem Aufruf implementiert.
-- Ohne Vorwärtsdeklaration gibt es einen Compilerfehler
+- Ohne Vorwärtsdeklaration gibt es einen Compiler-Fehler
 
 ![Vorwärtsdeklarationen](./x_gitres/funktionen-vorwärtsdeklarationen.png)
 
@@ -377,8 +377,8 @@ Schreibe ein C-Programm, dass Trennstricht auf die Konsole ausgibt.
 Das Programm soll die Funktion trennstriche() implementieren.
 
 - Programmiere die Funktion `trennstriche80()`, die immer 80 Trennstriche ausgibt.
-- Programmiere die Funktion `trennstriche` so, dass die Anzahl der auszugebehen Trennsriche an die Funktion als Parameter übergeben werden kann.
-- Teste die Funktionsaufrufe im Haupprogramm (`main`)
+- Programmiere die Funktion `trennstriche` so, dass die Anzahl der auszugebenden Trennstriche als Parameter an die Funktion übergeben werden kann.
+- Teste die Funktionsaufrufe im Hauptprogramm (`main`)
 - Prüfe, welche der beiden Funktion betreffend der Wiederverwendbarkeit obsiegt.
 
 ---
@@ -397,7 +397,7 @@ Das Programm soll die Funktion trennstriche() implementieren.
 | **Zeitbedarf**      | 20min                                                                   |
 | **Lösungselemente** | Funktionierendes Programm                                               |
 
-Schreiben Sie eine Funktion, welche den Ersatzwiderstand `R` einer Parallelschaltung aus zwei Widerständen `R1` und `R2` bestimmt.
+Schreibe eine Funktion, welche den Ersatzwiderstand `R` einer Parallelschaltung aus zwei Widerständen `R1` und `R2` bestimmt.
 Die Funktion soll in der main-Funktion aufgerufen und dort das Resultat ausgegeben werden.
 
 Die Formel lautet:
@@ -408,7 +408,7 @@ oder
 
 > **`R = (R1 * R2) / (R1 + R2)`**
 
-Schreiben Sie die Funktion mehrmals mit unterschiedlicher Signatur:
+Schreibe die Funktion mehrmals mit unterschiedlicher Signatur:
 
 - Die Funktion erwartet die Parameter R1 und R2 und gibt das Resultat als **Rückgabewert** zurück.
 - Die Funktion erwartet die Parameter R1 und R2 und das Resultat mittels **call-by-pointer**.
@@ -430,8 +430,8 @@ Schreiben Sie die Funktion mehrmals mit unterschiedlicher Signatur:
 | **Zeitbedarf**      | 20min                                                                   |
 | **Lösungselemente** | Funktionierendes Programm                                               |
 
-Analysieren Sie das folgende Programm und sagen Sie voraus, welchen Wert `x` an den Stellen mit `printf()` haben wird.
-Starten Sie das Programm erst nach Ihrer Analyse.
+Analysiere das folgende Programm und sagen im voraus, welchen Wert `x` an den Stellen mit `printf()` haben wird.
+Starte das Programm erst nach Ihrer Analyse.
 
 ```c
 #include <stdio.h>
@@ -480,8 +480,8 @@ Schreibe ein C-Programm, dass in einer Funktion `swap()` zwei Ganzzahlen tauscht
 
 Vervollständige das nachfolgende C-Programm mit folgenden Elementen:
 
-- Erweitere die `swap()` Funktion, sodass diese zwei Ganzzahlen als Parameter erhalteen kann.
-- Tausche die beiden Ganzahlen in der Funktion
+- Erweitere die `swap()` Funktion, sodass diese zwei Ganzzahlen als Parameter erhalten kann.
+- Tausche die beiden Ganzzahlen in der Funktion
 - Überlege, wie die Ganzzahlen an die Funktion zu übergeben sind, sodass die Zahlen im `main` vertauscht ausgegeben werden.
 
 ```c

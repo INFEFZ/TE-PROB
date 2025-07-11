@@ -143,7 +143,7 @@ Beispiel Visual Studio Code (tasks.json)
 | **Zeitbedarf**      | 30min                                                                   |
 | **Lösungselemente** | Funktionierendes Programm                                               |
 
-Lagere die beiden Trennstrich-Funtionen (siehe Aufgaben U01) in einem separates Modul aus z.B. `func.c`.
+Lagere die beiden Trennstrich-Funktionen (siehe Aufgaben U01) in einem separates Modul aus z.B. `func.c`.
 Erstelle für die beiden Funktionen ein Headerdatei z.B. `func.h`
 Rufe die die beiden Funktionen im `main` Programm auf.
 
@@ -162,7 +162,7 @@ Rufe die die beiden Funktionen im `main` Programm auf.
 | **Zeitbedarf**      | 30min                                                                   |
 | **Lösungselemente** | Funktionierendes Programm                                               |
 
-Lagere die beiden Ersatzwiderstandberechnungsfunktionen (siehe Aufgaben U01) in einem separates Modul aus z.B. `calc.c`.
+Lagere die beiden Ersatzwiderstandsberechnungsfunktionen (siehe Aufgaben U01) in einem separates Modul aus z.B. `calc.c`.
 
 Erstelle für die beiden Funktionen ein Headerdatei z.B. `calc.h`
 Rufe alle Funktionen im `main` Programm auf und gebe das Resultat in der Konsole aus.

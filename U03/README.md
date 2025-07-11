@@ -14,7 +14,7 @@
 - Speicherbereich Stack
 - Übungsaufgaben
 
-## [Pointer (Zeiger)](pointers.md)
+## [Pointer (Zeiger)](./pointers.md)
 
 - Definition von Pointer
 - Deklaration von Pointer
@@ -24,9 +24,9 @@
 - Häufige Fehler
 - Übungsaufgaben
 
-## [Eindimensionales Array (Datenfelder)](arrays.md)
+## [Eindimensionales Array (Datenfelder)](./arrays.md)
 
-- [Gruppenarbeit](gruppenarbeit-arrays.md)
+- [Gruppenarbeit](./gruppenarbeit-arrays.md)
 - Array mit Pointer
 - Array Übergabe
 - Übungsaufgaben

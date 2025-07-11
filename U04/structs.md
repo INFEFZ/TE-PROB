@@ -2,7 +2,7 @@
 | --------------------------- | ------------------------ | -------------------------------------- |
 | **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
 
-- [1. Strukturen (structs)](#1-strukturen-structs)
+- [1. Strukturen (struct's)](#1-strukturen-structs)
   - [1.1. E-Book](#11-e-book)
   - [1.2. Was ist eine struct in C?](#12-was-ist-eine-struct-in-c)
   - [1.3. Vorteile und Einsatzbereiche](#13-vorteile-und-einsatzbereiche)
@@ -22,7 +22,7 @@
 
 ---
 
-# 1. Strukturen (structs)
+# 1. Strukturen (struct's)
 
 ## 1.1. E-Book
 
@@ -32,7 +32,7 @@
 
 In C sind `struct` (Strukturen) eine Möglichkeit, **benutzerdefinierte Datentypen** zu erstellen, die mehrere Werte unterschiedlicher Typen unter einem Namen zusammenfassen.
 
-Strukturen (`struct`) sind ein essenzieller Bestandteil der C-Programmierung:
+Strukturen (`struct`) sind ein **essenzieller Bestandteil** der C-Programmierung:
 
 - Sie ermöglichen den Aufbau komplexer Datentypen.
 - Der Zugriff ist flexibel (direkt oder über Zeiger).
@@ -246,10 +246,10 @@ int main() {
 | **Zeitbedarf**      | 10min                                                          |
 | **Lösungselemente** | Funktionierendes Programm                                      |
 
-Studieren Sie das folgende Programm:
-a) Welche Codezeilen werden einen Fehler erzeugen? Überprüfen Sie Ihre Annahmen mit Hilfe des Compilers.
-b) Korrigieren Sie die Fehler, sodass das Programm lauffähig wird.
-c) Was wird nun ausgegeben werden? Überprüfen Sie Ihre Annahmen miteinem Programmdurchlauf.
+Studiere das folgende Programm:
+a) Welche Codezeilen werden einen Fehler erzeugen? Überprüfe Ihre Annahmen mit Hilfe des Compilers.
+b) Korrigiere die Fehler, sodass das Programm lauffähig wird.
+c) Was wird nun ausgegeben werden? Überprüfe Ihre Annahmen miteinem Programmdurchlauf.
 
 ```c
 #include <stdio.h>
@@ -294,13 +294,13 @@ int main(void) {
 | **Sozialform**      | Einzelarbeit                                   |
 | **Auftrag**         | siehe unten                                    |
 | **Hilfsmittel**     |                                                |
-| **Zeitbedarf**      | 50min                                          |
+| **Zeitbedarf**      | 40min                                          |
 | **Lösungselemente** | Funktionierendes Programm                      |
 
 **Auftrag:**
 
 - Erstelle ein einfaches Studentenverwaltungssystem, das Informationen über Studenten speichert und ausgibt.
-- Jeder Student hat eine Martikelnummer, einen Namen und eine Durchschnittsnote.
+- Jeder Student hat eine **Martikelnummer**, einen **Namen** und eine **Durchschnittsnote**.
 
 **Anforderung:**
 
@@ -327,7 +327,7 @@ int main(void) {
 | **Sozialform**      | Einzelarbeit                                   |
 | **Auftrag**         | siehe unten                                    |
 | **Hilfsmittel**     |                                                |
-| **Zeitbedarf**      | 30min                                          |
+| **Zeitbedarf**      | 20min                                          |
 | **Lösungselemente** | Funktionierendes Programm                      |
 
 **Auftrag:**

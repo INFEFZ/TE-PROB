@@ -9,8 +9,8 @@
   - [1.3. Initialisierung von Strings](#13-initialisierung-von-strings)
   - [1.4. String-Terminierung (\\0)](#14-string-terminierung-0)
   - [1.5. Ein- und Ausgabe von Strings](#15-ein--und-ausgabe-von-strings)
-  - [1.6. Wichtige Stringfunktionen in C (aus `<string.h>`)](#16-wichtige-stringfunktionen-in-c-aus-stringh)
-  - [1.7. Beispiele zu Stringfunktionen](#17-beispiele-zu-stringfunktionen)
+  - [1.6. Wichtige String-Funktionen in C (aus `<string.h>`)](#16-wichtige-string-funktionen-in-c-aus-stringh)
+  - [1.7. Beispiele zu String-Funktionen](#17-beispiele-zu-string-funktionen)
   - [1.8. Zusammenfassung](#18-zusammenfassung)
 - [2. Aufgaben](#2-aufgaben)
   - [2.1. Zeichenketten Länge](#21-zeichenketten-länge)
@@ -27,7 +27,7 @@
 
 ## 1.1. E-Book
 
-![Fortgeschrittene Programmierung mit Pointern](./x_gitres/k12-fortgeschrittene-programmierung-mit-pointern)
+![Fortgeschrittene Programmierung mit Pointer](./x_gitres/k12-fortgeschrittene-programmierung-mit-pointern)
 
 ## 1.1. Definition von Strings in C
 
@@ -73,13 +73,13 @@ char text1[] = "Test";  // Automatisch '\0' am Ende
 char text2[] = {'T', 'e', 's', 't', '\0'};  // Manuelle Termination
 ```
 
-> **Ein String muss das Nullzeichen '\0' enthalten, sonst verhalten sich Stringfunktionen undefiniert.**
+> **Ein String muss das Nullzeichen '\0' enthalten, sonst verhalten sich String-Funktionen undefiniert.**
 
 ## 1.4. String-Terminierung (\0)
 
 - Das Zeichen `'\0'` markiert das Ende eines Strings.
 - Alle Funktionen der Standardbibliothek wie `strlen()`, `printf()`, `strcpy()` usw. verlassen sich auf dieses Terminierungszeichen.
-- Wenn ein `char[]` **nicht** mit `'\0'` abgeschlossen ist, führen Stringoperationen zu undefiniertem Verhalten
+- Wenn ein `char[]` **nicht** mit `'\0'` abgeschlossen ist, führen String-Operationen zu undefiniertem Verhalten
 
 ```c
 char falsch[] = {'H', 'i'};  // Kein '\0' -> kein gültiger String
@@ -114,7 +114,7 @@ fgets(zeile, 100, stdin);  // Liest auch Leerzeichen mit
 
 > **fgets() speichert den Zeilenumbruch \n mit, wenn Platz ist. Eventuell muss dieser entfernt werden.**
 
-## 1.6. Wichtige Stringfunktionen in C (aus `<string.h>`)
+## 1.6. Wichtige String-Funktionen in C (aus `<string.h>`)
 
 Um mit Strings in C zu arbeiten, stellt die Standardbibliothek viele Funktionen bereit.
 Diese befinden sich in der Header-Datei: `#include <string.h>`
@@ -131,7 +131,7 @@ Diese befinden sich in der Header-Datei: `#include <string.h>`
 | `strchr(s, c)`             | Gibt Zeiger auf erstes `c` in `s` zurück            |
 | `strstr(s1, s2)`           | Sucht `s2` in `s1`, Rückgabe: Zeiger auf Fundstelle |
 
-## 1.7. Beispiele zu Stringfunktionen
+## 1.7. Beispiele zu String-Funktionen
 
 ```c
 char s[] = "Hallo";
@@ -150,22 +150,22 @@ char b[] = "Welt";
 strcat(a, b);  // a enthält jetzt "Hallo Welt"
 ```
 
-Viele Standardfunktionen wie `strcpy()` oder `strcat()` sind unsicher, da sie bei zu kleinen Arrays einen Pufferüberlauf (buffer overflow) verursachen können. Bessere Alternativen:
+Viele Standardfunktionen wie `strcpy()` oder `strcat()` sind unsicher, da sie bei zu kleinen Arrays einen **Pufferüberlauf (buffer overflow)** verursachen können. Bessere Alternativen:
 
 - `strncpy()` statt `strcpy()`
 - `strncat()` statt `strcat()`
 
 ## 1.8. Zusammenfassung
 
-| **Thema**            | **Wichtigste Punkte**                       |
-| :------------------- | :------------------------------------------ |
-| **Definition**       | Strings = `char`-Array + `'\0'`             |
-| **Deklaration**      | `char s[10];` oder `char s[] = "Text";`     |
-| **Initialisierung**  | Mit Stringliteral oder manuell mit `'\0'`   |
-| **Termination**      | `'\0'` zwingend notwendig                   |
-| **Ein-/Ausgabe**     | `scanf()`, `fgets()`, `printf("%s")`        |
-| **Stringfunktionen** | `strlen`, `strcpy`, `strcmp`, `strcat`, ... |
-| **Sicherheit**       | `strncpy`/`strncat` vermeiden Überläufe     |
+| **Thema**             | **Wichtigste Punkte**                       |
+| :-------------------- | :------------------------------------------ |
+| **Definition**        | Strings = `char`-Array + `'\0'`             |
+| **Deklaration**       | `char s[10];` oder `char s[] = "Text";`     |
+| **Initialisierung**   | Mit Stringliteral oder manuell mit `'\0'`   |
+| **Termination**       | `'\0'` zwingend notwendig                   |
+| **Ein-/Ausgabe**      | `scanf()`, `fgets()`, `printf("%s")`        |
+| **String-Funktionen** | `strlen`, `strcpy`, `strcmp`, `strcat`, ... |
+| **Sicherheit**        | `strncpy`/`strncat` vermeiden Überläufe     |
 
 ---
 
@@ -177,14 +177,14 @@ Viele Standardfunktionen wie `strcpy()` oder `strcat()` sind unsicher, da sie be
 | :------------------ | :--------------------------------------------------------------- |
 | **Lernziele**       | Verstehen wie Strings deklariert und initialisiert werden können |
 |                     | Kann Strings von der Konsole einlesen und ausgeben               |
-|                     | Kann Stringfunktionen einsetzen                                  |
+|                     | Kann String-Funktionen einsetzen                                 |
 | **Sozialform**      | Einzelarbeit                                                     |
 | **Auftrag**         | siehe unten                                                      |
 | **Hilfsmittel**     |                                                                  |
 | **Zeitbedarf**      | 20min                                                            |
 | **Lösungselemente** | Funktionierendes Programm                                        |
 
-Schreiben Sie ein C-Programm, das Folgendes tut:
+Schreibe ein C-Programm, das Folgendes tut:
 
 - Lese zwei Zeichenkette (max. 100 Zeichen) vom Benutzer ein.
 - Gib die längere Zeichenkette inkl. deren Länge (Anzahl Zeichen) in der Konsole aus.
@@ -204,7 +204,7 @@ Schreiben Sie ein C-Programm, das Folgendes tut:
 | **Zeitbedarf**      | 30min                                                            |
 | **Lösungselemente** | Funktionierendes Programm                                        |
 
-Schreiben Sie ein C-Programm, das Folgendes tut:
+Schreibe ein C-Programm, das Folgendes tut:
 
 - Lese eine Zeichenkette (max. 100 Zeichen) vom Benutzer ein.
 - Schreibe zwei Funktionen, welche die Zeichenkette rückwärts aus ausgibt, sowohl durch direkte Übergabe des Arrays als auch durch Übergabe über einen Pointer.
@@ -226,12 +226,12 @@ Schreiben Sie ein C-Programm, das Folgendes tut:
 | **Zeitbedarf**      | 30min                                                            |
 | **Lösungselemente** | Funktionierendes Programm                                        |
 
-Schreiben Sie ein C-Programm, das Folgendes tut:
+Schreibe ein C-Programm, das Folgendes tut:
 
 - Lese eine Zeichenkette vom Benutzer ein.
 - Kopiere die Zeichenkette in eine andere Zeichenkette.
-- Verlgeiche die beiden Zeichenkette, um sicherzustellen, dass die Kopie erfolgreich war.
-- Gib das Ergebnis des Verleichs sowie die ursprüngliche und die kopierte Zeichenkette aus.
+- Vergleiche die beiden Zeichenkette, um sicherzustellen, dass die Kopie erfolgreich war.
+- Gib das Ergebnis des Vergleichs sowie die ursprüngliche und die kopierte Zeichenkette aus.
 
 ---
 
@@ -241,14 +241,14 @@ Schreiben Sie ein C-Programm, das Folgendes tut:
 | :------------------ | :--------------------------------------------------------------- |
 | **Lernziele**       | Verstehen wie Strings deklariert und initialisiert werden können |
 |                     | Kann Strings von der Konsole einlesen und ausgeben               |
-|                     | Kann Stringfunktionen einsetzen                                  |
+|                     | Kann String-Funktionen einsetzen                                 |
 | **Sozialform**      | Einzelarbeit                                                     |
 | **Auftrag**         | siehe unten                                                      |
 | **Hilfsmittel**     |                                                                  |
 | **Zeitbedarf**      | 30min                                                            |
 | **Lösungselemente** | Funktionierendes Programm                                        |
 
-Schreiben Sie ein C-Programm, das Folgendes tut:
+Schreibe ein C-Programm, das Folgendes tut:
 
 - Liest zwei Zeichenketten (Strings) vom Benutzer ein.
 - Gibt beide Strings auf der Konsole aus.
@@ -260,6 +260,6 @@ Schreiben Sie ein C-Programm, das Folgendes tut:
 
 **Zusatzbedingung:**
 
-- Verwenden Sie die Funktionen aus der C-Standardbibliothek: `strcmp`, `strcat`, `strlen`.
-- Benutzen Sie `fgets()` zum Einlesen der Strings, um auch Leerzeichen zu unterstützen.
-- Entfernen Sie den Zeilenumbruch `\n`, der durch `fgets()` mit eingelesen wird.
+- Verwende die Funktionen aus der C-Standardbibliothek: `strcmp`, `strcat`, `strlen`.
+- Benutze `fgets()` zum Einlesen der Strings, um auch Leerzeichen zu unterstützen.
+- Entferne den Zeilenumbruch `\n`, der durch `fgets()` mit eingelesen wird.

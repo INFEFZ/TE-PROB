@@ -21,7 +21,7 @@
 - Der Zinssatz ist **3.2 Prozent**.
 - Wie hoch ist das Endkapital nach einem Jahr?
 
-Löse die Aufgabe mit einen C-Konsolen-Programm. Üebergebe die Parameter via Konsole.
+Löse die Aufgabe mit einen C-Konsolen-Programm. Übergebe die Parameter via Konsole.
 
 Die Formel dafür ist folgende:
 > ![Formel](./x_gitres/task-kapitalbildung.png)
@@ -53,10 +53,10 @@ Löse die Aufgabe als C-Konsolen-Programm.
 
 # 4. Erweiterter Taschenrechner
 
-- Implementiere einen Taschrechner der zuerst nach der 1. Zahl fragt.
+- Implementiere einen Taschenrechner der zuerst nach der 1. Zahl fragt.
 - Dann nach dem Operanden.
 - Dann nach der 2. Zahl.
-- Es sind folgende Operationen möglich: +, -, * u. /. (Additon. Subtraktion, Multiplikation u. Division).
+- Es sind folgende Operationen möglich: +, -, * u. /. (Addition. Subtraktion, Multiplikation u. Division).
 
 > - **Tipp**: Nach der Eingabe muss der Eingangspuffer mit `getchar()` geleert werden.
 > - **Grund**: `scanf` leert den Eingangspuffer nicht vollständig, wenn Zahlen eingelesen werden.
@@ -98,7 +98,7 @@ Löse die Aufgabe als C-Konsolen-Programm.
 
 - Schreibe ein Programm, dass den Wechselkurs rechnet.
 - Das Programm fragt den Betrag in Schweizer Franken [CHF] und in welche Währung es umrechnen soll.
-- Untersützt werden sollen '$', '£', 'e' und 'E' für Euro.
+- Unterstütz werden sollen '$', '£', 'e' und 'E' für Euro.
 - Löse die Aufgabe mit einem C-Programm.
 
 > **Tipp:** Nicht vergessen hier den Eingangspuffer mit `getchar()` zu leeren. Nach jeder Eingabe.

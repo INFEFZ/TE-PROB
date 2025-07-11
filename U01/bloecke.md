@@ -8,7 +8,7 @@
   - [2.2. Sichtbarkeit in Block](#22-sichtbarkeit-in-block)
   - [2.3. Sichtbarkeit lokal und global](#23-sichtbarkeit-lokal-und-global)
 - [3. Aufgaben](#3-aufgaben)
-  - [3.1. Sichbarkeit von lokalen Variablen](#31-sichbarkeit-von-lokalen-variablen)
+  - [3.1. Sichtbarkeit von lokalen Variablen](#31-sichtbarkeit-von-lokalen-variablen)
   - [3.2. Zugriff auf globale Variablen](#32-zugriff-auf-globale-variablen)
 
 ---
@@ -17,7 +17,7 @@
 
 # 2. Einleitung
 
-- Ein Block stellt eine beliebige Folge von Anweisungen dar. 
+- Ein Block stellt eine beliebige Folge von Anweisungen dar.
 - Diese Folge von Anweisungen wird sequenziell im Programmcode ausgeführt.
 
 ```c
@@ -33,9 +33,9 @@ Anweisung2;
 
 ## 2.1. Schachtelung von Codeblöcken in C
 
-- Die Schachtelung von **Codeblöcken** in C ermöglicht eine detailliertere Steuerung des Programmablaufs. 
-- Sie ist besonders wichtig, um die Logik eines Programms klar zu strukturieren. 
-- **Schachtelung** bedeutet, dass Codeblöcke innerhalb anderer Codeblöcke enthalten sind. 
+- Die Schachtelung von **Codeblöcken** in C ermöglicht eine detailliertere Steuerung des Programmablaufs.
+- Sie ist besonders wichtig, um die Logik eines Programms klar zu strukturieren.
+- **Schachtelung** bedeutet, dass Codeblöcke innerhalb anderer Codeblöcke enthalten sind.
 - Zu den wichtigsten Mechanismen gehören:
   - Bedingte Anweisungen (if, else, else if)
   - Schleifen (for, while, do-while)
@@ -71,7 +71,7 @@ void main(void)
 ## 2.2. Sichtbarkeit in Block
 
 - Ein Variable welche innerhalb eines Blockes definiert wurde ist nur sichtbar
-- Ein Varialbe ausserhalb des Blockes ist auch innerhalb des Blockes sichtbar
+- Ein Variable ausserhalb des Blockes ist auch innerhalb des Blockes sichtbar
 
 ```c
 void main(void)
@@ -140,13 +140,13 @@ void main(void)
 
 # 3. Aufgaben
 
-## 3.1. Sichbarkeit von lokalen Variablen
+## 3.1. Sichtbarkeit von lokalen Variablen
 
 | **Vorgabe**         | **Beschreibung**                                                                |
 | :------------------ | :------------------------------------------------------------------------------ |
-| **Lernziele**       | Kennt die Sichbarkeit von Variablen (lokal u. global)                           |
-|                     | Kenn die Sichbarkeit von Variablen in Code Blöcken                              |
-|                     | Kann Entscheiden, wann eine lokale oder golbale Variable eingesetzt werden soll |
+| **Lernziele**       | Kennt die Sichtbarkeit von Variablen (lokal u. global)                          |
+|                     | Kennt die Sichtbarkeit von Variablen in Code Blöcken                            |
+|                     | Kann Entscheiden, wann eine lokale oder globale Variable eingesetzt werden soll |
 | **Sozialform**      | Einzelarbeit                                                                    |
 | **Auftrag**         | siehe unten                                                                     |
 | **Hilfsmittel**     |                                                                                 |
@@ -155,7 +155,7 @@ void main(void)
 
 **Auftrag:**
 
-- Kopieren den Programmcode unten in dein Editor und führe das Programm mit dem Debugger Schritt für Schrit aus.
+- Kopieren den Programmcode unten in dein Editor und führe das Programm mit dem Debugger Schritt für Schritt aus.
 - Kontrolliere im VARIABLES-Fenster (links) wann welche lokale Variablen zur Verfügung stehen und wann der Zugriff verloren geht.
 
 ```c
@@ -174,7 +174,7 @@ void main(void)
 {
   int zahl1 = 1;
 
-  // Funktion wird augerufen
+  // Funktion wird aufgerufen
   ausgabe();
 
   // Ein neuer Block beginnt
@@ -185,7 +185,7 @@ void main(void)
   }
 
   // Steht die Variable zahl1 noch zur Verfügung?
-  // Steht die Variable zahl2 noch zur Verfügüng?
+  // Steht die Variable zahl2 noch zur Verfügung?
   
   printf("Ende");
 }
@@ -195,9 +195,9 @@ void main(void)
 
 | **Vorgabe**         | **Beschreibung**                                                                |
 | :------------------ | :------------------------------------------------------------------------------ |
-| **Lernziele**       | Kennt die Sichbarkeit von Variablen (lokal u. global)                           |
-|                     | Kenn die Sichbarkeit von Variablen in Code Blöcken                              |
-|                     | Kann Entscheiden, wann eine lokale oder golbale Variable eingesetzt werden soll |
+| **Lernziele**       | Kennt die Sichtbarkeit von Variablen (lokal u. global)                          |
+|                     | Kennt die Sichtbarkeit von Variablen in Code Blöcken                            |
+|                     | Kann Entscheiden, wann eine lokale oder globale Variable eingesetzt werden soll |
 | **Sozialform**      | Einzelarbeit                                                                    |
 | **Auftrag**         | siehe unten                                                                     |
 | **Hilfsmittel**     |                                                                                 |
@@ -206,7 +206,7 @@ void main(void)
 
 **Auftrag:**
 
-- Das nachfolgende C-Progamm funktioniert noch nicht.
+- Das nachfolgende C-Programm funktioniert noch nicht.
 - Überlege auf welcher Ebene die Variable des Kontostands (kontostand) deklariert sein muss.
 - Stelle das Programm fertig, sodass die Ein- und Auszahlungen funktionieren und der korrekte Kontostand angezeigt wird.
 

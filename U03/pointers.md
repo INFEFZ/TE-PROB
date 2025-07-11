@@ -10,7 +10,7 @@
   - [1.5. Wozu dient das \*-Zeichen?](#15-wozu-dient-das--zeichen)
   - [1.6. Adress-Operator \&](#16-adress-operator-)
   - [1.7. NULL-Pointer](#17-null-pointer)
-  - [1.8. Zugriff auf ein Objekt mit Pointern](#18-zugriff-auf-ein-objekt-mit-pointern)
+  - [1.8. Zugriff auf ein Objekt mit Pointer](#18-zugriff-auf-ein-objekt-mit-pointer)
   - [1.9. Pointer auf void (void-Pointer)](#19-pointer-auf-void-void-pointer)
   - [1.10. Häufige Fehler im Umgang mit Pointern](#110-häufige-fehler-im-umgang-mit-pointern)
     - [1.10.1. Uninitialisierte Pointer verwenden](#1101-uninitialisierte-pointer-verwenden)
@@ -108,7 +108,7 @@ Warum NULL-Pointer verwenden?
 - Um Abstürze durch ungültigen Speicherzugriff zu vermeiden.
 - Um auf besondere Zustände hinzuweisen (z. B. Ende einer Liste).
 
-## 1.8. Zugriff auf ein Objekt mit Pointern
+## 1.8. Zugriff auf ein Objekt mit Pointer
 
 Mit einem Pointer kann man auf eine Variable zugreifen und ihren Wert lesen oder verändern.
 
@@ -209,10 +209,10 @@ Pointer sind ein zentrales Konzept in C, das viele Leistungsfähigkeiten bietet:
 | **Zeitbedarf**      | 30min                                                     |
 | **Lösungselemente** | Funktionierendes Programm                                 |
 
-- Schreiben Sie ein C-Programm, das den Umgang mit **Pointern** demonstriert.
-- Deklarieren Sie eine int-Variable `x` und weisen Sie ihr den Wert 25 zu.
-- Deklarieren Sie einen Pointer `px`, der auf `x` zeigt.
-- Geben Sie die Adresse von `x` und den Wert von `x` über den Pointer `px` aus.
-- Ändern Sie den Wert von `x` über den Pointer `px` auf 50.
-- Geben Sie den neuen Wert von `x` aus.
-- Erstellen Sie einen void*-Pointer, der auf `x` zeigt, und zeigen Sie mit Type-Casting, wie man den Wert von `x` über diesen `void*`-Pointer ausgibt.
+- Schreibe ein C-Programm, das den Umgang mit **Pointern** demonstriert.
+- Deklariere eine int-Variable `x` und weise ihr den Wert 25 zu.
+- Deklariere einen Pointer `px`, der auf `x` zeigt.
+- Gebe die Adresse von `x` und den Wert von `x` über den Pointer `px` aus.
+- Ändere den Wert von `x` über den Pointer `px` auf 50.
+- Gebe den neuen Wert von `x` aus.
+- Erstelle einen `void*`-Pointer, der auf `x` zeigt, und zeige mit Type-Casting, wie man den Wert von `x` über diesen `void*`-Pointer ausgibt.
