@@ -3,10 +3,11 @@
 | **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
 
 - [1. Aufzählungstypen (enum)](#1-aufzählungstypen-enum)
-  - [1.1. Was ist ein `enum`?](#11-was-ist-ein-enum)
-  - [1.2. Konvertierung zu `int`](#12-konvertierung-zu-int)
-  - [1.3. Beispiel Menüsystem mit `enum`](#13-beispiel-menüsystem-mit-enum)
-  - [1.4. Zusammenfassung](#14-zusammenfassung)
+  - [1.1. E-Book](#11-e-book)
+  - [1.2. Was ist ein `enum`?](#12-was-ist-ein-enum)
+  - [1.3. Konvertierung zu `int`](#13-konvertierung-zu-int)
+  - [1.4. Beispiel Menüsystem mit `enum`](#14-beispiel-menüsystem-mit-enum)
+  - [1.5. Zusammenfassung](#15-zusammenfassung)
 - [2. Aufgaben](#2-aufgaben)
   - [2.1. Aufgabe Programmsteuerung](#21-aufgabe-programmsteuerung)
   - [2.2. Aufgabe Ampelsteuerung](#22-aufgabe-ampelsteuerung)
@@ -15,7 +16,11 @@
 
 # 1. Aufzählungstypen (enum)
 
-## 1.1. Was ist ein `enum`?
+## 1.1. E-Book
+
+![7.2.5 Aufzählungstypen](./x_gitres/k07-datentypen-und-variablen-in-c.pdf)
+
+## 1.2. Was ist ein `enum`?
 
 - Der Schlüsselwort `enum` (kurz für "enumeration", dt. Aufzählung) ermöglicht es in C, benannte ganzzahlige Konstanten zu definieren.
 - Es handelt sich dabei um eine **benutzerdefinierte Datendefinition**, die **lesbare Namen** für ganzzahlige Werte zur Verfügung stellt.
@@ -60,7 +65,7 @@ enum Wochentag tag = MITTWOCH;
 if (tag == MITTWOCH) { printf("Heute ist Mittwoch.\n"); }
 ```
 
-## 1.2. Konvertierung zu `int`
+## 1.3. Konvertierung zu `int`
 
 Ein enum-Wert ist intern ein `int`. Man kann ihn direkt als Zahl behandeln:
 
@@ -70,7 +75,7 @@ printf("Zahlenwert von FEHLER: %d\n", FEHLER);  // Ausgabe: 10
 int code = zustand;  // implizite Konvertierung enum → int
 ```
 
-## 1.3. Beispiel Menüsystem mit `enum`
+## 1.4. Beispiel Menüsystem mit `enum`
 
 ```c
 #include <stdio.h>
@@ -111,7 +116,7 @@ int main() {
 }
 ```
 
-## 1.4. Zusammenfassung
+## 1.5. Zusammenfassung
 
 | **Aspekt**            | **Beschreibung**                                 |
 | :-------------------- | :----------------------------------------------- |
