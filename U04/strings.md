@@ -27,7 +27,7 @@
 
 ## 1.1. E-Book
 
-![Fortgeschrittene Programmierung mit Pointer](./x_gitres/k12-fortgeschrittene-programmierung-mit-pointern)
+![Fortgeschrittene Programmierung mit Pointer](./x_gitres/k12-fortgeschrittene-programmierung-mit-pointern.pdf)
 
 ## 1.1. Definition von Strings in C
 
