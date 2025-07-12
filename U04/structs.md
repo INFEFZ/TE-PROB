@@ -247,9 +247,10 @@ int main() {
 | **Lösungselemente** | Funktionierendes Programm                                      |
 
 Studiere das folgende Programm:
-a) Welche Codezeilen werden einen Fehler erzeugen? Überprüfe Ihre Annahmen mit Hilfe des Compilers.
-b) Korrigiere die Fehler, sodass das Programm lauffähig wird.
-c) Was wird nun ausgegeben werden? Überprüfe Ihre Annahmen miteinem Programmdurchlauf.
+
+- Welche Codezeilen werden einen Fehler erzeugen? Überprüfe Ihre Annahmen mit Hilfe des Compilers.
+- Korrigiere die Fehler, sodass das Programm lauffähig wird.
+- Was wird nun ausgegeben werden? Überprüfe Ihre Annahmen miteinem Programmdurchlauf.
 
 ```c
 #include <stdio.h>
