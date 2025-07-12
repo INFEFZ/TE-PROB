@@ -60,7 +60,7 @@ struct Person {
 
 - Darstellung von Datensätzen (z. B. eine Kundenkartei)
 - Verwendung in Verketteten Listen, Bäumen oder Stacks
-- Grundlage für Datenstrukturen in größeren Projekten
+- Grundlage für Datenstrukturen in grösseren Projekten
 - Übergabe komplexer Daten an Funktionen
 - Paketieren von Informationen, z. B. beim Serialisieren
 

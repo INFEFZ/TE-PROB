@@ -97,7 +97,7 @@ if (systemStatus.fehler) {
 systemStatus.bereit = 1;
 ```
 
-> **Man kann Bitfelder lesen und schreiben wie normale Variablen. Werte außerhalb der Bitgröße werden automatisch abgeschnitten.**
+> **Man kann Bitfelder lesen und schreiben wie normale Variablen. Werte ausserhalb der Bitgrösse werden automatisch abgeschnitten.**
 
 ## 1.8. Beispiel: Flags für Systemstatus
 

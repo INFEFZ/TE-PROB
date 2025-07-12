@@ -4,10 +4,10 @@
 
 - [1. String (Zeichenketten)](#1-string-zeichenketten)
   - [1.1. E-Book](#11-e-book)
-  - [1.1. Definition von Strings in C](#11-definition-von-strings-in-c)
+  - [1.1. Definition von Strings](#11-definition-von-strings)
   - [1.2. Deklaration von Strings](#12-deklaration-von-strings)
   - [1.3. Initialisierung von Strings](#13-initialisierung-von-strings)
-  - [1.4. String-Terminierung (\\0)](#14-string-terminierung-0)
+  - [1.4. String-Terminierung (`\0`)](#14-string-terminierung-0)
   - [1.5. Ein- und Ausgabe von Strings](#15-ein--und-ausgabe-von-strings)
   - [1.6. Wichtige String-Funktionen in C (aus `<string.h>`)](#16-wichtige-string-funktionen-in-c-aus-stringh)
   - [1.7. Beispiele zu String-Funktionen](#17-beispiele-zu-string-funktionen)
@@ -23,13 +23,13 @@
 # 1. String (Zeichenketten)
 
 - In der Programmiersprache C gibt es **keine** eigene String-Datentypen wie in modernen Sprachen (z. B. String in Java).
-- Stattdessen werden Zeichenketten (Strings) in C als **Arrays von Zeichen (char)**dargestellt, die mit einem speziellen **Abschlusszeichen** `'\0'` (Null-Byte) terminiert werden.
+- Stattdessen werden Zeichenketten (Strings) in C als **Arrays von Zeichen (char)** dargestellt, die mit einem speziellen **Abschlusszeichen** `'\0'` (Null-Byte) terminiert werden.
 
 ## 1.1. E-Book
 
 ![Fortgeschrittene Programmierung mit Pointer](./x_gitres/k12-fortgeschrittene-programmierung-mit-pointern.pdf)
 
-## 1.1. Definition von Strings in C
+## 1.1. Definition von Strings
 
 - Ein String ist in C eine **Abfolge von Zeichen**, die im Speicher als **char**-Array gespeichert wird.
 - Das **letzte Zeichen** eines Strings ist immer das Null-Zeichen **`'\0'`**, das das Ende der Zeichenkette markiert.
@@ -51,7 +51,7 @@ char wort[10];  // Platz für 9 Zeichen + '\0'
 **Mit Initialisierung:**
 
 ```c
-char wort[] = "Hallo";  // Automatische Größe: 6 (inkl. '\0')
+char wort[] = "Hallo";  // Automatische Grösse: 6 (inkl. '\0')
 
 // Wichtig:
 char wort[] = {'H', 'a', 'l', 'l', 'o'};  // KEIN String, da '\0' fehlt
@@ -75,11 +75,11 @@ char text2[] = {'T', 'e', 's', 't', '\0'};  // Manuelle Termination
 
 > **Ein String muss das Nullzeichen '\0' enthalten, sonst verhalten sich String-Funktionen undefiniert.**
 
-## 1.4. String-Terminierung (\0)
+## 1.4. String-Terminierung (`\0`)
 
 - Das Zeichen `'\0'` markiert das Ende eines Strings.
 - Alle Funktionen der Standardbibliothek wie `strlen()`, `printf()`, `strcpy()` usw. verlassen sich auf dieses Terminierungszeichen.
-- Wenn ein `char[]` **nicht** mit `'\0'` abgeschlossen ist, führen String-Operationen zu undefiniertem Verhalten
+- Wenn ein `char[]` **nicht** mit `'\0'` abgeschlossen ist, führen String-Operationen zu **undefiniertem Verhalten**.
 
 ```c
 char falsch[] = {'H', 'i'};  // Kein '\0' -> kein gültiger String
@@ -112,7 +112,7 @@ char zeile[100];
 fgets(zeile, 100, stdin);  // Liest auch Leerzeichen mit
 ```
 
-> **fgets() speichert den Zeilenumbruch \n mit, wenn Platz ist. Eventuell muss dieser entfernt werden.**
+> **fgets() speichert den Zeilenumbruch **\n** mit, wenn Platz ist. Eventuell muss dieser entfernt werden.**
 
 ## 1.6. Wichtige String-Funktionen in C (aus `<string.h>`)
 
