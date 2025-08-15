@@ -58,11 +58,11 @@ Effiziente Sortier- und Suchalgorithmen sind entscheidend für:
 
 ![Komplexitätsklasse](./x_gitres/big-o-notation.png)
 
-- **O(1)** → Konstante Zeit, unabhängig von der Eingabegröße
+- **O(1)** → Konstante Zeit, unabhängig von der Eingabegrösse
 - **O(log n)** → Logarithmisch, wächst sehr langsam
 - **O(n)** → Linear, Aufwand steigt proportional zu
 - **O(n log n)** → „Fast linear“, oft bei effizienten Sortierverfahren
-- **O(n^2)** → Quadratisch, Aufwand wächst stark bei größeren Datenmengen
+- **O(n^2)** → Quadratisch, Aufwand wächst stark bei grösseren Datenmengen
 
 ![Komplexitätsklasse](./x_gitres/big-o-notation-graphic.png)
 
@@ -169,7 +169,7 @@ void main() {
 - **Laufzeit**
   - 𝑂(𝑛 log⁡𝑛)
 - **Einsatz**
-  - Große Datenmengen, besonders bei externer Sortierung.
+  - Grosse Datenmengen, besonders bei externer Sortierung.
 
 ### 1.7.5. Quicksort
 
@@ -183,7 +183,7 @@ void main() {
 ![Quick-Sort Ablauf](./x_gitres/quick-sort-1.png)
 
 - **Prinzip**
-  - Wählt ein Pivot-Element, teilt die Liste in kleiner/gleich und größer, sortiert rekursiv.
+  - Wählt ein Pivot-Element, teilt die Liste in kleiner/gleich und grösser, sortiert rekursiv.
 - **Laufzeit**
   - Best/Average Case: 𝑂(𝑛 log⁡𝑛)
   - Worst Case: 𝑂(𝑛2) (ungünstige Pivot-Wahl)
@@ -193,7 +193,7 @@ void main() {
 ### 1.7.6. Heapsort
 
 - **Prinzip**
-  - Bildet einen Heap (Max-Heap oder Min-Heap) und entnimmt schrittweise das größte/kleinste Element.
+  - Bildet einen Heap (Max-Heap oder Min-Heap) und entnimmt schrittweise das grösste/kleinste Element.
 - **Laufzeit**
   - 𝑂(𝑛log⁡𝑛)
 - **Einsatz**
@@ -206,7 +206,7 @@ void main() {
 | Bubblesort    | O(n)          | O(n²)            | O(n²)          | O(1)               | Ja         | Sehr kleine Listen         |
 | Selectionsort | O(n²)         | O(n²)            | O(n²)          | O(1)               | Nein       | Sehr kleine Listen         |
 | Insertionsort | O(n)          | O(n²)            | O(n²)          | O(1)               | Ja         | Kleine oder fast sortierte |
-| Mergesort     | O(n log n)    | O(n log n)       | O(n log n)     | O(n)               | Ja         | Große Datenmengen          |
+| Mergesort     | O(n log n)    | O(n log n)       | O(n log n)     | O(n)               | Ja         | Grosse Datenmengen         |
 | Quicksort     | O(n log n)    | O(n log n)       | O(n²)          | O(log n)           | Nein       | Allgemein, sehr schnell    |
 | Heapsort      | O(n log n)    | O(n log n)       | O(n log n)     | O(1)               | Nein       | Speicherarme Anwendungen   |
 | Counting Sort | O(n + k)      | O(n + k)         | O(n + k)       | O(n + k)           | Ja         | Ganzzahlen mit kleinem k   |
