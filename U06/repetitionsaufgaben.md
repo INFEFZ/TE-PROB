@@ -4,19 +4,64 @@
 
 ---
 
-# Funktionen - Simulation von call by reference. Funktionsprototyp
+# 1. Kapitalbildung II
 
-| **Vorgabe**         | **Beschreibung**                                                        |
-| :------------------ | :---------------------------------------------------------------------- |
-| **Lernziele**       | Kennt die Möglichkeiten zur Modularisierung und Strukturierung von Code |
-|                     | Kann Funktionen mit und ohne Parameter implementieren                   |
-|                     | Kann Funktionen korrekt aufrufen                                        |
-|                     | Kann zwischen "call by value" und "call by pointer" unterscheiden       |
-| **Sozialform**      | Einzelarbeit                                                            |
-| **Auftrag**         | siehe unten                                                             |
-| **Hilfsmittel**     |                                                                         |
-| **Zeitbedarf**      | 20min                                                                   |
-| **Lösungselemente** | Funktionierendes Programm                                               |
+Ein Kapital von 2800 CHF wird angelegt. Der Zinssatz sei 3.2 Prozent. 
+Wie hoch ist das Endkapital nach einem Jahr?
+Lösen Sie die Aufgabe mit einen C-Konsolen-Programm. Uebergeben sie die Parameter via Konsole.
+
+Die Formel dafür ist folgende:
+
+![Formel](./x_gitres/repititionsaufgabe-kapitalbildung.png)
+
+---
+
+# 2. Volumenberechnung
+
+Berechnen Sie das Volumen eines Körpers.
+Es wird die Länge, Breite und Höhe in m als Parameter übergeben.
+Lösen Sie die Aufgabe als C-Konsolen-Programm.
+
+---
+
+# 3. Bremswegberechnung
+
+Berechne Sie den Bremsweg bei einer vorgegebenen Verzögerung in m/s2 und mit einer Zeit in s mit der Formel.
+Lösen Sie die Aufgabe mit einem C-Konsolen-Programm.
+
+![Formel](./x_gitres/repititionsaufgabe-bremswegberechnung.png)
+
+---
+
+# 4. Erweiterter Taschenrechner
+
+Implementieren Sie einen Taschenrechner der zuerst nach der 1. Zahl fragt. Dann nach dem Operanden und dann nach der 2. Zahl. 
+Es sind folgende Operationen möglich: +, -, * u. /. (Addition. Subtraktion, Multiplikation u. Division). 
+**Tipp**: Sie müssen nach der Eingabe den Eingangspuffer leeren mit `getchar()` Grund: `scanf` leert den Eingangspuffer nicht vollständig, wenn Zahlen eingelesen werden
+
+---
+
+# 5. Wechselkurs
+
+Schreiben Sie ein Programm, dass den Wechselkurs rechnet. Das Programm fragt den Betrag in Schweizer Franken und in welche Währung es umrechnen soll. Unterstütz werden sollen ‘ $’, ‘£’, ‘e’ und ‘E’ für Euro.
+Lösen Sie die Aufgabe mit einem C-Programm. Tipp: Nicht vergessen hier den Eingangspuffer mit `getchar()` zu leeren. Nach jeder Eingabe.
+
+---
+
+# 6. Kreisberechnung
+
+Schreiben Sie eine Funktion `rechne_kreisdaten()`, die den Umfang und die Fläche eines Kreises aus dem Radius berechnet.
+
+- Die Funktion erhält drei Übergabeparameter:
+  - den Radius und zwei Zeiger auf double-Variablen, in welche die Funktion `rechne_kreisdaten()` die Fläche und den Umfang des Kreises zurückschreibt.  
+- Die Ein- und Ausgabe erfolgt in main().
+- Für einen Kreis mit Radius R gilt:
+  - Fläche = `PI * R * R`
+  - Umfang = `2 * PI * R`
+
+---
+
+# 7. Zahlen einlesen
 
 - Das folgende Programm soll zwei float-Zahlen `a` und `b` einlesen und ihren Wert am Bildschirm ausgeben.
 - Für das Einlesen wird die Funktion `einlesen()` verwendet.
@@ -47,44 +92,7 @@ void einlesen (float * x, float * y)
 
 ---
 
-# Übergabeparameter
-
-| **Vorgabe**         | **Beschreibung**                                                        |
-| :------------------ | :---------------------------------------------------------------------- |
-| **Lernziele**       | Kennt die Möglichkeiten zur Modularisierung und Strukturierung von Code |
-|                     | Kann Funktionen mit und ohne Parameter implementieren                   |
-|                     | Kann Funktionen korrekt aufrufen                                        |
-|                     | Kann zwischen "call by value" und "call by pointer" unterscheiden       |
-| **Sozialform**      | Einzelarbeit                                                            |
-| **Auftrag**         | siehe unten                                                             |
-| **Hilfsmittel**     |                                                                         |
-| **Zeitbedarf**      | 20min                                                                   |
-| **Lösungselemente** | Funktionierendes Programm                                               |
-
-Schreiben Sie eine Funktion `rechne_kreisdaten()`, die den Umfang und die Fläche eines Kreises aus dem Radius berechnet.
-
-- Die Funktion erhält drei Übergabeparameter:
-  - den Radius und zwei Zeiger auf double-Variablen, in welche die Funktion `rechne_kreisdaten()` die Fläche und den Umfang des Kreises zurückschreibt.  
-- Die Ein- und Ausgabe erfolgt in main().
-- Für einen Kreis mit Radius R gilt:
-  - Fläche = `PI * R * R`
-  - Umfang = `2 * PI * R`
-
----
-
-# Funktionen - Rückgabe mit return und über die Parameterliste
-
-| **Vorgabe**         | **Beschreibung**                                                        |
-| :------------------ | :---------------------------------------------------------------------- |
-| **Lernziele**       | Kennt die Möglichkeiten zur Modularisierung und Strukturierung von Code |
-|                     | Kann Funktionen mit und ohne Parameter implementieren                   |
-|                     | Kann Funktionen korrekt aufrufen                                        |
-|                     | Kann zwischen "call by value" und "call by pointer" unterscheiden       |
-| **Sozialform**      | Einzelarbeit                                                            |
-| **Auftrag**         | siehe unten                                                             |
-| **Hilfsmittel**     |                                                                         |
-| **Zeitbedarf**      | 20min                                                                   |
-| **Lösungselemente** | Funktionierendes Programm                                               |
+# 8. Durchschnittsberechnung
 
 - Das folgende Programm dient zur Berechnung des Durchschnitts von 10 int-Zahlen, die im Dialog eingegeben werden.
 - Der berechnete Durchschnitt wird von der Funktion `durchschnitt1()` über die Parameterliste und von der Funktion `durchschnitt2()` mit return zurückgegeben.
