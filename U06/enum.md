@@ -28,7 +28,14 @@
 **Beispiel:**
 
 ```c
-enum Wochentag { MONTAG, DIENSTAG, MITTWOCH, DONNERSTAG, FREITAG };
+enum Wochentag { MONTAG, DIENSTAG, MITTWOCH, DONNERSTAG, FREITAG, SAMSTAG, SONNTAG };
+
+int main() 
+{
+    enum Wochentag heute = MITTWOCH;
+    printf("Heute ist Tag-Nummer: %d\n", heute);
+    return 0;
+}
 ```
 
 **Dabei erhält:**
@@ -40,9 +47,20 @@ enum Wochentag { MONTAG, DIENSTAG, MITTWOCH, DONNERSTAG, FREITAG };
 
 > **Standardmässig beginnt die Zählung bei 0, kann aber auch manuell festgelegt werden.**
 
+Die Zählung kann aber auch angepasst werden:
+
+```c
+enum Wochentag { MONTAG = 1, DIENSTAG, MITTWOCH, DONNERSTAG, FREITAG, SAMSTAG, SONNTAG };
+
+```
+
 </br>
 
 **Sinn und Zweck:**
+
+Farben oder Zustände (Ampel, Spielzustände, Menüpunkte) sind sehr einprägsam.
+Immer zeigen, dass **enum** → **Lesbarkeit + Wartbarkeit** bringt.
+Mit `printf` und `%d` sichtbar machen, dass es intern ganze Zahlen sind.
 
 | **Vorteil**          | **Beschreibung**                                             |
 | :------------------- | :----------------------------------------------------------- |
@@ -117,6 +135,8 @@ int main() {
 ```
 
 ## 1.5. Zusammenfassung
+
+> **enum** = Sprechende Namen für Zahlen → lesbarer, sicherer, wartbarer Code.
 
 | **Aspekt**            | **Beschreibung**                                 |
 | :-------------------- | :----------------------------------------------- |

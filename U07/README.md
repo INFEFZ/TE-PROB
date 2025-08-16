@@ -36,9 +36,3 @@
 - Grundstruktur u. Eigenschaften
 - Types Anwendungen
 - Übungsaufgaben
-
-## Kickoff Praxisarbeit
-
-- Gruppenzuteilung
-- Termine
-- Bewertung

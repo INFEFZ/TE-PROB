@@ -32,3 +32,11 @@
 - Vorteile
 - Code Beispiele
 - Übungsaufgaben
+
+## [Kickoff Praxisarbeit](./x_gitres/Praxisarbeit%20PV.A.A.A.46_N-ZH-S2504-PROB.TA1A.pdf)
+
+- Einzelarbeit
+- Word-Template - Dokumentstruktur
+- Lieferumfang beachten - wichtig
+- Abgabetermin: **5. Oktober 2025, 23:56 Uhr**
+- [Bewertung](./x_gitres/bewertung-praxisarbeit.png)

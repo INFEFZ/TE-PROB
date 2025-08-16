@@ -13,6 +13,7 @@
   - [1.8. Beispiel: Flags für Systemstatus](#18-beispiel-flags-für-systemstatus)
   - [1.9. Bitfelder und Platzersparnis – Beispielvergleich](#19-bitfelder-und-platzersparnis--beispielvergleich)
   - [1.10. Einschränkungen und Hinweise](#110-einschränkungen-und-hinweise)
+  - [1.11. Zusammenfassung](#111-zusammenfassung)
 - [2. Aufgaben](#2-aufgaben)
   - [2.1. Aufgabe SmartLight](#21-aufgabe-smartlight)
 
@@ -25,6 +26,9 @@
 ![Strukturen, Unionen und Bitfelder](./x_gitres/k13-strukturen-unionen-und-bitfelder.pdf)
 
 ## 1.2. Was sind Bitfelder (Bitfields)?
+
+Was haben Ampeln, Schalter oder Spielfiguren im Computerspiel gemeinsam?. Sie haben oft nur zwei Zustände (an/aus, rot/grün/gelb, lebt/tot).
+Für so etwas braucht man nur 1 Bit, aber ein `int` **verschwendet 32 oder 64 Bits**.
 
 - Ein **Bitfeld** in C ist eine Möglichkeit, mehrere Werte (normalerweise Flags oder kleine Ganzzahlen) in einer Struktur platzsparend auf Bit-Ebene zu speichern.
 - Statt jedem Wert ein ganzes Byte oder Word zuzuweisen, kann man z.B. sagen: "Dieser Wert braucht nur 1 Bit."
@@ -65,6 +69,20 @@ struct Status {
     unsigned int fehler : 1;
     unsigned int bereit : 1;
     unsigned int aktiv  : 1;
+};
+
+struct Fahrzeug {
+    unsigned int licht : 1;
+    unsigned int motor : 1;
+    unsigned int tuer  : 1;
+    unsigned int gänge : 3;  // Werte 0-7 möglich
+};
+
+struct Waschmaschine {
+    unsigned int wasserEin : 1;
+    unsigned int pumpeAn   : 1;
+    unsigned int heizung   : 1;
+    unsigned int programm  : 3; // 0-7
 };
 ```
 
@@ -157,6 +175,35 @@ struct FlagsBitfield {
 | **Kein Zeiger auf Bitfelder** | Man kann **keine Adresse** eines Bitfelds nehmen (`&struct.bf` ist nicht erlaubt)                              |
 | **Nur ganze Typen**           | Nur `int`, `unsigned int`, `signed int` (und Varianten wie `short`, `char`) erlaubt                            |
 | **Kein Array von Bitfeldern** | Bitfelder können **nicht direkt** als Arrays verwendet werden                                                  |
+
+## 1.11. Zusammenfassung
+
+Warum sollte man Speicher sparen, wenn heutige PCs doch Gigabytes haben?
+Bei Embedded Systems, Mikrocontroller, Netzwerke, Spieleentwicklung zählt jedes Bit, Speicher ist knapp!
+
+```c
+// 12 Byte nur für 3 kleine Zustände (an/aus)!
+struct Fahrzeug {
+    unsigned int licht;  // braucht 4 Byte
+    unsigned int motor;  // braucht 4 Byte
+    unsigned int tuer;   // braucht 4 Byte
+};
+
+// Alles zusammen passt in nur 1 Byte.
+struct Fahrzeug {
+    unsigned int licht : 1;  // 1 Bit
+    unsigned int motor : 1;  // 1 Bit
+    unsigned int tuer  : 1;  // 1 Bit
+    unsigned int gaenge: 3;  // 0–7
+};
+```
+
+```console
+Bit:   [8]  [7]  [6]   [5]   [4]   [3]  [2]   [1]   [0]
+Feld:  leer leer leer gänge gänge gänge tuer motor licht
+```
+
+> **Bitfelder helfen, Speicher zu sparen und Information kompakt zu speichern.**
 
 ---
 
