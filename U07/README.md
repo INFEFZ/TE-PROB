@@ -49,3 +49,19 @@
 - Arten von Bäumen
 - Grundstruktur eines Baumes
 - Operationen auf Bäumen
+
+## Ankündigung Teilprüfung
+
+- Findet am 6.9.2025 statt
+- Ohne elektronische Hilfsmittel, nur Papier u. Stift erlaubt
+- Zeit: ca. 60 min
+- Allg. Fragen zu Programmcode (roter Faden)
+  . Kontrollfluss Elemente wie if, else, for, while
+  - Datentyp Konvertierungen
+  - Global u. lokale Variablen
+  - strings bzw. char arrays
+  - Arrays
+  - Pointer
+  - Benutzerdefinierte Datentypen struct, enum
+  - Modularisierung und Funktionen
+  - Rekursion
