@@ -15,7 +15,7 @@
   - [1.10. Beispiel Strukturen binär speichern](#110-beispiel-strukturen-binär-speichern)
   - [1.11. Übersicht der Dateifunktionen](#111-übersicht-der-dateifunktionen)
 - [2. Aufgaben](#2-aufgaben)
-  - [2.1. Textanalyse einer Datei](#21-textanalyse-einer-datei)
+  - [2.1. Textanalyse (Datei)](#21-textanalyse-datei)
   - [2.2. Formatierte Zeichenkette in Datei schreiben](#22-formatierte-zeichenkette-in-datei-schreiben)
   - [2.3. Formatierte Zeichenkette aus Datei lesen](#23-formatierte-zeichenkette-aus-datei-lesen)
   - [2.4. Einfache Logdatei schreiben und lesen](#24-einfache-logdatei-schreiben-und-lesen)
@@ -29,7 +29,7 @@
 
 ## 1.1. E-Book
 
-Kapitel 16
+![K16-Ein und Ausgabe](./x_gitres/k16-ein-und-ausgabe.pdf)
 
 ## 1.2. EVA-Prinzip
 
@@ -317,7 +317,7 @@ void read_kunden(const char *pfad) {
 
 # 2. Aufgaben
 
-## 2.1. Textanalyse einer Datei
+## 2.1. Textanalyse (Datei)
 
 | **Vorgabe**         | **Beschreibung**                               |
 | :------------------ | :--------------------------------------------- |
@@ -330,7 +330,7 @@ void read_kunden(const char *pfad) {
 | **Zeitbedarf**      | 40min                                          |
 | **Lösungselemente** |                                                |
 
-Schreibe ein C-Programm welches eine `Beispieldatei.txt` einliest die Anzahl Wörter, Anzahl Zeichen und Anzahl Zeilen herausgibt.
+Schreibe ein C-Programm, welches eine `Beispieldatei.txt` einliest die Anzahl Wörter, Anzahl Zeichen und Anzahl Zeilen herausgibt.
 
 ## 2.2. Formatierte Zeichenkette in Datei schreiben
 
@@ -345,7 +345,7 @@ Schreibe ein C-Programm welches eine `Beispieldatei.txt` einliest die Anzahl Wö
 | **Zeitbedarf**      | 30min                                                 |
 | **Lösungselemente** |                                                       |
 
-Schreibe ein C-Programm welches in eine `Output.txt`-Datei folgendes ausgibt:
+Schreibe ein C-Programm, welches folgende formatierte Textzeilen in einer `Output.txt`-Datei speichert:
 
 ```console
 Ganzzahl (dezimal): 20

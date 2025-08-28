@@ -2,7 +2,7 @@
 | --------------------------- | ------------------------ | -------------------------------------- |
 | **Elektrotechniker/-in HF** | **Programmiertechnik A** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
 
-- [1. Windows GUI Anwendung](#1-windows-gui-anwendung)
+- [1. Windows GUI Anwendung (Grafische Benutzeroberfläche)](#1-windows-gui-anwendung-grafische-benutzeroberfläche)
   - [1.1. Einführung](#11-einführung)
   - [1.2. Voraussetzungen](#12-voraussetzungen)
     - [1.2.1. Installation .NET 8 SDK](#121-installation-net-8-sdk)
@@ -24,7 +24,7 @@
 
 </br>
 
-# 1. Windows GUI Anwendung
+# 1. Windows GUI Anwendung (Grafische Benutzeroberfläche)
 
 ## 1.1. Einführung
 

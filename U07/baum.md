@@ -4,7 +4,7 @@
 
 - [1. Baumstruktur](#1-baumstruktur)
   - [1.1. Was ist eine Baumstruktur](#11-was-ist-eine-baumstruktur)
-  - [1.2. Eigenschaften einer Stack-Struktur](#12-eigenschaften-einer-stack-struktur)
+  - [1.2. Eigenschaften einer Baum-Struktur](#12-eigenschaften-einer-baum-struktur)
   - [1.3. Arten von Bäumen](#13-arten-von-bäumen)
   - [1.4. Grundstruktur eines Baumes](#14-grundstruktur-eines-baumes)
   - [1.5. Operationen auf Bäumen](#15-operationen-auf-bäumen)
@@ -27,7 +27,7 @@
 - Die Knoten sind durch **Kanten (edges)** verbunden, wobei es einen einzigen **Wurzelknoten (root)** gibt, von dem aus alle anderen Knoten erreichbar sind.
 - Ein Baum modelliert eine **Eltern-Kind-Beziehung**: Jeder Knoten kann null oder mehr Kindknoten besitzen.
 
-## 1.2. Eigenschaften einer Stack-Struktur
+## 1.2. Eigenschaften einer Baum-Struktur
 
 - Keine Zyklen: Es gibt keinen Weg, bei dem man von einem Knoten über Kanten wieder zu sich selbst zurückkehrt.
 - Eindeutiger Pfad zwischen der Wurzel und jedem anderen Knoten.
@@ -48,7 +48,7 @@
 
 - Die Elemente werden in einer Baumstruktur unter einem Wurzelknoten in einer Eltern-Kind Beziehung eingeordnet.
 
-**Grundstrukturelemente**
+**Grundstrukturelemente:**
 
 ![Baumstruktur](./x_gitres/tree-elements.png)
 
@@ -58,6 +58,7 @@
 ![Navigation](./x_gitres/binarytree-navigation.png)
 
 Die Reihenfolge der Knotenelemente folgt einer bestimmten Ordnung
+
 - Beispiel: Ebene 0 = Wuzel = 1 Ziffer / Ebene 1 = 2 Ziffern / Ebene 2 = 3 Ziffern, Nummern werden von rechts nach links verteilt
 
 ![Ordnung der Elemente](./x_gitres/tree-sequence-order.png)
@@ -68,19 +69,14 @@ Die Reihenfolge der Knotenelemente folgt einer bestimmten Ordnung
 - Löschen von Knoten.
 - **Suchen nach einem bestimmten Wert.**
   - ![Suchen](./x_gitres/binarytree-search.png)
-  - ---
 - **Traversieren (Durchlaufen) des Baumes:**
   - ![Varianten](./x_gitres/binarytree-traversing.png)
-  - ---
   - **Preorder (Wurzel → Links → Rechts)**
     - ![Preorder](./x_gitres/binarytree-preorder.png)
-    - ---
   - **Inorder (Links → Wurzel → Rechts)**
     - ![Inorder](./x_gitres/binarytree-inorder.png)
-    - ---
   - **Postorder (Links → Rechts → Wurzel)**
     - ![Postorder](./x_gitres/binarytree-postorder.png)
-    - ---
 
 ## 1.6. Typische Anwendungen einer Stack-Struktur
 
@@ -152,7 +148,6 @@ struct Node* minValueNode(struct Node* node) {
         current = current->left;
     return current;
 }
-
 ```
 
 ## 1.9. Beispiel Binärbaumstruktur

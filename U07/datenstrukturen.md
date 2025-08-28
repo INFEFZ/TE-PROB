@@ -145,17 +145,17 @@ Eine Vielzahl von Datenstrukturen und Algorithmen werden auf [Data Structure Vis
 
 Setze dich intensiv mit der zugeteilten Datenstruktur auseinander, analysiere deren Aufbau und Funktionsweise und präsentiere deine Ergebnisse in einer kurzen Präsentation.
 
-- Liste (einfach und doppelt verkettet)
+- **Liste (einfach und doppelt verkettet)**
   - [Linked List Visualizer](https://vonvista.github.io/Linked-List/)
   - [Visualgo](https://visualgo.net/en/list?slide=3)
-- Stack
+- **Stack**
   - [Stack (Array)](https://www.cs.usfca.edu/~galles/visualization/StackArray.html)
   - [Stack (Linked List)](https://www.cs.usfca.edu/~galles/visualization/StackLL.html)
-- Queue
+- **Queue**
   - [Queue (Array)](https://www.cs.usfca.edu/~galles/visualization/QueueArray.html)
   - [Queue (List)](https://www.cs.usfca.edu/~galles/visualization/QueueLL.html)
-- Baum Binärbaum
+- **Baum Binärbaum**
   - [AVL Tree](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)
-- B+ Baum
+- **B+ Baum**
   - [B Trees](https://www.cs.usfca.edu/~galles/visualization/BTree.html)
   - [B+ Trees](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html)

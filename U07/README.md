@@ -22,7 +22,7 @@
 - Stack
 - Übungsaufgaben
 
-## Listen
+## [Listen](./verkette-listen.md)
 
 - Varianten der Datenstruktur
 - Einfach verkettete Liste
@@ -31,7 +31,14 @@
 - Doppelt verkettete Liste
 - Übungsaufgaben
 
-## Queue und Stack Datenstruktur
+## [Baum](./baum.md)
+
+- Eigenschaften einer Baum-Struktur
+- Arten von Bäumen
+- Grundstruktur eines Baumes
+- Operationen auf Bäumen
+
+## [Queue und Stack Datenstruktur](./queue-stack.md)
 
 - Grundstruktur u. Eigenschaften
 - Types Anwendungen

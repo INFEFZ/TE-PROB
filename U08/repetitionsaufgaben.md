@@ -6,7 +6,7 @@
 
 # 1. Kapitalbildung II
 
-Ein Kapital von 2800 CHF wird angelegt. Der Zinssatz sei 3.2 Prozent. 
+Ein Kapital von 2800 CHF wird angelegt. Der Zinssatz sei 3.2 Prozent.
 Wie hoch ist das Endkapital nach einem Jahr?
 Lösen Sie die Aufgabe mit einen C-Konsolen-Programm. Uebergeben sie die Parameter via Konsole.
 
@@ -35,8 +35,8 @@ Lösen Sie die Aufgabe mit einem C-Konsolen-Programm.
 
 # 4. Erweiterter Taschenrechner
 
-Implementieren Sie einen Taschenrechner der zuerst nach der 1. Zahl fragt. Dann nach dem Operanden und dann nach der 2. Zahl. 
-Es sind folgende Operationen möglich: +, -, * u. /. (Addition. Subtraktion, Multiplikation u. Division). 
+Implementieren Sie einen Taschenrechner der zuerst nach der 1. Zahl fragt. Dann nach dem Operanden und dann nach der 2. Zahl.
+Es sind folgende Operationen möglich: +, -, * u. /. (Addition. Subtraktion, Multiplikation u. Division).
 **Tipp**: Sie müssen nach der Eingabe den Eingangspuffer leeren mit `getchar()` Grund: `scanf` leert den Eingangspuffer nicht vollständig, wenn Zahlen eingelesen werden
 
 ---

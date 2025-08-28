@@ -14,12 +14,17 @@
 
 - Einführung
 - Gross O-Notation
-- Direktes Auswählen
-  - Einfach verkettete Liste
-  - Doppelt verkettete Liste
-- Baum
-  - Binärbaum
-  - B+ Baum
-- Queue
-- Stack
+- Direktes Auswählen (Selection-Sort)
+- Wichtige Sortierverfahren
+  - Bubblesort
+  - Selectionsort
+  - Insertionsort
+  - Mergesort
+  - Quicksort
+  - Heapsort
+- Implementierung
 - Übungsaufgaben
+
+## [Repetitionsaufgaben](./repetitionsaufgaben.md)
+
+- Aufgaben lösen und der Klasse präsentieren
