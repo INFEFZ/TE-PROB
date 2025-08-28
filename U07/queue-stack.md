@@ -1,6 +1,6 @@
 |                             |                          |                                        |
 | --------------------------- | ------------------------ | -------------------------------------- |
-| **Elektrotechniker/-in HF** | **Programmiertechnik A** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
+| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
 
 - [1. Stack](#1-stack)
   - [1.1. Was ist ein Stack](#11-was-ist-ein-stack)

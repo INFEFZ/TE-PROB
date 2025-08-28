@@ -1,6 +1,6 @@
 |                             |                          |                                        |
 | --------------------------- | ------------------------ | -------------------------------------- |
-| **Elektrotechniker/-in HF** | **Programmiertechnik A** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
+| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
 
 - [1. Windows GUI Anwendung (Grafische Benutzeroberfläche)](#1-windows-gui-anwendung-grafische-benutzeroberfläche)
   - [1.1. Einführung](#11-einführung)

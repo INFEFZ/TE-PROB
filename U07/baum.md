@@ -1,6 +1,6 @@
 |                             |                          |                                        |
 | --------------------------- | ------------------------ | -------------------------------------- |
-| **Elektrotechniker/-in HF** | **Programmiertechnik A** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
+| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
 
 - [1. Baumstruktur](#1-baumstruktur)
   - [1.1. Was ist eine Baumstruktur](#11-was-ist-eine-baumstruktur)

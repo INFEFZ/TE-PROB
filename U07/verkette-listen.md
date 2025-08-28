@@ -1,6 +1,6 @@
 |                             |                          |                                        |
 | --------------------------- | ------------------------ | -------------------------------------- |
-| **Elektrotechniker/-in HF** | **Programmiertechnik A** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
+| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
 
 - [1. Verkettete Listen](#1-verkettete-listen)
   - [1.1. Varianten verketteter Listen](#11-varianten-verketteter-listen)
