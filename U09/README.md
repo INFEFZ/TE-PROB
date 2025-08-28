@@ -19,3 +19,14 @@
 - Projekterstellen
 - Beispiel
 - Übungsaufgaben
+
+## [Ein- und Ausgabe](./ein-ausgabe.md)
+
+- EVA-Prinzip
+- Grundlagen & Begriffe
+- Dateioperationen
+  - Öffnen und schliessen
+  - Lesen u. schreiben
+- Timestamp / Logdateien
+- Binäre Dateien
+- Übungsaufgaben

@@ -72,7 +72,7 @@ dotnet run
 
 ## 1.5. WPF (Windows Presentation Foundation)
 
-WPF (Windows Presentation Foundation) ist ein Framework von Microsoft zur Entwicklung von grafischen Benutzeroberflächen (GUI) für Windows-Anwendungen. 
+WPF (Windows Presentation Foundation) ist ein Framework von Microsoft zur Entwicklung von grafischen Benutzeroberflächen (GUI) für Windows-Anwendungen.
 Es ist Teil des .NET-Frameworks bzw. .NET (Core/5/6/7/8) und wurde entwickelt, um moderne, flexible und anpassbare Desktop-Anwendungen zu erstellen.
 
 WPF ist ein mächtiges **UI-Framework** für Windows-Desktopanwendungen, das XAML + C# kombiniert, sehr flexibel ist und sich besonders für Anwendungen mit komplexem User Interface eignet.

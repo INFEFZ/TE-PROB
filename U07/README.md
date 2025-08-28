@@ -22,6 +22,12 @@
 - Stack
 - Übungsaufgaben
 
+## [Gruppenarbeit](./gruppenarbeit-datenstrukturen.md)
+
+- Recherche der Datenstruktur
+- Codebeispiele
+- Präsentation
+
 ## [Listen](./verkette-listen.md)
 
 - Varianten der Datenstruktur
@@ -31,15 +37,15 @@
 - Doppelt verkettete Liste
 - Übungsaufgaben
 
+## [Queue und Stack Datenstruktur](./queue-stack.md)
+
+- Grundstruktur u. Eigenschaften
+- Types Anwendungen
+- Übungsaufgaben
+
 ## [Baum](./baum.md)
 
 - Eigenschaften einer Baum-Struktur
 - Arten von Bäumen
 - Grundstruktur eines Baumes
 - Operationen auf Bäumen
-
-## [Queue und Stack Datenstruktur](./queue-stack.md)
-
-- Grundstruktur u. Eigenschaften
-- Types Anwendungen
-- Übungsaufgaben
