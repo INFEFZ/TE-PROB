@@ -37,7 +37,7 @@
 - Doppelt verkettete Liste
 - Übungsaufgaben
 
-## [Queue und Stack Datenstruktur](./queue-stack.md)
+## [Queue und Stack](./queue-stack.md)
 
 - Grundstruktur u. Eigenschaften
 - Types Anwendungen
