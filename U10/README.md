@@ -22,6 +22,7 @@
   - Benutzerdefinierte Datentypen struct, enum
   - Modularisierung und Funktionen
   - Rekursion
+  - Sortierung
   
 ## [Dynamische Speicherverwaltung](dynamische-speicherverwaltung.md)
 
