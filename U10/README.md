@@ -32,6 +32,6 @@
   - auto
   - register
   - static
-- Allokation malloc()
+- Allokation `malloc()`
 - Memory Leaks
 - Übungsaufgaben
