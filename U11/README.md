@@ -8,6 +8,18 @@
 
 - Was lernen wir?
 
+## [Ein- und Ausgabe](./ein-ausgabe.md)
+
+- EVA-Prinzip
+- Grundlagen & Begriffe
+- Dateioperationen
+  - Öffnen und schliessen
+  - Lesen u. schreiben
+- Timestamp / Logdateien
+- Binäre Dateien
+- Übungsaufgaben
+
+
 ## [Objektorientierte Programmierung](oop.md)
 
 - Einführung
