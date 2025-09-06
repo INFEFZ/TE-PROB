@@ -107,18 +107,27 @@ WPF ist ein mächtiges **UI-Framework** für Windows-Desktopanwendungen, das XAM
 ### 1.6.1. MainWindow.xaml (Benutzeroberfläche)
 
 ```xml
-<Window x:Class="WpfApp.MainWindow"
+<Window x:Class="MyWpfApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Meine WPF-App" Height="200" Width="300">
-    <Grid>
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyWpfApp"
+        mc:Ignorable="d"
+        Title="Mein erstes WPF Programm"
+        Height="200"
+        Width="400">
+    <StackPanel Margin="10">
+        <Label Content="Name"/>
+        <TextBox Name="TextBox1"
+                 Height="30"
+                 Text="Hello! I am a TextBox.">
+        </TextBox>
         <Button Content="Klick mich"
-                Width="100" Height="40"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
+                Height="40"
                 Click="Button_Click"/>
-    </Grid>
-</Window>
+    </StackPanel>
+</Window>>
 ```
 
 ### 1.6.2. MainWindow.xaml.cs (Code behind)

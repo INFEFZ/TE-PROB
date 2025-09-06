@@ -26,8 +26,12 @@
 ## [Dynamische Speicherverwaltung](dynamische-speicherverwaltung.md)
 
 - Einführung
-- Vor- und Nachteile
-- Klassen u. Objekte
-- Eigenschaften u. Methoden
-- Header (.h) und Implementierungsdatei (.cpp)
+- Linker
+- Extern (globale Variablen)
+- Speicherklasse
+  - auto
+  - register
+  - static
+- Allokation malloc()
+- Memory Leaks
 - Übungsaufgaben
