@@ -38,5 +38,5 @@
 - Einzelarbeit
 - Word-Template - Dokumentstruktur
 - Lieferumfang beachten - wichtig
-- Abgabetermin: **5. Oktober 2025, 23:56 Uhr**
+- Abgabetermin: **5. Oktober 2025, 23:59 Uhr**
 - [Bewertung](./x_gitres/bewertung-praxisarbeit.png)
