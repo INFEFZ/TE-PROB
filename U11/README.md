@@ -19,7 +19,6 @@
 - Binäre Dateien
 - Übungsaufgaben
 
-
 ## [Objektorientierte Programmierung](oop.md)
 
 - Einführung
