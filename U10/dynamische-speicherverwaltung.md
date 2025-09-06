@@ -352,7 +352,7 @@ Das Programm soll die folgenden Schritte ausführen:
 3. **Eingabe der Array-Elemente**
    - Der Benutzer muss nun die Werte für die Elemente des Arrays eingeben.
 4. **Berechne und Ausgabe des Durchschnitts**
-   - Berechne den Durchschnitt der Elemente im Array udn gebe diesen aus.
+   - Berechne den Durchschnitt der Elemente im Array und gebe diesen aus.
 5. **Freigeben des dynamisch zugewiesenen Speichers:**
    - Geben den Speicher am Ende des Programms mit `free()` wieder frei
 
