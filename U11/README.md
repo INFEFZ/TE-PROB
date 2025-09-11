@@ -25,5 +25,5 @@
 - Vor- und Nachteile
 - Klassen u. Objekte
 - Eigenschaften u. Methoden
-- Header (.h) und Implementierungsdatei (.cpp)
+- Header (`.h`) und Implementierungsdatei (`.cpp`)
 - Übungsaufgaben

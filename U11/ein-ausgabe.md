@@ -46,7 +46,7 @@
 - **Pufferung**
   - stdio puffert Ein-/Ausgaben, um Systemaufrufe zu reduzieren.
 - **Flushing**
-  - `fflush(FILE*)` oder automatisch beim Schließen (`fclose`).
+  - `fflush(FILE*)` oder automatisch beim Schliessen (`fclose`).
 - **Text vs. Binär**
   - Unter Windows unterscheidet `fopen` Modi bzgl. Zeilenenden (`"\r\n"` vs. `"\n"`).
   - Für Binärdaten unbedingt `"b"` verwenden (z.B. `"rb"`, `"wb"`).
@@ -118,7 +118,7 @@ void main()
         printf("%s", buffer);
     }
 
-    // Datei schließen
+    // Datei schliessen
     fclose(file);
 }
 ```
@@ -172,7 +172,7 @@ int main()
     fprintf(file, "Dezimal: %d\n", int_value);
     fprintf(file, "Oktal: %o\n", uint_value);
     fprintf(file, "Hexadezimal (klein): %x\n", uint_value);
-    fprintf(file, "Hexadezimal (groß): %X\n", uint_value);
+    fprintf(file, "Hexadezimal (gross): %X\n", uint_value);
     fprintf(file, "Unsigned Dezimal: %u\n", uint_value);
     fprintf(file, "Character: %c\n", char_value);
 
@@ -182,9 +182,9 @@ int main()
     // Ausgabe von Gleitpunktzahlen
     fprintf(file, "Dezimalzahl: %f\n", double_value);
     fprintf(file, "Exponentialzahl (klein): %e\n", double_value);
-    fprintf(file, "Exponentialzahl (groß): %E\n", double_value);
+    fprintf(file, "Exponentialzahl (gross): %E\n", double_value);
     fprintf(file, "Allgemeines Format (klein): %g\n", double_value);
-    fprintf(file, "Allgemeines Format (groß): %G\n", double_value);
+    fprintf(file, "Allgemeines Format (gross): %G\n", double_value);
 
     // Ausgabe von Pointern
     fprintf(file, "Pointer: %p\n", ptr_value);
@@ -197,7 +197,7 @@ int main()
     fprintf(file, "Anzahl der geschriebenen Zeichen: %n\n", &count);
     printf("Anzahl der geschriebenen Zeichen: %d\n", count);
 
-    // Datei schließen
+    // Datei schliessen
     fclose(file);
 
     printf("Daten wurden in die Datei geschrieben.\n");
@@ -232,7 +232,7 @@ void main() {
     // Zeitstempel in die Datei schreiben
     fprintf(file, "%s\n", buffer);
 
-    // Datei schließen
+    // Datei schliessen
     fclose(file);
 
     // Datei öffnen zum Lesen
@@ -244,7 +244,7 @@ void main() {
     // Zeitstempel aus der Datei lesen
     fscanf(file, "%s", buffer);
 
-    // Datei schließen
+    // Datei schliessen
     fclose(file);
 
     // Eingelesenen Zeitstempel ausgeben
@@ -292,7 +292,7 @@ void read_kunden(const char *pfad) {
 | Kategorie                     | Funktion                           | Beschreibung                                                                              |
 | ----------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------- |
 | **Datei öffnen / schliessen** | `fopen(pfad, modus)`               | Öffnet eine Datei (`"r"`, `"w"`, `"a"`, optional `b` für Binär, `+` für Lesen+Schreiben). |
-|                               | `fclose(stream)`                   | Schließt Datei, gibt 0 bei Erfolg zurück.                                                 |
+|                               | `fclose(stream)`                   | Schliesst Datei, gibt 0 bei Erfolg zurück.                                                |
 | **Schreiben**                 | `fputc(c, stream)`                 | Schreibt ein Zeichen.                                                                     |
 |                               | `fputs(s, stream)`                 | Schreibt String (endet bei `\0`).                                                         |
 |                               | `fprintf(stream, fmt, …)`          | Formatiertes Schreiben.                                                                   |

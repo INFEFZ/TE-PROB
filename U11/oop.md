@@ -48,24 +48,23 @@ Anstatt nur Funktionen und Daten getrennt zu betrachten (wie in der prozeduralen
 
 ### 1.2.1. Klassen
 
-Eine Klasse ist ein Bauplan für Objekte. 
+Eine Klasse ist ein **Bauplan** für Objekte.
 Sie definiert:
 
 - **Attribute** (Daten/Member-Variablen)
 - **Methoden** (Funktionen, die auf diesen Daten arbeiten)
 
 ```c++
-class Fahrzeug 
+class Auto 
 {
   public:
-      int geschwindigkeit; // Attribut
+      string farbe;
+      int geschwindigkeit;
 
-       // Methode
-      void fahren() 
-      {     
-          geschwindigkeit += 10;
-      }
+      void starten() { cout << "Auto startet\n"; }
+      void bremsen() { geschwindigkeit = 0; }
 };
+
 ```
 
 ### 1.2.2. Objekte
@@ -73,11 +72,27 @@ class Fahrzeug
 - Ein Objekt ist eine **Instanz** einer Klasse.
 
 ```c++
-Fahrzeug auto1;
+// Objekt erstellt
+Auto audi;
 
-auto1.geschwindigkeit = 0;
+// Eigenschaft (farbe) zuweisen
+audi.farbe = "rot";
 
-auto1.fahren();  // erhöht Geschwindigkeit auf 10
+// Methode aufrufen
+audi.starten();
+
+// Objekt erstellen
+Auto ferrari;
+
+// Eigenschaft setzen
+ferrari.farbe = "rot";
+
+// Methoden aufrufen
+ferrari.starten();
+ferrari.bremsen();
+
+// Eigenschaft auslesen
+printf("Die Farbe ist: %s", ferrari.farbe);
 ```
 
 ### 1.2.3. Kapselung
@@ -290,15 +305,16 @@ Jedes Fahrzeug hat:
 #include <string>
 using namespace std;
 
-class Fahrzeug {
-protected:
-    string name;
-    int geschwindigkeit;
-public:
-    Fahrzeug(string n, int g);
-    virtual void bewegen();   // virtuelle Methode -> Überschreiben erlaubt
-    virtual void ausgeben();  // virtuelle Methode -> dynamischer Polymorphismus
-    virtual ~Fahrzeug();      // virtueller Destruktor
+class Fahrzeug 
+{
+  protected:
+      string name;
+      int geschwindigkeit;
+  public:
+      Fahrzeug(string n, int g);
+      virtual void bewegen();   // virtuelle Methode -> Überschreiben erlaubt
+      virtual void ausgeben();  // virtuelle Methode -> dynamischer Polymorphismus
+      virtual ~Fahrzeug();      // virtueller Destruktor
 };
 
 #endif
@@ -313,11 +329,13 @@ using namespace std;
 
 Fahrzeug::Fahrzeug(string n, int g) : name(n), geschwindigkeit(g) {}
 
-void Fahrzeug::bewegen() {
+void Fahrzeug::bewegen() 
+{
     cout << name << " bewegt sich mit " << geschwindigkeit << " km/h." << endl;
 }
 
-void Fahrzeug::ausgeben() {
+void Fahrzeug::ausgeben() 
+{
     cout << "Fahrzeug: " << name << ", Geschwindigkeit: " << geschwindigkeit << " km/h" << endl;
 }
 
@@ -325,11 +343,14 @@ Fahrzeug::~Fahrzeug() {}
 ```
 
 **`main.cpp`**
+
 ```c++
 #include "Fahrzeug.h"
 
-int main() {
+int main() 
+{
     Fahrzeug f("Motorrad", 80);
+
     f.ausgeben();
     f.bewegen();
 
