@@ -6,9 +6,9 @@
 
 # 1. Kapitalbildung II
 
-Ein Kapital von 2800 CHF wird angelegt. Der Zinssatz sei 3.2 Prozent.
-Wie hoch ist das Endkapital nach einem Jahr?
-Lösen Sie die Aufgabe mit einen C-Konsolen-Programm. Uebergeben sie die Parameter via Konsole.
+- Ein Kapital von 2800 CHF wird angelegt. Der Zinssatz sei 3.2 Prozent.
+- Wie hoch ist das Endkapital nach einem Jahr?
+- Lösen Sie die Aufgabe mit einen C-Konsolen-Programm. Uebergeben sie die Parameter via Konsole.
 
 Die Formel dafür ist folgende:
 
@@ -18,16 +18,16 @@ Die Formel dafür ist folgende:
 
 # 2. Volumenberechnung
 
-Berechnen Sie das Volumen eines Körpers.
-Es wird die Länge, Breite und Höhe in m als Parameter übergeben.
-Lösen Sie die Aufgabe als C-Konsolen-Programm.
+- Berechnen Sie das Volumen eines Körpers.
+- Es wird die Länge, Breite und Höhe in m als Parameter übergeben.
+- Lösen Sie die Aufgabe als C-Konsolen-Programm.
 
 ---
 
 # 3. Bremswegberechnung
 
-Berechne Sie den Bremsweg bei einer vorgegebenen Verzögerung in m/s2 und mit einer Zeit in s mit der Formel.
-Lösen Sie die Aufgabe mit einem C-Konsolen-Programm.
+- Berechne Sie den Bremsweg bei einer vorgegebenen Verzögerung in m/s2 und mit einer Zeit in s mit der Formel.
+- Lösen Sie die Aufgabe mit einem C-Konsolen-Programm.
 
 ![Formel](./x_gitres/repititionsaufgabe-bremswegberechnung.png)
 
@@ -37,14 +37,16 @@ Lösen Sie die Aufgabe mit einem C-Konsolen-Programm.
 
 Implementieren Sie einen Taschenrechner der zuerst nach der 1. Zahl fragt. Dann nach dem Operanden und dann nach der 2. Zahl.
 Es sind folgende Operationen möglich: +, -, * u. /. (Addition. Subtraktion, Multiplikation u. Division).
+
 **Tipp**: Sie müssen nach der Eingabe den Eingangspuffer leeren mit `getchar()` Grund: `scanf` leert den Eingangspuffer nicht vollständig, wenn Zahlen eingelesen werden
 
 ---
 
 # 5. Wechselkurs
 
-Schreiben Sie ein Programm, dass den Wechselkurs rechnet. Das Programm fragt den Betrag in Schweizer Franken und in welche Währung es umrechnen soll. Unterstütz werden sollen ‘ $’, ‘£’, ‘e’ und ‘E’ für Euro.
-Lösen Sie die Aufgabe mit einem C-Programm. Tipp: Nicht vergessen hier den Eingangspuffer mit `getchar()` zu leeren. Nach jeder Eingabe.
+- Schreiben Sie ein Programm, dass den Wechselkurs rechnet. 
+- Das Programm fragt den Betrag in Schweizer Franken und in welche Währung es umrechnen soll. Unterstütz werden sollen ‘ $’, ‘£’, ‘e’ und ‘E’ für Euro.
+- Lösen Sie die Aufgabe mit einem C-Programm. Tipp: Nicht vergessen hier den Eingangspuffer mit `getchar()` zu leeren. Nach jeder Eingabe.
 
 ---
 
