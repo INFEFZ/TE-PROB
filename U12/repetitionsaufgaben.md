@@ -53,7 +53,7 @@ Lösen Sie die Aufgabe mit einem C-Programm. Tipp: Nicht vergessen hier den Eing
 Schreiben Sie eine Funktion `rechne_kreisdaten()`, die den Umfang und die Fläche eines Kreises aus dem Radius berechnet.
 
 - Die Funktion erhält drei Übergabeparameter:
-  - den Radius und zwei Zeiger auf double-Variablen, in welche die Funktion `rechne_kreisdaten()` die Fläche und den Umfang des Kreises zurückschreibt.  
+  - den **Radius** und zwei Zeiger auf double-Variablen, in welche die Funktion `rechne_kreisdaten()` die Fläche und den Umfang des Kreises zurückschreibt.  
 - Die Ein- und Ausgabe erfolgt in main().
 - Für einen Kreis mit Radius R gilt:
   - Fläche = `PI * R * R`
@@ -95,11 +95,8 @@ void einlesen (float * x, float * y)
 # 8. Durchschnittsberechnung
 
 - Das folgende Programm dient zur Berechnung des Durchschnitts von 10 int-Zahlen, die im Dialog eingegeben werden.
-- Der berechnete Durchschnitt wird von der Funktion `durchschnitt1()` über die Parameterliste und von der Funktion `durchschnitt2()` mit return zurückgegeben.
-
-Schreiben Sie die Funktionen `einlesen()`, `durchschnitt1()` und `durchschnitt2()`.
-Fehlende Teile sind mit .... gekennzeichnet.
-Es wird mit dem globalen Array `a` gearbeitet.
+- Implementiere die Funktion `statistik()`, die wiederum für die Statistikberechnungen die `summe()`, `maximum()` und `durchschnitt()` Funktionen aufruft.
+- Im Hauptprogramm `main()` sind dann die Resultate der Berechungen auszugeben.
 
 ```c
 #include <stdio.h>
@@ -114,7 +111,8 @@ double durchschnitt(???) { ??? }
 
 void statistik(int* sum, int* max, double* avg, ???) { ??? }
 
-int main(void) {
+int main(void) 
+{
   int a[MAX] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
   int sum;
