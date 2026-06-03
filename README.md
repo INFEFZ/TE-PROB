@@ -1,6 +1,6 @@
-|                             |                          |                                        |
-| --------------------------- | ------------------------ | -------------------------------------- |
-| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
+|                             |                          |                              |
+| --------------------------- | ------------------------ | ---------------------------- |
+| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![Logo](./x_gitres/logo.png) |
 
 </br>
 
@@ -10,7 +10,7 @@
 
 ## Unterrichtstage
 
-### [U01](./U01/README.md)
+### [Blöcke u. Funktionen](./C1_BlockFunctions/README.md)
 
 ### [U02](./U02/README.md)
 
@@ -33,6 +33,31 @@
 ### [U11](./U11/README.md)
 
 ### [U12](./U12/README.md)
+
+---
+
+## Unterrichtsorganisation
+
+- Lektionen: 60 Lektionen
+  - 50% Theorie, 50% Übungen
+  - Gruppenarbeiten
+  - Einzelarbeiten
+  - Gemeinsames lösen von Aufgaben
+- Prüfungen
+  - 1 TP (Teilprüfung)
+  - 1 FP (Fachprüfung)
+  - 1 PA (Praxisarbeit)
+- Hausaufgaben
+  - Werden im Unterricht oder per Mail angekündigt
+  - Richtgrösse: 2h / Block
+- Erreichbarkeit
+  - <lukas.mueller@dozent.ipso.ch> innerhalb von 3 Tagen (Antwort)
+
+---
+
+## E-Book
+
+![E-Book](./GE4_EBook/Goll_C-als-erste-Programmiersprache_Auflage-9.pdf)
 
 ---
 
@@ -61,7 +86,7 @@ Es bestehen keine zwingend vorgängig zu erbringenden Leistungen.
 |               | 1 x Fachprüfung  |
 |               | 1 x Praxisarbeit |
 
-![Curriculum](./X01/Programmiertechnik%20B.pdf)
+![Curriculum](./GE3_Curriculum/Programmiertechnik%20B.pdf)
 
 ---
 
