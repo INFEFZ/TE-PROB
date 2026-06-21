@@ -6,36 +6,6 @@
 
 # Programmiertechnik B
 
-</br>
-
-## Unterrichtstage
-
-### [Blöcke u. Funktionen](./C1_BlockFunctions/README.md)
-
-### [U02](./U02/README.md)
-
-### [U03](./U03/README.md)
-
-### [U04](./U04/README.md)
-
-### [U05](./U05/README.md)
-
-### [U06](./U06/README.md)
-
-### [U07](./U07/README.md)
-
-### [U08](./U08/README.md)
-
-### [U09](./U09/README.md)
-
-### [U10](./U10/README.md)
-
-### [U11](./U11/README.md)
-
-### [U12](./U12/README.md)
-
----
-
 ## Unterrichtsorganisation
 
 - Lektionen: 60 Lektionen
@@ -93,3 +63,8 @@ Es bestehen keine zwingend vorgängig zu erbringenden Leistungen.
 ## Lehrgang
 
 [Ausschreibung](https://www.ipso.ch/angebote/dipl-elektrotechnikerin-hf?school=ibz)
+
+---
+
+© 2026 Lukas Müller – Licensed under CC BY-NC-ND 4.0
+See [LICENSE](..\license.md) file for details.

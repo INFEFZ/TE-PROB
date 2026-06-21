@@ -1,8 +1,0 @@
-|                             |                          |                                        |
-| --------------------------- | ------------------------ | -------------------------------------- |
-| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
-
-# Lernziele
-
-- [ ] Sie kennen die Möglichkeiten der Array- und String Initialisierung und können diese in Programmen anwenden.
-- [ ] Sie wissen wie eindimensionale Arrays an Funktionen zu übergeben sind und können diese Aufrufe in Programmen anwenden.

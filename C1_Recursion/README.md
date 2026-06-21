@@ -149,3 +149,8 @@ Teste das Programm mit folgenden Eingabewerten:
 - 5^2  2.5^8  1000^3  3^1000  7^1  1^7  1^777777  0^1  1^0  0^0
 - Wenn die Resultate der Funktionen nicht übereinstimmen, überlege wieso.
 - Es könnte sogar sein, dass etwas gänzlich unerwartetes passiert.
+
+---
+
+© 2026 Lukas Müller – Licensed under CC BY-NC-ND 4.0
+See [LICENSE](..\license.md) file for details.

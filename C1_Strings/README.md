@@ -258,3 +258,8 @@ Schreibe ein C-Programm, das Folgendes tut:
 - Verwende die Funktionen aus der C-Standardbibliothek: `strcmp`, `strcat`, `strlen`.
 - Benutze `fgets()` zum Einlesen der Strings, um auch Leerzeichen zu unterstützen.
 - Entferne den Zeilenumbruch `\n`, der durch `fgets()` mit eingelesen wird.
+
+---
+
+© 2026 Lukas Müller – Licensed under CC BY-NC-ND 4.0
+See [LICENSE](..\license.md) file for details.
