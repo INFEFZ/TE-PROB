@@ -27,7 +27,7 @@
 
 ## E-Book
 
-![E-Book](./GE4_EBook/Goll_C-als-erste-Programmiersprache_Auflage-9.pdf)
+![E-Book](./GE4_EBooks/Goll_C-als-erste-Programmiersprache_Auflage-9.pdf)
 
 ---
 
