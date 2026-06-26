@@ -41,7 +41,13 @@
 
 ## Voraussetzungen
 
-Es bestehen keine zwingend vorgängig zu erbringenden Leistungen.
+- Erfolgreicher Abschluss des Kurses „**Programmiertechnik A**”
+
+---
+
+## Unterrichtsstrukturierung
+
+![Unterrichtsstrukturierung](./GE3_Curriculum/unit-overview.png)
 
 ---
 
@@ -63,6 +69,33 @@ Es bestehen keine zwingend vorgängig zu erbringenden Leistungen.
 ## Lehrgang
 
 [Ausschreibung](https://www.ipso.ch/angebote/dipl-elektrotechnikerin-hf?school=ibz)
+
+---
+
+## Vorstellung
+
+### Wer bin ich
+
+- Name/Vorname: Lukas Müller
+- Wohnort: 5426 Lengnau AG
+- Mail: <lukas.mueller@dozent.ipso.ch>
+
+- Kleines Softwarebüro, technische Softwareentwicklung (Fertigungsindustrie, Automation)
+  - Datenbankentwicklung (MS-SQL, Oracle)
+  - Softwareentwicklung (C/C++, C#)
+- Fachdozent bei IPSO (HF u. EFZ), HBU Uster, Juventus Zürich
+
+---
+
+### Wer sind Sie?
+
+- Name, Vorname
+- Ausbildung/Beruf
+- Arbeitgeber/Tätigkeiten
+- Berufliche Ziele
+- Grund für diese Ausbildung
+- Erfahrungen mit Programmieren/Software-Entwicklung
+- Erwartungen an den Kurs "Programmiertechnik B"
 
 ---
 
