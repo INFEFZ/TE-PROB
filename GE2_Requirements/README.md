@@ -1,6 +1,6 @@
 |                             |                          |                               |
 | --------------------------- | ------------------------ | ----------------------------- |
-| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![Logo](../x_gitres/logo.png) |
+| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![logo](../x_gitres/logo.png) |
 
 - [1. Voraussetzungen](#1-voraussetzungen)
   - [1.1. Visual Studio Code](#11-visual-studio-code)

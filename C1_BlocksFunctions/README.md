@@ -1,6 +1,6 @@
-|                             |                          |                              |
-| --------------------------- | ------------------------ | ---------------------------- |
-| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![logo](./x_gitres/logo.png) |
+|                             |                          |                               |
+| --------------------------- | ------------------------ | ----------------------------- |
+| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![logo](../x_gitres/logo.png) |
 
 - [1. Blöcke](#1-blöcke)
   - [1.1. Einleitung](#11-einleitung)
@@ -75,7 +75,7 @@ void myFunc2()
 
 }
 
-void main(void)
+int main(void)
 {
   int zahl1 = 1;
 
@@ -84,6 +84,8 @@ void main(void)
     int zahl2 = 2;
     printf("Zahl1: %d Zahl2: %d", zahl1, zahl2);
   }
+
+  return 0;
 }
 
 ```
@@ -94,7 +96,7 @@ void main(void)
 - Ein Variable ausserhalb des Blockes ist auch innerhalb des Blockes sichtbar
 
 ```c
-void main(void)
+int main(void)
 {
   int zahl1 = 1;
 
@@ -105,13 +107,15 @@ void main(void)
   }
 
   zahl2 = 0;  // Fehler, Variable steht nicht mehr im Zugriff
+
+  return 0;
 }
 ```
 
 ```c
 #include <stdio.h>
 
-void main(void)
+int main(void)
 {
   int zahl1=1;
 
@@ -120,6 +124,8 @@ void main(void)
      int zahl2=2;
      printf("Zahl1: %d Zahl2: %d",zahl1,zahl2);  // Zugriff auf lokale Variable zahl2 funktioniert
   }
+
+  return 0;
 }
 ```
 
@@ -142,7 +148,7 @@ void ausgabe(void)
   printf("Lokale Zahl ist: %d", lokaleZahl);
 }
 
-void main(void)
+int main(void)
 {
   int zahl1 = 1;
 
@@ -151,6 +157,8 @@ void main(void)
 
     printf("Zahl1: %d, Zahl2: %d", zahl1, zahl2);
   }
+
+  return 0;
 }
 ```
 
@@ -547,7 +555,7 @@ void ausgabe(void)
   printf("Lokale Zahl ist: %d", lokaleZahl);
 }
 
-void main(void)
+int main(void)
 {
   int zahl1 = 1;
 
@@ -565,6 +573,8 @@ void main(void)
   // Steht die Variable zahl2 noch zur Verfügung?
   
   printf("Ende");
+
+  return 0;
 }
 ```
 
