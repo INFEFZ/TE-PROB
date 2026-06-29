@@ -369,7 +369,7 @@ int main(void) {
 // Funktion berechnet Quotient UND Rest gleichzeitig
 void division(int dividend, int divisor, int *quotient, int *rest) {
     *quotient = dividend / divisor;
-    *rest     = dividend % divisor;
+    *rest = dividend % divisor;
 }
 
 int main(void) {
@@ -405,7 +405,9 @@ void funktion_b(void) {
 int main(void) {
     funktion_a();
     funktion_b();
+
     // printf("%d", x);   // FEHLER! x existiert hier nicht
+    
     return 0;
 }
 ```

@@ -31,6 +31,25 @@
 
 ---
 
+## E-Learning
+
+[Sololean](https://www.sololearn.com/de/)
+
+Viele interaktive und praxisnahe Kurse.
+Die App ist auch als Mobile-Version erhältlich.
+
+- [Kurs Einführung C](https://www.sololearn.com/de/learn/courses/c-introduction)
+- [Kurs C Mittelstufe](https://www.sololearn.com/de/learn/courses/c-intermediate)
+
+> **Es ist eine Registrierung erforderlich**
+
+[w3schools](https://www.w3schools.com/)
+
+- [Tutorial](https://www.w3schools.com/c/index.php)
+- [Quiz](https://www.w3schools.com/c/c_quiz.php)
+
+---
+
 ## Handlungskompetenz
 
 - Die Dipl. Elektrotechniker/-in HF müssen sich bei Diskussionen im Fachgebiet Programmiertechnik kompetent einbringen können.
