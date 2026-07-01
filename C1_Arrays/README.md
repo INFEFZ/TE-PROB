@@ -15,9 +15,10 @@
     - [1.8.2. Zugriff auf Elemente](#182-zugriff-auf-elemente)
     - [1.8.3. 2D-Arrays als Funktionsparameter](#183-2d-arrays-als-funktionsparameter)
 - [2. Aufgaben](#2-aufgaben)
-  - [2.1. Aufgabe Analyse von Array's](#21-aufgabe-analyse-von-arrays)
-  - [2.2. Fehlende Überprüfung auf Überschreitung der Feldgrenzen bei Arrays](#22-fehlende-überprüfung-auf-überschreitung-der-feldgrenzen-bei-arrays)
-  - [2.3. Aufgabe Temperaturstatistik](#23-aufgabe-temperaturstatistik)
+  - [2.1. Sololearn Arrays \& Strings](#21-sololearn-arrays--strings)
+  - [2.2. Aufgabe Analyse von Array's](#22-aufgabe-analyse-von-arrays)
+  - [2.3. Fehlende Überprüfung auf Überschreitung der Feldgrenzen bei Arrays](#23-fehlende-überprüfung-auf-überschreitung-der-feldgrenzen-bei-arrays)
+  - [2.4. Aufgabe Temperaturstatistik](#24-aufgabe-temperaturstatistik)
 
 ---
 
@@ -27,7 +28,7 @@
 
 ## 1.1. Sinn und Zweck von Arrays
 
-**Das Problem ohne Arrays:** Stell dir vor, du willst die Prüfungsnoten von 30 Studierenden speichern:
+**Das Problem ohne Arrays:** Stell dir vor, die Prüfungsnoten von 30 Studierenden sollen gespeichert:
 
 ```c
 // Ohne Array – ein Albtraum:
@@ -35,7 +36,7 @@ int note1, note2, note3, note4, note5; // ... bis note30
 printf("%d %d %d ...", note1, note2, note3); // nicht wartbar
 ```
 
-> **Mit 30 Variablen wirst du verrückt. Mit 1000 ist es unmöglich.**
+> **Die Verwendung von 30 Variablen kann zu einer Überforderung führen. Mit 1000 ist es unmöglich.**
 
 **Die Lösung - Array:**
 
@@ -227,14 +228,15 @@ int main(void) {
 
 Ein 2D-Array ist ein Array von Arrays – man kann es sich als Tabelle (Zeilen × Spalten) vorstellen.
 
+**Stundenplan (3 Tage × 4 Lektionen):**
+
+|            | **Lektion 0** | **Lektion 1** | **Lektion 2** | **Lektion 3** |
+| ---------- | ------------- | ------------- | ------------- | ------------- |
+| **Tag 0:** | Mathe         | Deutsch       | Physik        | Sport         |
+| **Tag 1:** | Englisch      | Chemie        | Mathe         | Deutsch       |
+| **Tag 2:** | Sport         | Physik        | Englisch      | Chemie        |
+
 ```console
-Stundenplan (3 Tage × 4 Lektionen):
-
-          Lektion 0  Lektion 1  Lektion 2  Lektion 3
-Tag 0:       Mathe      Deutsch     Physik      Sport
-Tag 1:      Englisch   Chemie       Mathe      Deutsch
-Tag 2:       Sport      Physik     Englisch     Chemie
-
 Speicher: stundenplan[0][0] = Mathe
           stundenplan[0][1] = Deutsch
           stundenplan[1][2] = Mathe
@@ -316,7 +318,24 @@ int main(void) {
 
 # 2. Aufgaben
 
-## 2.1. Aufgabe Analyse von Array's
+## 2.1. Sololearn Arrays & Strings
+
+| **Vorgabe**         | **Beschreibung**                                          |
+| :------------------ | :-------------------------------------------------------- |
+| **Lernziele**       | Verstehen wie Array's deklariert und initialisiert werden |
+|                     | Kann auf einzelne Elemente eines Array's zugreifen        |
+|                     | Kann ein Wert in einem Array setzen                       |
+| **Sozialform**      | Einzelarbeit                                              |
+| **Auftrag**         | siehe unten                                               |
+| **Hilfsmittel**     |                                                           |
+| **Zeitbedarf**      | 15min                                                     |
+| **Lösungselemente** | Sololearn Kapitel erfolgreich abgeschlossen               |
+
+Starte auf Sololearn den Kurs [**Einführung in C**](https://www.sololearn.com/de/learn/courses/c-introduction?location=2) und arbeite die Lektion **Arrays & Strings** durch.
+
+---
+
+## 2.2. Aufgabe Analyse von Array's
 
 | **Vorgabe**         | **Beschreibung**                                          |
 | :------------------ | :-------------------------------------------------------- |
@@ -352,7 +371,7 @@ int main(void) {
 }
 ```
 
-## 2.2. Fehlende Überprüfung auf Überschreitung der Feldgrenzen bei Arrays
+## 2.3. Fehlende Überprüfung auf Überschreitung der Feldgrenzen bei Arrays
 
 | **Vorgabe**         | **Beschreibung**                                          |
 | :------------------ | :-------------------------------------------------------- |
@@ -402,7 +421,7 @@ int main(void) {
 }
 ```
 
-## 2.3. Aufgabe Temperaturstatistik
+## 2.4. Aufgabe Temperaturstatistik
 
 | **Vorgabe**         | **Beschreibung**                                          |
 | :------------------ | :-------------------------------------------------------- |

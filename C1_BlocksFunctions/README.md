@@ -29,10 +29,11 @@
   - [3.2. Praxisbeispiel mit mehreren Bibliotheken](#32-praxisbeispiel-mit-mehreren-bibliotheken)
 - [4. Aufgaben](#4-aufgaben)
   - [4.1. Sichtbarkeit von lokalen Variablen (Blocks)](#41-sichtbarkeit-von-lokalen-variablen-blocks)
-  - [4.2. Erste eigene Funktion](#42-erste-eigene-funktion)
-  - [4.3. Temperaturumrechnung](#43-temperaturumrechnung)
-  - [4.4. Swap-Funktion](#44-swap-funktion)
-  - [4.5. Einfacher Taschenrechner in C programmieren](#45-einfacher-taschenrechner-in-c-programmieren)
+  - [4.2. Sololearn Funktionen und Zeiger](#42-sololearn-funktionen-und-zeiger)
+  - [4.3. Erste eigene Funktion](#43-erste-eigene-funktion)
+  - [4.4. Temperaturumrechnung](#44-temperaturumrechnung)
+  - [4.5. Swap-Funktion](#45-swap-funktion)
+  - [4.6. Einfacher Taschenrechner in C programmieren](#46-einfacher-taschenrechner-in-c-programmieren)
 
 ---
 
@@ -582,18 +583,35 @@ int main(void)
 
 ---
 
-## 4.2. Erste eigene Funktion
+## 4.2. Sololearn Funktionen und Zeiger
 
-| **Vorgabe**         | **Beschreibung**                                                                |
-| :------------------ | :------------------------------------------------------------------------------ |
-| **Lernziele**       | Kennt die Sichtbarkeit von Variablen (lokal u. global)                          |
-|                     | Kennt die Sichtbarkeit von Variablen in Code Blöcken                            |
-|                     | Kann Entscheiden, wann eine lokale oder globale Variable eingesetzt werden soll |
-| **Sozialform**      | Einzelarbeit                                                                    |
-| **Auftrag**         | siehe unten                                                                     |
-| **Hilfsmittel**     |                                                                                 |
-| **Zeitbedarf**      | 20min                                                                           |
-| **Lösungselemente** |                                                                                 |
+| **Vorgabe**         | **Beschreibung**                                                        |
+| :------------------ | :---------------------------------------------------------------------- |
+| **Lernziele**       | Kennt die Möglichkeiten zur Modularisierung und Strukturierung von Code |
+|                     | Kann Funktionen mit und ohne Parameter implementieren                   |
+|                     | Kann Funktionen korrekt aufrufen                                        |
+| **Sozialform**      | Einzelarbeit                                                            |
+| **Auftrag**         | siehe unten                                                             |
+| **Hilfsmittel**     |                                                                         |
+| **Zeitbedarf**      | 15min                                                                   |
+| **Lösungselemente** | Sololearn Kapitel erfolgreich abgeschlossen                             |
+
+Starte auf Sololearn den Kurs [**Einführung in C**](https://www.sololearn.com/de/learn/courses/c-introduction?location=2) und arbeite die Lektion **Funktionen und Zeiger** durch.
+
+---
+
+## 4.3. Erste eigene Funktion
+
+| **Vorgabe**         | **Beschreibung**                                                        |
+| :------------------ | :---------------------------------------------------------------------- |
+| **Lernziele**       | Kennt die Möglichkeiten zur Modularisierung und Strukturierung von Code |
+|                     | Kann Funktionen mit und ohne Parameter implementieren                   |
+|                     | Kann Funktionen korrekt aufrufen                                        |
+| **Sozialform**      | Einzelarbeit                                                            |
+| **Auftrag**         | siehe unten                                                             |
+| **Hilfsmittel**     |                                                                         |
+| **Zeitbedarf**      | 20min                                                                   |
+| **Lösungselemente** |                                                                         |
 
 **Auftrag:**
 
@@ -615,7 +633,7 @@ Quadrat von 7 = 49
 
 ---
 
-## 4.3. Temperaturumrechnung
+## 4.4. Temperaturumrechnung
 
 | **Vorgabe**         | **Beschreibung**                                                        |
 | :------------------ | :---------------------------------------------------------------------- |
@@ -645,7 +663,7 @@ Gib in `main()` eine Tabelle mit den Werten 0, 20, 37, 100 °C aus.
 
 ---
 
-## 4.4. Swap-Funktion
+## 4.5. Swap-Funktion
 
 | **Vorgabe**         | **Beschreibung**                                                        |
 | :------------------ | :---------------------------------------------------------------------- |
@@ -689,7 +707,7 @@ void main(void)
 
 ---
 
-## 4.5. Einfacher Taschenrechner in C programmieren
+## 4.6. Einfacher Taschenrechner in C programmieren
 
 | **Vorgabe**         | **Beschreibung**                                                      |
 | :------------------ | :-------------------------------------------------------------------- |
