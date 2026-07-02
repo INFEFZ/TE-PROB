@@ -83,6 +83,32 @@ Präsentiert das Programmlayout und Beispielausgabe.
 
 ---
 
+</br>
+
+## Gruppe 4: Suchen und Sortieren in Arrays (E-Book, Kapitel 20)
+
+**Themen:**
+
+- Lineare Suche in einem Array (Wert finden, Index zurückgeben)
+- Grundprinzip von Sortieralgorithmen am Beispiel **Bubble Sort**
+- Unterschied: unsortiertes vs. sortiertes Array (Auswirkung auf die Suche)
+- Anzahl Vergleiche/Schritte als einfaches Mass für Effizienz
+
+**Aufgaben:**
+
+- Erklärt, wie eine lineare Suche in einem Array funktioniert.
+- Erstellt ein Beispielprogramm mit:
+  - Einer Funktion zur linearen Suche eines Wertes im Array (Rückgabe des Index oder -1, falls nicht gefunden),
+  - Einer Funktion, die das Array mit Bubble Sort aufsteigend sortiert,
+  - Ausgabe des Arrays vor und nach dem Sortieren.
+- Präsentiert den Ablauf des Sortierens anhand eines kleinen Beispiels (z.B. Schritt-für-Schritt an der Tafel/Folie).
+
+> **Ergebnis: Kurze Erklärung (max. 5 Minuten) mit Beispielcode und Visualisierung des Sortiervorgangs.**
+
+---
+
+</br>
+
 ## Arbeitszeit
 
 - 45 Minuten Gruppenarbeit + 3 × 5 Minuten Präsentation + kurze Nachbesprechung

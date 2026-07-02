@@ -16,9 +16,8 @@
     - [1.8.3. 2D-Arrays als Funktionsparameter](#183-2d-arrays-als-funktionsparameter)
 - [2. Aufgaben](#2-aufgaben)
   - [2.1. Sololearn Arrays \& Strings](#21-sololearn-arrays--strings)
-  - [2.2. Aufgabe Analyse von Array's](#22-aufgabe-analyse-von-arrays)
-  - [2.3. Fehlende Überprüfung auf Überschreitung der Feldgrenzen bei Arrays](#23-fehlende-überprüfung-auf-überschreitung-der-feldgrenzen-bei-arrays)
-  - [2.4. Aufgabe Temperaturstatistik](#24-aufgabe-temperaturstatistik)
+  - [2.2. Aufgabe Notendurchschnittsberechnung](#22-aufgabe-notendurchschnittsberechnung)
+  - [2.3. Aufgabe Temperaturstatistik](#23-aufgabe-temperaturstatistik)
 
 ---
 
@@ -335,7 +334,7 @@ Starte auf Sololearn den Kurs [**Einführung in C**](https://www.sololearn.com/d
 
 ---
 
-## 2.2. Aufgabe Analyse von Array's
+## 2.2. Aufgabe Notendurchschnittsberechnung
 
 | **Vorgabe**         | **Beschreibung**                                          |
 | :------------------ | :-------------------------------------------------------- |
@@ -345,83 +344,78 @@ Starte auf Sololearn den Kurs [**Einführung in C**](https://www.sololearn.com/d
 | **Sozialform**      | Einzelarbeit                                              |
 | **Auftrag**         | siehe unten                                               |
 | **Hilfsmittel**     |                                                           |
-| **Zeitbedarf**      | 10min                                                     |
+| **Zeitbedarf**      | 50min                                                     |
 | **Lösungselemente** | Ausgabeliste der Zahlen                                   |
 
-Überlege, was das folgende Programm ausgibt. Überzeuge dich durch einen Programmlauf.
+Schreiben Sie ein Programm, welches den Benutzer zur Eingabe von **3 Prüfungsnoten** auffordert und anschliessend die **Durchschnittsnote** berechnet und ausgibt.
 
-```c
-#include <stdio.h>
+**Funktionale Anforderungen:**
 
-int main(void) {
-  size_t i;
-  int ar[100];
+- Das Programm fordert den Benutzer nacheinander zur Eingabe von genau 3 Noten auf (z.B. "Bitte Note 1 eingeben:").
+- Die Noten können Kommazahlen sein (z.B. 4.5), da im Notensystem Zwischenwerte üblich sind.
+- Das Programm berechnet den Durchschnitt der 3 eingegebenen Noten.
+- Das Programm gibt die berechnete Durchschnittsnote übersichtlich aus, z.B.:
+  
+  ```console
+  Ihre Durchschnittsnote lautet: 4.83
+  ```
 
-  for (i = 0; i < 100; i = i + 1)
-    ar[i] = 1;
+- Die Ausgabe soll auf **2 Nachkommastellen** gerundet erfolgen.
 
-  ar[11] = -5;
-  ar[12] = ar[12] + 1;
-  ar[13] = ar[0] + ar[11] + 4;
+**Teil 1 - Lösung mit Flowgorithm:**
 
-  for (i = 10; i <= 14; i = i + 1) 
-    printf("ar[%2d] = %4d\n", (int)i, ar[i]);
+Erstellen Sie zuerst ein **Flussdiagramm** in Flowgorithm, welches den Ablauf des Programms grafisch darstellt.
 
-  return 0;
-}
+**Wichtige Vorgabe:** Die Noten sollen **nicht** in 3 einzelnen Variablen gespeichert werden, sondern in einem **Feld (Array)** mit der Grösse 3, z.B. `noten[3]` vom Typ Real/Decimal. Sowohl die **Eingabe** als auch die **Berechnung des Durchschnitts** müssen mit einer **Schleife** (For-Schleife) realisiert werden – nicht durch dreimaliges Wiederholen derselben Blöcke von Hand.
+
+**Ihr Flussdiagramm soll folgende Elemente enthalten:**
+
+1. **Deklaration** der benötigten Variablen:
+   - Ein Feld `noten` mit Grösse 3 (Real/Decimal-Typ)
+   - Eine Zählervariable, z.B. `i` (Integer), für die Schleife
+   - Eine Variable `summe` (Real/Decimal, Startwert 0) zur Aufsummierung
+   - Eine Variable `durchschnitt` (Real/Decimal) für das Endresultat
+2. **Eingabeschleife:** Eine `For`-Schleife (`i` von 1 bis 3), in welcher pro Durchlauf:
+   - eine Eingabeaufforderung erscheint (z.B. "Bitte Note {i} eingeben:"),
+   - der eingegebene Wert im Feld gespeichert wird: `noten[i] = ...`.
+3. **Berechnungsschleife:** Eine zweite `For`-Schleife (`i` von 1 bis 3), in welcher pro Durchlauf der jeweilige Feldwert zur `summe` addiert wird: `summe = summe + noten[i]`.
+   - *Hinweis:* Diese Schleife kann auch mit der Eingabeschleife aus Schritt 2 kombiniert werden (Aufsummieren direkt bei der Eingabe) – beides ist zulässig.
+4. Einen **Zuweisungs-Block** (Assign) **nach** der/den Schleife(n), welcher den Durchschnitt berechnet: `durchschnitt = summe / 3`.
+5. Einen **Ausgabe-Block** (Output), welcher die Durchschnittsnote sauber formatiert ausgibt.
+
+**Testen Sie Ihr Flussdiagramm** direkt in Flowgorithm mit mindestens einem Beispiel (z.B. Noten 5, 4.5 und 5.5 → Durchschnitt 5.0) und kontrollieren Sie, ob das Resultat stimmt. Nutzen Sie dazu auch den **Debug-Modus** von Flowgorithm, um zu beobachten, wie sich die Feldwerte und der Zähler `i` bei jedem Schleifendurchlauf verändern.
+
+> **Abgabe Teil 1:** Screenshot oder Export des Flussdiagramms (`.fprg`-Datei).
+
+**Teil 2 - Lösung in C:**
+
+Setzen Sie denselben Algorithmus nun in der Programmiersprache **C** um.
+
+**Technische Anforderungen:**
+
+- Verwenden Sie einen passenden Datentyp für die Noten und den Durchschnitt (z.B. `float` oder `double`).
+- Nutzen Sie `printf()` für die Eingabeaufforderungen und `scanf()` für die Einlesung der Werte.
+- Berechnen Sie den Durchschnitt analog zum Flussdiagramm aus Teil 1.
+- Formatieren Sie die Ausgabe des Durchschnitts auf **2 Nachkommastellen** (Tipp: Formatangabe bei `printf`, z.B. `%.2f`).
+- Achten Sie auf eine saubere und lesbare Code-Struktur (sinnvolle Variablennamen, ggf. Kommentare).
+
+**Beispielhafter Programmablauf (Konsole):**
+
+```console
+Bitte Note 1 eingeben: 5
+Bitte Note 2 eingeben: 4.5
+Bitte Note 3 eingeben: 5.5
+Ihre Durchschnittsnote lautet: 5.00
 ```
 
-## 2.3. Fehlende Überprüfung auf Überschreitung der Feldgrenzen bei Arrays
+**Zusatzaufgabe (freiwillig, für Schnelle):**
+Erweitern Sie Ihr C-Programm so, dass ungültige Noten (kleiner als 1 oder grösser als 6) erkannt und mit einer Fehlermeldung abgelehnt werden. Die Eingabe soll so lange wiederholt werden, bis eine gültige Note eingegeben wurde.
 
-| **Vorgabe**         | **Beschreibung**                                          |
-| :------------------ | :-------------------------------------------------------- |
-| **Lernziele**       | Verstehen wie Array's deklariert und initialisiert werden |
-|                     | Kann auf einzelne Elemente eines Array's zugreifen        |
-|                     | Kann ein Wert in einem Array setzen                       |
-| **Sozialform**      | Einzelarbeit                                              |
-| **Auftrag**         | siehe unten                                               |
-| **Hilfsmittel**     |                                                           |
-| **Zeitbedarf**      | 10min                                                     |
-| **Lösungselemente** | Ergebnis Analyse                                          |
+> **Abgabe Teil 2:** C-Quellcode (`.c`-Datei), lauffähig und getestet.
 
-- Führe einen Programmlauf mit dem folgenden Programm durch.
-- Analysieren das Ergebnis!
+---
 
-```c
-#include <stdio.h>
-
-int main(void) {
-
-  int i = 16; 
-  int k = 21; 
-  int l = 22; 
-  int p = 23; 
-  int q = 24;
-
-  int ar[100];
-
-  for (size_t i = 0; i < 100; i = i + 1)
-    ar[i] = 27;
-
-  printf("i ist %d\n", i); 
-  printf("ar[-1] ist %d\n", ar[-1]); 
-  printf("ar[0] ist %d\n", ar[0]); 
-  printf("ar[100] ist %d\n", ar[100]); 
-  printf("ar[101] ist %d\n", ar[101]); 
-  printf("ar[102] ist %d\n", ar[102]); 
-  printf("ar[103] ist %d\n", ar[103]); 
-  printf("ar[-2] ist %d\n", ar[-2]); 
-  printf("ar[-3] ist %d\n", ar[-3]); 
-  printf("k ist %d\n", k);
-  printf("l ist %d\n", l);
-  printf("p ist %d\n", p);
-  printf("q ist %d\n", q);
-
-  return 0;
-}
-```
-
-## 2.4. Aufgabe Temperaturstatistik
+## 2.3. Aufgabe Temperaturstatistik
 
 | **Vorgabe**         | **Beschreibung**                                          |
 | :------------------ | :-------------------------------------------------------- |
