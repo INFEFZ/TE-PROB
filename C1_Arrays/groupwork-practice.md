@@ -14,17 +14,19 @@
 
 # 1. Gruppenarbeit Array's
 
-| **Vorgabe**         | **Beschreibung**                                                                                |
-| :------------------ | :---------------------------------------------------------------------------------------------- |
-| **Lernziele**       | Ein- und zweidimensionale Arrays deklarieren, initialisieren und gezielt auf Elemente zugreifen |
-|                     | Erkennen wann ein Array die richtige Datenstruktur                                              |
-|                     | Arrays als Funktionsparameter übergeben                                                         |
-| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                                     |
-| **Auftrag**         | siehe unten                                                                                     |
-| **Hilfsmittel**     |                                                                                                 |
-| **Zeitbedarf**      | 60min                                                                                           |
-| **Lösungselemente** | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.                          |
-|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können                                      |
+| **Vorgabe**         | **Beschreibung**                                                                                 |
+| :------------------ | :----------------------------------------------------------------------------------------------- |
+| **Lernziele**       | Sinn und Zweck von Arrays erklären und gegenüber Einzelvariablen abgrenzen                       |
+|                     | Eindimensionale Arrays deklarieren, initialisieren und auf Elemente zugreifen                    |
+|                     | Zweidimensionale Arrays (Matrizen) deklarieren und mit verschachtelten Schleifen verarbeiten     |
+|                     | Arrays als Funktionsparameter korrekt übergeben und deren Verhalten (immer als Pointer) erklären |
+|                     | Typische Array-Muster (Suchen, Min/Max, Umkehren) implementieren                                 |
+| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                                      |
+| **Auftrag**         | siehe unten                                                                                      |
+| **Hilfsmittel**     |                                                                                                  |
+| **Zeitbedarf**      | 60min                                                                                            |
+| **Lösungselemente** | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.                           |
+|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können                                       |
 
 > Hinweis zum KI-Einsatz
 > Ihr dürft KI-Tools verwenden – aber: Ihr werdet den Code in der Präsentation erklären müssen.

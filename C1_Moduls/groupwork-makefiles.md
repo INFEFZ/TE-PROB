@@ -35,16 +35,19 @@
 
 # 1. Gruppenarbeit Moduls
 
-| **Vorgabe**         | **Beschreibung**                                                        |
-| :------------------ | :---------------------------------------------------------------------- |
-| **Lernziele**       | Kennt die Möglichkeiten zur Modularisierung und Strukturierung von Code |
-|                     | Kann Funktionen mit und ohne Parameter implementieren                   |
-|                     | Kann Funktionen korrekt aufrufen                                        |
-| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                             |
-| **Auftrag**         | siehe unten                                                             |
-| **Hilfsmittel**     |                                                                         |
-| **Zeitbedarf**      | 60min                                                                   |
-| **Lösungselemente** | Alle Projektdateien inkl. `Makefile`                 "                  |
+| **Vorgabe**         | **Beschreibung**                                                                                   |
+| :------------------ | :------------------------------------------------------------------------------------------------- |
+| **Lernziele**       | Den Zweck und Aufbau eines Makefiles (Target, Dependencies, Recipe) erklären                       |
+|                     | Ein Makefile für ein Mehrdateiprojekt mit korrekten Header-Abhängigkeiten erstellen                |
+|                     | Makefile-Variablen (CC, CFLAGS, OBJS) und automatische Variablen ($@, $<, $^) einsetzen            |
+|                     | Phony-Targets (all, clean, rebuild, help) definieren und deren Notwendigkeit erklären              |
+|                     | Den Zeitstempel-Mechanismus von make erklären und das Verhalten bei geänderten Dateien vorhersagen |
+|                     | Den Unterschied zwischen Kompilierung (.c → .o) und Linking (.o → Programm) erläutern              |
+| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                                        |
+| **Auftrag**         | siehe unten                                                                                        |
+| **Hilfsmittel**     |                                                                                                    |
+| **Zeitbedarf**      | 60min                                                                                              |
+| **Lösungselemente** | Alle Projektdateien inkl. `Makefile`                 "                                             |
 
 > Hinweis zum KI-Einsatz
 >

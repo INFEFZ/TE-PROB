@@ -6,18 +6,21 @@
 
 # Gruppenarbeit WPF-Oberflächen mit C\#
 
-| **Vorgabe**         | **Beschreibung**                                                                     |
-| :------------------ | :----------------------------------------------------------------------------------- |
-| **Lernziele**       | Kannst Dateien öffnen, lesen, schreiben und schliessen,                              |
-|                     | Verstehst den Unterschied zwischen Text- und Binärmodus                              |
-|                     | Kannst formatiert mit Dateien arbeiten und Datenstrukturen direkt binär persistieren |
-| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                          |
-| **Auftrag**         | siehe unten                                                                          |
-| **Hilfsmittel**     |                                                                                      |
-| **Zeitbedarf**      | 60min                                                                                |
-| **Lösungselemente** | Abgabe: Alle Dateien (.h und .c) als Gesamtprojekt                                   |
-|                     | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.               |
-|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können                           |
+| **Vorgabe**         | **Beschreibung**                                                                                      |
+| :------------------ | :---------------------------------------------------------------------------------------------------- |
+| **Lernziele**       | Die .NET-Entwicklungsumgebung (SDK, VS Code, C# Dev Kit) einrichten und verifizieren                  |
+|                     | Ein WPF-Projekt mit dotnet new wpf erstellen, mit dotnet build kompilieren und mit dotnet run starten |
+|                     | Den Unterschied zwischen XAML (Oberfläche) und Code-Behind (Logik) erklären                           |
+|                     | Eine WPF-Oberfläche mit Label, TextBox, Button, ListBox und ComboBox in XAML erstellen                |
+|                     | Eventhandler für Benutzerinteraktionen (z.B. Click) implementieren                                    |
+|                     | Eingaben validieren und Fehler ohne Programmabsturz behandeln (TryParse)                              |
+| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                                           |
+| **Auftrag**         | siehe unten                                                                                           |
+| **Hilfsmittel**     |                                                                                                       |
+| **Zeitbedarf**      | 60min                                                                                                 |
+| **Lösungselemente** | Abgabe: Alle Dateien (.h und .c) als Gesamtprojekt                                                    |
+|                     | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.                                |
+|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können                                            |
 
 > ## Hinweis zum KI-Einsatz
 >

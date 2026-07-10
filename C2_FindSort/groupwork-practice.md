@@ -6,18 +6,19 @@
 
 # 1. Gruppenarbeit Such- und Sortieralgorithmen
 
-| **Vorgabe**         | **Beschreibung**                                                                                            |
-| :------------------ | :---------------------------------------------------------------------------------------------------------- |
-| **Lernziele**       | Kennt die wichtigsten Sortieralgorithmen                                                                    |
-|                     | Kann ihre Funktionsweise erklären und in C implementieren                                                   |
-|                     | Kann ihre Zeitkomplexität einschätzen und begründen, welcher Algorithmus für welches Szenario geeignet ist. |
-| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                                                 |
-| **Auftrag**         | siehe unten                                                                                                 |
-| **Hilfsmittel**     |                                                                                                             |
-| **Zeitbedarf**      | 60min                                                                                                       |
-| **Lösungselemente** | Abgabe: Alle Dateien (.h und .c) als Gesamtprojekt                                                          |
-|                     | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.                                      |
-|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können                                                  |
+| **Vorgabe**         | **Beschreibung**                                                                                       |
+| :------------------ | :----------------------------------------------------------------------------------------------------- |
+| **Lernziele**       | Die Funktionsweise von Bubblesort, Selectionsort und Insertionsort erklären und implementieren         |
+|                     | Die Funktionsweise von Mergesort, Quicksort und Heapsort erklären und implementieren                   |
+|                     | Die Zeitkomplexität (O-Notation) der behandelten Algorithmen benennen und vergleichen                  |
+|                     | Den Begriff „Stabilität" eines Sortieralgorithmus erklären und für die behandelten Algorithmen angeben |
+| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                                            |
+| **Auftrag**         | siehe unten                                                                                            |
+| **Hilfsmittel**     |                                                                                                        |
+| **Zeitbedarf**      | 60min                                                                                                  |
+| **Lösungselemente** | Abgabe: Alle Dateien (.h und .c) als Gesamtprojekt                                                     |
+|                     | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.                                 |
+|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können                                             |
 
 > **Hinweis zum KI-Einsatz**
 > Sortieralgorithmen lassen sich von KI in Sekunden erzeugen – das macht diese Aufgaben **nicht** überflüssig, sondern wichtiger.

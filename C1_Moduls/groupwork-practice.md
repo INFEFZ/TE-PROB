@@ -15,18 +15,21 @@
 
 # 1. Gruppenarbeit Moduls
 
-| **Vorgabe**         | **Beschreibung**                                                        |
-| :------------------ | :---------------------------------------------------------------------- |
-| **Lernziele**       | Kennt die Möglichkeiten zur Modularisierung und Strukturierung von Code |
-|                     | Kann Funktionen mit und ohne Parameter implementieren                   |
-|                     | Kann Funktionen korrekt aufrufen                                        |
-| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                             |
-| **Auftrag**         | siehe unten                                                             |
-| **Hilfsmittel**     |                                                                         |
-| **Zeitbedarf**      | 60min                                                                   |
-| **Lösungselemente** | Abgabe: Alle Dateien (.h und .c) als Gesamtprojekt                      |
-|                     | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.  |
-|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können              |
+| **Vorgabe**         | **Beschreibung**                                                                                 |
+| :------------------ | :----------------------------------------------------------------------------------------------- |
+| **Lernziele**       | Die Prinzipien des modularen Designs (hohe Kohäsion, lose Kopplung, Information Hiding) erklären |
+|                     | Ein C-Programm in logisch getrennte Module (.h / .c) aufteilen                                   |
+|                     | Header-Dateien mit korrekten Include-Guards (#ifndef) erstellen                                  |
+|                     | Das Schlüsselwort static für Information Hiding auf Dateiebene einsetzen                         |
+|                     | Globale Variablen mit extern über mehrere Dateien hinweg korrekt deklarieren und definieren      |
+|                     | Ein bestehendes Einzel-Datei-Programm in eine saubere Modulstruktur refaktorisieren              |
+| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                                      |
+| **Auftrag**         | siehe unten                                                                                      |
+| **Hilfsmittel**     |                                                                                                  |
+| **Zeitbedarf**      | 60min                                                                                            |
+| **Lösungselemente** | Abgabe: Alle Dateien (.h und .c) als Gesamtprojekt                                               |
+|                     | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.                           |
+|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können                                       |
 
 > Hinweis zum KI-Einsatz
 > Ihr dürft KI-Tools verwenden – aber: Ihr werdet den Code in der Präsentation erklären müssen.

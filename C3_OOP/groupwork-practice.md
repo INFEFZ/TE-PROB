@@ -6,19 +6,21 @@
 
 # Gruppenarbeit Objektorientierte Programmierung
 
-| **Vorgabe**         | **Beschreibung**                                                                      |
-| :------------------ | :------------------------------------------------------------------------------------ |
-| **Lernziele**       | Verstehst die Grundidee der objektorientierten Programmierung                         |
-|                     | Kennst die zentralen Begriffe (Klasse, Objekt, Attribut, Methode)                     |
-|                     | Kannst eigene Klassen mit Konstruktoren schreiben                                     |
-|                     | Objekte erzeugen und Klassen korrekt in Header- und Implementierungsdateien aufteilen |
-| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                           |
-| **Auftrag**         | siehe unten                                                                           |
-| **Hilfsmittel**     |                                                                                       |
-| **Zeitbedarf**      | 60min                                                                                 |
-| **Lösungselemente** | Abgabe: Alle Dateien (.h und .c) als Gesamtprojekt                                    |
-|                     | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.                |
-|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können                            |
+| **Vorgabe**         | **Beschreibung**                                                                                              |
+| :------------------ | :------------------------------------------------------------------------------------------------------------ |
+| **Lernziele**       | Den Unterschied zwischen prozeduraler und objektorientierter Programmierung erklären                          |
+|                     | Verstehst die Grundidee der objektorientierten Programmierung                                                 |
+|                     | Die Begriffe Klasse, Objekt, Attribut, Methode und Konstruktor definieren und anhand von Beispielen erläutern |
+|                     | Eigene Klassen mit Attributen, Methoden und Konstruktoren in C++ implementieren                               |
+|                     | Die drei Grundpfeiler Abstraktion, Kapselung und Vererbung erklären und in eigenen Klassen anwenden           |
+|                     | Klassen in Header- (.h) und Implementierungsdateien (.cpp) aufteilen und den Scope-Operator :: verwenden      |
+| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                                                   |
+| **Auftrag**         | siehe unten                                                                                                   |
+| **Hilfsmittel**     |                                                                                                               |
+| **Zeitbedarf**      | 60min                                                                                                         |
+| **Lösungselemente** | Abgabe: Alle Dateien (.h und .c) als Gesamtprojekt                                                            |
+|                     | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.                                        |
+|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können                                                    |
 
 > ## Hinweis zum KI-Einsatz
 >

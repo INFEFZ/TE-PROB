@@ -15,17 +15,21 @@
 
 # 1. Gruppenarbeit Funktionen
 
-| **Vorgabe**         | **Beschreibung**                                                        |
-| :------------------ | :---------------------------------------------------------------------- |
-| **Lernziele**       | Kennt die Möglichkeiten zur Modularisierung und Strukturierung von Code |
-|                     | Kann Funktionen mit und ohne Parameter implementieren                   |
-|                     | Kann Funktionen korrekt aufrufen                                        |
-| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                             |
-| **Auftrag**         | siehe unten                                                             |
-| **Hilfsmittel**     |                                                                         |
-| **Zeitbedarf**      | 60min                                                                   |
-| **Lösungselemente** | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.  |
-|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können              |
+| **Vorgabe**         | **Beschreibung**                                                                         |
+| :------------------ | :--------------------------------------------------------------------------------------- |
+| **Lernziele**       | Den Aufbau einer C-Funktion (Rückgabetyp, Name, Parameter, Rumpf) benennen und erläutern |
+|                     | Eigene Funktionen mit und ohne Rückgabewert definieren und aufrufen                      |
+|                     | Den Unterschied zwischen Call by Value und Call by Pointer erklären und korrekt anwenden |
+|                     | Den Gültigkeitsbereich (Scope) von Variablen erklären und Konflikte vermeiden            |
+|                     | Vorwärtsdeklarationen (Prototypen) erstellen und deren Notwendigkeit begründen           |
+|                     | Geeignete Funktionen aus der C-Standardbibliothek einsetzen (stdio.h, math.h, string.h)  |
+|                     | Ein bestehendes Programm durch sinnvolle Funktionsaufteilung strukturieren               |
+| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                              |
+| **Auftrag**         | siehe unten                                                                              |
+| **Hilfsmittel**     |                                                                                          |
+| **Zeitbedarf**      | 60min                                                                                    |
+| **Lösungselemente** | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.                   |
+|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können                               |
 
 > Hinweis zum KI-Einsatz
 > Ihr dürft KI-Tools verwenden – aber: Ihr werdet den Code in der Präsentation erklären müssen.

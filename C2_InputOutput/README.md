@@ -15,11 +15,12 @@
   - [1.10. Beispiel Strukturen binär speichern](#110-beispiel-strukturen-binär-speichern)
   - [1.11. Übersicht der Dateifunktionen](#111-übersicht-der-dateifunktionen)
 - [2. Aufgaben](#2-aufgaben)
-  - [2.1. Textanalyse (Datei)](#21-textanalyse-datei)
-  - [2.2. Formatierte Zeichenkette in Datei schreiben](#22-formatierte-zeichenkette-in-datei-schreiben)
-  - [2.3. Formatierte Zeichenkette aus Datei lesen](#23-formatierte-zeichenkette-aus-datei-lesen)
-  - [2.4. Einfache Logdatei schreiben und lesen](#24-einfache-logdatei-schreiben-und-lesen)
-  - [2.5. Rollenspiel Persistenz](#25-rollenspiel-persistenz)
+  - [2.1. Sololearn Funktionen und Zeiger](#21-sololearn-funktionen-und-zeiger)
+  - [2.2. Textanalyse (Datei)](#22-textanalyse-datei)
+  - [2.3. Formatierte Zeichenkette in Datei schreiben](#23-formatierte-zeichenkette-in-datei-schreiben)
+  - [2.4. Formatierte Zeichenkette aus Datei lesen](#24-formatierte-zeichenkette-aus-datei-lesen)
+  - [2.5. Einfache Logdatei schreiben und lesen](#25-einfache-logdatei-schreiben-und-lesen)
+  - [2.6. Rollenspiel Persistenz](#26-rollenspiel-persistenz)
 
 ---
 
@@ -317,7 +318,24 @@ void read_kunden(const char *pfad) {
 
 # 2. Aufgaben
 
-## 2.1. Textanalyse (Datei)
+## 2.1. Sololearn Funktionen und Zeiger
+
+| **Vorgabe**         | **Beschreibung**                                              |
+| :------------------ | :------------------------------------------------------------ |
+| **Lernziele**       | Kann das Ein-/Ausgabe Konzept korrekt anwenden                |
+|                     | Kann eine Datei (Text und Binäre) korrekt lesen und schreiben |
+|                     | Kann den Textinhalt einer Datei anlaysieren                   |
+| **Sozialform**      | Einzelarbeit                                                  |
+| **Auftrag**         | siehe unten                                                   |
+| **Hilfsmittel**     |                                                               |
+| **Zeitbedarf**      | 20min                                                         |
+| **Lösungselemente** | Sololearn Kapitel erfolgreich abgeschlossen                   |
+
+Starte auf Sololearn den Kurs [**C Mittelstufe**](https://www.sololearn.com/de/learn/courses/c-intermediate?location=2) und arbeite die Lektion **Dateien & Fehlerbehandlung** durch.
+
+---
+
+## 2.2. Textanalyse (Datei)
 
 | **Vorgabe**         | **Beschreibung**                               |
 | :------------------ | :--------------------------------------------- |
@@ -332,7 +350,7 @@ void read_kunden(const char *pfad) {
 
 Schreibe ein C-Programm, welches eine `Beispieldatei.txt` einliest die Anzahl Wörter, Anzahl Zeichen und Anzahl Zeilen herausgibt.
 
-## 2.2. Formatierte Zeichenkette in Datei schreiben
+## 2.3. Formatierte Zeichenkette in Datei schreiben
 
 | **Vorgabe**         | **Beschreibung**                                      |
 | :------------------ | :---------------------------------------------------- |
@@ -359,7 +377,7 @@ Gleitkommazahl (exponential): 1.411234e+02
 Gleitkommazahl (allgemeines Format): 141.123
 ```
 
-## 2.3. Formatierte Zeichenkette aus Datei lesen
+## 2.4. Formatierte Zeichenkette aus Datei lesen
 
 | **Vorgabe**         | **Beschreibung**                               |
 | :------------------ | :--------------------------------------------- |
@@ -373,7 +391,7 @@ Gleitkommazahl (allgemeines Format): 141.123
 
 Schreibe ein C-Programm, welches die Datei `Output.txt` der vorherigen Übung einliest und auf der Konsole ausgibt.
 
-## 2.4. Einfache Logdatei schreiben und lesen
+## 2.5. Einfache Logdatei schreiben und lesen
 
 | **Vorgabe**         | **Beschreibung**                                      |
 | :------------------ | :---------------------------------------------------- |
@@ -395,7 +413,7 @@ Das Programm soll die Funktionen `writeLog()` und `readLog()` enthalten und folg
 [2025-08-26 12:34:10] Programm beendet
 ```
 
-## 2.5. Rollenspiel Persistenz
+## 2.6. Rollenspiel Persistenz
 
 | **Vorgabe**         | **Beschreibung**                                      |
 | :------------------ | :---------------------------------------------------- |

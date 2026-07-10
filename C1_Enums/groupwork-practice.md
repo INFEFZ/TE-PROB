@@ -12,16 +12,19 @@
 
 # 1. Gruppenarbeit Enum's
 
-| **Vorgabe**         | **Beschreibung**                                                       |
-| :------------------ | :--------------------------------------------------------------------- |
-| **Lernziele**       | Enum in Kombination mit Arrays, Zählen, Filtern                        |
-|                     | Mehrere Enums kombiniert in einer struct, Vergleichslogik              |
-| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                            |
-| **Auftrag**         | siehe unten                                                            |
-| **Hilfsmittel**     |                                                                        |
-| **Zeitbedarf**      | 60min                                                                  |
-| **Lösungselemente** | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min. |
-|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können             |
+| **Vorgabe**         | **Beschreibung**                                                         |
+| :------------------ | :----------------------------------------------------------------------- |
+| **Lernziele**       | Das Problem von „Magic Numbers" erklären und enum als Lösung einsetzen   |
+|                     | Eigene Enumerationen mit typedef enum definieren                         |
+|                     | enum-Werte in switch-Anweisungen korrekt verwenden                       |
+|                     | Die automatische Wertevergabe und benutzerdefinierte Startwerte erklären |
+|                     | Geeignete Anwendungsfälle für enum von ungeeigneten unterscheiden        |
+| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                              |
+| **Auftrag**         | siehe unten                                                              |
+| **Hilfsmittel**     |                                                                          |
+| **Zeitbedarf**      | 60min                                                                    |
+| **Lösungselemente** | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.   |
+|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können               |
 
 > Hinweis zum KI-Einsatz
 > Ihr dürft KI-Tools verwenden – aber: Ihr werdet den Code in der Präsentation erklären müssen.

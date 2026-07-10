@@ -47,9 +47,10 @@
     - [1.8.6. Struct-Arrays dynamisch allokieren – Praxisbeispiel](#186-struct-arrays-dynamisch-allokieren--praxisbeispiel)
     - [1.8.7. Die goldene Regel](#187-die-goldene-regel)
 - [2. Aufgaben](#2-aufgaben)
-  - [2.1. Externe Variablen u. Funktionen](#21-externe-variablen-u-funktionen)
-  - [2.2. Speicherverwaltung auto, register, static](#22-speicherverwaltung-auto-register-static)
-  - [2.3. Speicherallokierung `malloc()`](#23-speicherallokierung-malloc)
+  - [2.1. Sololearn Funktionen und Zeiger](#21-sololearn-funktionen-und-zeiger)
+  - [2.2. Externe Variablen u. Funktionen](#22-externe-variablen-u-funktionen)
+  - [2.3. Speicherverwaltung auto, register, static](#23-speicherverwaltung-auto-register-static)
+  - [2.4. Speicherallokierung `malloc()`](#24-speicherallokierung-malloc)
 
 ---
 
@@ -775,7 +776,24 @@ int main(void) {
 
 # 2. Aufgaben
 
-## 2.1. Externe Variablen u. Funktionen
+## 2.1. Sololearn Funktionen und Zeiger
+
+| **Vorgabe**         | **Beschreibung**                                                       |
+| :------------------ | :--------------------------------------------------------------------- |
+| **Lernziele**       | Kann im Programm dynamisch Speicher einer bestimmten Grösse allozieren |
+|                     | Kann auf den allozierten Speicher zugreifen                            |
+|                     | Kann den allozierten Speicher wieder freigeben                         |
+| **Sozialform**      | Einzelarbeit                                                           |
+| **Auftrag**         | siehe unten                                                            |
+| **Hilfsmittel**     |                                                                        |
+| **Zeitbedarf**      | 20min                                                                  |
+| **Lösungselemente** | Sololearn Kapitel erfolgreich abgeschlossen                            |
+
+Starte auf Sololearn den Kurs [**C Mittelstufe**](https://www.sololearn.com/de/learn/courses/c-intermediate?location=2) und arbeite die Lektion **Speicherverwaltung** durch.
+
+---
+
+## 2.2. Externe Variablen u. Funktionen
 
 | **Vorgabe**         | **Beschreibung**                                               |
 | :------------------ | :------------------------------------------------------------- |
@@ -793,7 +811,7 @@ Erstelle ein C-Programm, das 2 Module verwendet:
 - ein Modul zur Definition einer **externen Variable** und einer **externen Funktion** und ein anderes Modul, um diese Variable und Funktion zu verwenden.
 - Das Programm soll eine Zahl von der **externen** Variable einlesen, diese Zahl verdoppeln und das Ergebnis ausgeben.
 
-## 2.2. Speicherverwaltung auto, register, static
+## 2.3. Speicherverwaltung auto, register, static
 
 | **Vorgabe**         | **Beschreibung**                                                           |
 | :------------------ | :------------------------------------------------------------------------- |
@@ -838,7 +856,7 @@ Die Funktion zaehler() wurde 2 mal aufgerufen.
 Die Funktion zaehler() wurde 3 mal aufgerufen.
 ```
 
-## 2.3. Speicherallokierung `malloc()`
+## 2.4. Speicherallokierung `malloc()`
 
 | **Vorgabe**         | **Beschreibung**                                                       |
 | :------------------ | :--------------------------------------------------------------------- |

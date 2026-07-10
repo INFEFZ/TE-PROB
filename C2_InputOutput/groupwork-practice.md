@@ -6,18 +6,21 @@
 
 # Gruppenarbeit Input und Output mit Dateien
 
-| **Vorgabe**         | **Beschreibung**                                                                     |
-| :------------------ | :----------------------------------------------------------------------------------- |
-| **Lernziele**       | Kannst Dateien öffnen, lesen, schreiben und schliessen,                              |
-|                     | Verstehst den Unterschied zwischen Text- und Binärmodus                              |
-|                     | Kannst formatiert mit Dateien arbeiten und Datenstrukturen direkt binär persistieren |
-| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                          |
-| **Auftrag**         | siehe unten                                                                          |
-| **Hilfsmittel**     |                                                                                      |
-| **Zeitbedarf**      | 60min                                                                                |
-| **Lösungselemente** | Abgabe: Alle Dateien (.h und .c) als Gesamtprojekt                                   |
-|                     | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.               |
-|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können                           |
+| **Vorgabe**         | **Beschreibung**                                                                         |
+| :------------------ | :--------------------------------------------------------------------------------------- |
+| **Lernziele**       | Das EVA-Prinzip im Kontext von Dateioperationen erläutern                                |
+|                     | Dateien mit fopen() korrekt öffnen (geeigneten Modus wählen) und mit fclose() schliessen |
+|                     | Den Rückgabewert NULL nach fopen() prüfen und Fehler behandeln                           |
+|                     | Strukturen mit fwrite und fread binär speichern und laden                                |
+|                     | Verstehst den Unterschied zwischen Text- und Binärmodus                                  |
+|                     | Kannst formatiert mit Dateien arbeiten und Datenstrukturen direkt binär persistieren     |
+| **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                              |
+| **Auftrag**         | siehe unten                                                                              |
+| **Hilfsmittel**     |                                                                                          |
+| **Zeitbedarf**      | 60min                                                                                    |
+| **Lösungselemente** | Abgabe: Alle Dateien (.h und .c) als Gesamtprojekt                                       |
+|                     | Funktionierendes Programm und Präsentation (Code erklären), ca. 5 min.                   |
+|                     | Jedes Gruppenmitglied muss Teile des Codes erklären können                               |
 
 > ## Hinweis zum KI-Einsatz
 >

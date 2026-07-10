@@ -11,6 +11,7 @@
 | **Lernziele**       | Kennst die Lebensdauer von Variablen und ihre Speicherklassen                                                                    |
 |                     | Kennst die Speichersegmente eines laufenden Programms                                                                            |
 |                     | Kannst Speicher mit malloc()/free() sicher verwalten und erkennst typische Fehler wie Memory Leaks, bevor sie zum Problem werden |
+|                     | Bestehende Speicherblöcke mit realloc() vergrössern und dabei die NULL-Falle vermeiden                                           |
 | **Sozialform**      | Gruppenarbeit: 2-3 Personen                                                                                                      |
 | **Auftrag**         | siehe unten                                                                                                                      |
 | **Hilfsmittel**     |                                                                                                                                  |
