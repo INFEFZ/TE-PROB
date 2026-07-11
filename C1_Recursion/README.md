@@ -146,7 +146,7 @@ Nehme die Funktion mit der `pow()`-Funktion als Referenz, sie gibt das korrekte 
 
 Teste das Programm mit folgenden Eingabewerten:
 
-- 5^2  2.5^8  1000^3  3^1000  7^1  1^7  1^777777  0^1  1^0  0^0
+- 5^2, 2.5^8, 1000^3, 3^1000, 7^1, 1^7, 1^777777, 0^1, 1^0, 0^0
 - Wenn die Resultate der Funktionen nicht übereinstimmen, überlege wieso.
 - Es könnte sogar sein, dass etwas gänzlich unerwartetes passiert.
 
