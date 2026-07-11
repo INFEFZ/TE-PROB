@@ -242,7 +242,7 @@ make help             # Hilfe anzeigen
 
 ### 1.3.1. Szenario
 
-- Ein Kommilitone hat ein **Makefile** geschrieben – es ist voller Fehler.
+- Ein Studienkollege-/inn hat ein **Makefile** geschrieben – es ist voller Fehler.
 - Eure Aufgabe: alle Fehler finden, erklären **warum** sie falsch sind, und ein korrigiertes, verbessertes Makefile abliefern.
 
 ### 1.3.2. Vorgegebener fehlerhafter Code

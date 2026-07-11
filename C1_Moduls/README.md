@@ -38,16 +38,16 @@
 
 ## 1.2. Warum Modularisierung?
 
-Bisher haben wir alles in eine einzige .c-Datei geschrieben. Das funktioniert – aber nur solange das Programm klein bleibt.
+Bisher haben wir alles in eine einzige .c-Datei geschrieben. Das funktioniert – aber nur solange das Programm **klein** bleibt.
 Stell dir ein reales Projekt vor:
 
 ```console
 main.c  →  5'000 Zeilen Code
-           - Benutzeroberfläche
-           - Datenbankzugriffe
-           - Berechnungslogik
-           - Fehlerbehandlung
-           - Hilfsfunktionen
+    - Benutzeroberfläche
+    - Datenbankzugriffe
+    - Berechnungslogik
+    - Fehlerbehandlung
+    - Hilfsfunktionen
 ```
 
 **Probleme:**
@@ -74,7 +74,7 @@ hilfsfunktionen.c → Allgemeine Utilities
 
 ## 1.3. Modulares Design – Grundprinzipien
 
-Gutes modulares Design folgt drei Kernprinzipien:
+Gutes modulares Design folgt drei **Kernprinzipien**:
 
 - **Hohe Kohäsion (High Cohesion)**: Alles, was zusammengehört, kommt in dasselbe Modul.
   - **Gut**: modul_statistik.c → nur statistische Berechnungen

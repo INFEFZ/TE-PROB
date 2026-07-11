@@ -51,6 +51,9 @@
 
 - Nach dieser Lektion kannst du ein Makefile für ein C-Projekt mit **mehreren Dateien** erstellen, verstehst den Unterschied zwischen **Kompilierung** und **Linking**, nutzt Variablen und Phony-Targets sinnvoll und kannst erklären, warum **Make** nur geänderte Dateien neu kompiliert.
 
+**Kurze Einführung (Video):**
+[Programme mit "make" kompilieren - Schritt für Schritt zum soliden Makefile](https://www.youtube.com/watch?v=K96jRX92_PM)
+
 ## 1.2. Wozu dienen Makefiles?
 
 Im letzten Modul haben wir unser Programm aus mehreren `.c`-Dateien kompiliert:
@@ -585,7 +588,7 @@ DEPS = $(OBJS:.o=.d)
 | **Zeitbedarf**      | 30min                                                   |
 | **Lösungselemente** | Funktionierendes Programm                               |
 
-In vorheriger Aufgabe zur Modularisierung wurde eine Trennstrchfunktion in eine separate Datei ausgelagert.
+In vorheriger Aufgabe zur Modularisierung wurde eine Trennstrichfunktion in eine separate Datei ausgelagert.
 Schreibe nun ein Makefile, welches das Hauptprogramm (main) und die `func.c` Datei zusammen erstellt.
 
 ---
