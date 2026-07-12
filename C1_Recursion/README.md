@@ -1,6 +1,6 @@
-|                             |                          |                              |
-| --------------------------- | ------------------------ | ---------------------------- |
-| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![Logo](./x_gitres/logo.png) |
+|                             |                          |                               |
+| --------------------------- | ------------------------ | ----------------------------- |
+| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![logo](../x_gitres/logo.png) |
 
 - [1. Rekursive Funktionen](#1-rekursive-funktionen)
   - [1.1. Einleitung](#11-einleitung)

@@ -1,6 +1,6 @@
-|                             |                          |                                        |
-| --------------------------- | ------------------------ | -------------------------------------- |
-| **Elektrotechniker/-in HF** | **Programmiertechnik A** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
+|                             |                          |                               |
+| --------------------------- | ------------------------ | ----------------------------- |
+| **Elektrotechniker/-in HF** | **Programmiertechnik A** | ![logo](../x_gitres/logo.png) |
 
 - [1. Kapitalbildung](#1-kapitalbildung)
 - [2. Volumenberechnung](#2-volumenberechnung)

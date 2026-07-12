@@ -1,6 +1,6 @@
-|                             |                          |                                        |
-| --------------------------- | ------------------------ | -------------------------------------- |
-| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
+|                             |                          |                               |
+| --------------------------- | ------------------------ | ----------------------------- |
+| **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![logo](../x_gitres/logo.png) |
 
 ---
 
