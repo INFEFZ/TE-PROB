@@ -1,3 +1,22 @@
+---
+theme: horizon
+theme_overrides:
+  colors:
+    primary: "#164E63"
+    accent: "#06B6D4"
+    background: "#e9edec"
+    text: "#164E63"
+    code_bg: "#a8bbc2"
+    title_text: "#ffffff"
+    section_bg: "#155E75"
+  fonts:
+    title: Inter, Helvetica Neue, Arial, sans-serif
+    body: Inter, Helvetica Neue, Arial, sans-serif
+    code: Fira Code, JetBrains Mono, monospace
+  header:
+    show: false
+    text: ""
+---
 |                             |                          |                               |
 | --------------------------- | ------------------------ | ----------------------------- |
 | **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![Logo](../x_gitres/logo.png) |

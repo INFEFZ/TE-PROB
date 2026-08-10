@@ -14,11 +14,21 @@
   - [1.8. Struktur als Funktionsparameter](#18-struktur-als-funktionsparameter)
   - [1.9. typedef zur Vereinfachung](#19-typedef-zur-vereinfachung)
   - [1.10. Beispiel: Einfaches Programm mit struct und Funktion](#110-beispiel-einfaches-programm-mit-struct-und-funktion)
-- [2. Aufgaben](#2-aufgaben)
-  - [2.1. Sololearn Funktionen und Zeiger](#21-sololearn-funktionen-und-zeiger)
-  - [2.2. Aufgabe Strukturelemente untersuchen](#22-aufgabe-strukturelemente-untersuchen)
-  - [2.3. Aufgabe Studentenverwaltungssystem](#23-aufgabe-studentenverwaltungssystem)
-  - [2.4. Aufgabe Studentenverwaltungssystem mit Verschachtelung](#24-aufgabe-studentenverwaltungssystem-mit-verschachtelung)
+- [2. Unions – mehrere Typen im selben Speicher](#2-unions--mehrere-typen-im-selben-speicher)
+  - [2.1. Was ist eine Union?](#21-was-ist-eine-union)
+  - [2.2. Der entscheidende Unterschied zur struct](#22-der-entscheidende-unterschied-zur-struct)
+  - [2.3. Zugriff und die wichtigste Gefahr](#23-zugriff-und-die-wichtigste-gefahr)
+    - [2.3.1. Einsatzbereich 1: Daten byteweise interpretieren](#231-einsatzbereich-1-daten-byteweise-interpretieren)
+    - [2.3.2. Einsatzbereich 2: Speicher sparen bei alternativen Daten](#232-einsatzbereich-2-speicher-sparen-bei-alternativen-daten)
+  - [2.4. Das Tagged-Union-Muster (Best Practice)](#24-das-tagged-union-muster-best-practice)
+  - [2.5. Union vs. struct – Vergleichstabelle](#25-union-vs-struct--vergleichstabelle)
+    - [2.5.1. Zusammenfassung Unions](#251-zusammenfassung-unions)
+- [3. Aufgaben](#3-aufgaben)
+  - [3.1. Sololearn Funktionen und Zeiger](#31-sololearn-funktionen-und-zeiger)
+  - [3.2. Aufgabe Strukturelemente untersuchen](#32-aufgabe-strukturelemente-untersuchen)
+  - [3.3. Aufgabe Studentenverwaltungssystem](#33-aufgabe-studentenverwaltungssystem)
+  - [3.4. Aufgabe Studentenverwaltungssystem mit Verschachtelung](#34-aufgabe-studentenverwaltungssystem-mit-verschachtelung)
+  - [3.5. Aufgabe Union analysieren und anwenden](#35-aufgabe-union-analysieren-und-anwenden)
 
 ---
 
@@ -229,11 +239,271 @@ int main() {
 
 ---
 
+# 2. Unions – mehrere Typen im selben Speicher
+
+## 2.1. Was ist eine Union?
+
+> Eine **Union** sieht auf den ersten Blick aus wie eine `struct` – mit einem entscheidenden Unterschied: Alle Felder einer Union teilen sich **denselben Speicherbereich**. Es kann daher immer nur **ein einziges** Feld gleichzeitig einen gültigen Wert enthalten.
+
+```c
+union Messwert {
+    int   ganzzahl;
+    float kommazahl;
+    char  zeichen;
+};
+```
+
+## 2.2. Der entscheidende Unterschied zur struct
+
+```c
+struct S_Messwert {          union U_Messwert {
+    int   ganzzahl;              int   ganzzahl;
+    float kommazahl;             float kommazahl;
+    char  zeichen;               char  zeichen;
+};                           };
+```
+
+**Speicherbelegung im Vergleich:**
+
+```bash
+struct (12 Bytes – jedes Feld hat eigenen Platz):
+┌────────────┬────────────┬──────┬─────────┐
+│  ganzzahl  │ kommazahl  │zeich.│ Padding │
+│  4 Byte    │  4 Byte    │1 Byte│ 3 Byte  │
+└────────────┴────────────┴──────┴─────────┘
+ ← alle drei Werte gleichzeitig nutzbar →
+
+union (4 Bytes – alle Felder am SELBEN Ort):
+┌────────────┐
+│  ganzzahl  │  ← alle drei Felder beginnen
+│  kommazahl │     an derselben Adresse!
+│  zeichen   │
+└────────────┘
+ ← nur EIN Wert gleichzeitig gültig →
+```
+
+**Nachweis mit `sizeof`:**
+
+```c
+#include <stdio.h>
+
+struct S_Messwert { int ganzzahl; float kommazahl; char zeichen; };
+union  U_Messwert { int ganzzahl; float kommazahl; char zeichen; };
+
+int main(void) {
+    printf("sizeof(struct) = %zu Bytes\n", sizeof(struct S_Messwert));
+    printf("sizeof(union)  = %zu Bytes\n", sizeof(union  U_Messwert));
+    return 0;
+}
+```
+
+```bash
+Ausgabe:
+sizeof(struct) = 12 Bytes
+sizeof(union)  = 4 Bytes
+```
+
+> **Merksatz:**
+> `sizeof(struct)` = Summe aller Felder (plus Padding)
+> `sizeof(union)` = Grösse des **grössten** Feldes
+
+## 2.3. Zugriff und die wichtigste Gefahr
+
+Der Zugriff erfolgt syntaktisch **genau wie bei einer struct** – mit `.` bzw. `->`:
+
+```c
+union Messwert w;
+w.ganzzahl = 42;
+printf("%d\n", w.ganzzahl);
+```
+
+**Die zentrale Gefahr:** Schreibt man ein Feld, werden **alle anderen ungültig**:
+
+```c
+#include <stdio.h>
+
+union Wert { int ganzzahl; float kommazahl; };
+
+int main(void) {
+    union Wert w;
+
+    w.ganzzahl = 42;
+    printf("w.ganzzahl  = %d\n", w.ganzzahl);
+    printf("w.kommazahl = %f   <- unsinnig!\n", w.kommazahl);
+
+    w.kommazahl = 3.14f;                    // überschreibt denselben Speicher!
+    printf("w.kommazahl = %f\n", w.kommazahl);
+    printf("w.ganzzahl  = %d   <- zerstört!\n", w.ganzzahl);
+
+    return 0;
+}
+```
+
+```bash
+Ausgabe:
+w.ganzzahl  = 42
+w.kommazahl = 0.000000   <- unsinnig!
+w.kommazahl = 3.140000
+w.ganzzahl  = 1078523331 <- zerstört!
+```
+
+> Der Compiler **warnt nicht** davor. Es liegt vollständig in der Verantwortung
+> der Programmiererin/des Programmierers, sich zu merken, welches Feld gerade gültig ist.
+
+### 2.3.1. Einsatzbereich 1: Daten byteweise interpretieren
+
+Der klassische Anwendungsfall in der Elektrotechnik: Ein Sensor liefert 4 Bytes über einen Bus, die als `float` interpretiert werden sollen – oder umgekehrt.
+
+```c
+#include <stdio.h>
+
+union Sensordaten {
+    float         messwert;
+    unsigned char bytes[4];
+};
+
+int main(void) {
+    union Sensordaten s;
+    s.messwert = 23.5f;
+
+    printf("float 23.5 besteht aus den Bytes: ");
+    for (int i = 0; i < 4; i++) {
+        printf("0x%02X ", s.bytes[i]);
+    }
+    printf("\n");
+    return 0;
+}
+```
+
+```bash
+Ausgabe:
+float 23.5 besteht aus den Bytes: 0x00 0x00 0xBC 0x41
+```
+
+> So lassen sich empfangene Bytes direkt als Zahl lesen, ohne manuelle
+> Bit-Schieberei – die Union übernimmt die Umdeutung des Speicherinhalts.
+>
+> **Achtung Plattformabhängigkeit:** Die Reihenfolge der Bytes hängt von der
+> **Byte-Reihenfolge** (*Endianness*) des Systems ab. Auf einem Big-Endian-System
+> wäre die Ausgabe umgekehrt. Beim Datenaustausch zwischen verschiedenen Systemen
+> muss das berücksichtigt werden.
+
+### 2.3.2. Einsatzbereich 2: Speicher sparen bei alternativen Daten
+
+Wenn ein Datensatz **entweder** das eine **oder** das andere enthält – nie beides – spart eine Union Speicher:
+
+```c
+// Ohne Union: 3 Felder = immer alle 3 belegt (Verschwendung)
+struct KontaktA {
+    char name[30];
+    char telefon[20];       // entweder Telefon...
+    char email[50];         // ...oder E-Mail – nie beides
+};                          // → 100 Bytes
+
+// Mit Union: nur das grössere Feld wird reserviert
+struct KontaktB {
+    char name[30];
+    union {
+        char telefon[20];
+        char email[50];
+    } kontaktweg;           // → nur 50 Bytes statt 70
+};
+```
+
+## 2.4. Das Tagged-Union-Muster (Best Practice)
+
+Da eine Union **nicht weiss**, welches Feld gerade gültig ist, kombiniert man sie in der Praxis mit einem `enum`, das den aktuellen Typ festhält:
+
+```c
+#include <stdio.h>
+
+typedef enum {
+    TYP_GANZZAHL,
+    TYP_KOMMAZAHL,
+    TYP_ZEICHEN
+} Werttyp;
+
+typedef struct {
+    Werttyp typ;                   // WELCHES Feld ist gültig?
+    union {
+        int   i;
+        float f;
+        char  c;
+    } wert;                        // DER eigentliche Wert
+} Messwert;
+
+void anzeigen(const Messwert *m) {
+    switch (m->typ) {
+        case TYP_GANZZAHL:  printf("  Ganzzahl:  %d\n",   m->wert.i); break;
+        case TYP_KOMMAZAHL: printf("  Kommazahl: %.2f\n", m->wert.f); break;
+        case TYP_ZEICHEN:   printf("  Zeichen:   %c\n",   m->wert.c); break;
+    }
+}
+
+int main(void) {
+    Messwert liste[3];
+
+    liste[0].typ = TYP_GANZZAHL;   liste[0].wert.i = 42;
+    liste[1].typ = TYP_KOMMAZAHL;  liste[1].wert.f = 3.14f;
+    liste[2].typ = TYP_ZEICHEN;    liste[2].wert.c = 'A';
+
+    for (int i = 0; i < 3; i++) {
+        anzeigen(&liste[i]);
+    }
+
+    printf("\nsizeof(Messwert) = %zu Bytes\n", sizeof(Messwert));
+    return 0;
+}
+```
+
+```bash
+Ausgabe:
+  Ganzzahl:  42
+  Kommazahl: 3.14
+  Zeichen:   A
+
+sizeof(Messwert) = 8 Bytes
+```
+
+> 💡 **Warum 8 Bytes?** 4 Bytes für das `enum` (`typ`) + 4 Bytes für die Union
+> (grösstes Feld). Ein Array aus 3 solchen Elementen kann Werte **unterschiedlichen
+> Typs** aufnehmen – etwas, das mit einem normalen Array nicht möglich wäre.
+
+## 2.5. Union vs. struct – Vergleichstabelle
+
+| Kriterium           | `struct`               | `union`                                |
+| ------------------- | ---------------------- | -------------------------------------- |
+| Speicherbelegung    | Summe aller Felder     | Grösse des grössten Feldes             |
+| Gleichzeitig gültig | **alle** Felder        | nur **ein** Feld                       |
+| Zugriffssyntax      | `.` bzw. `->`          | `.` bzw. `->` (identisch)              |
+| Typischer Einsatz   | Zusammengehörige Daten | Alternative Daten, Byte-Umdeutung      |
+| Compiler-Schutz     | –                      | keine Prüfung, welches Feld gültig ist |
+
+### 2.5.1. Zusammenfassung Unions
+
+```bash
+┌────────────────────────────────────────────────────────────────┐
+│ Definition       │ union Name { typ1 feld1; typ2 feld2; };     │
+│ Speicher         │ alle Felder an DERSELBEN Adresse            │
+│ Grösse           │ = grösstes Feld (nicht Summe!)              │
+│ Gültig           │ immer nur EIN Feld gleichzeitig             │
+│ Zugriff          │ union.feld  /  zeiger->feld                 │
+│ Einsatz          │ Byte-Umdeutung, alternative Daten           │
+│ Best Practice    │ Tagged Union: enum + union in einer struct  │
+└────────────────────────────────────────────────────────────────┘
+```
+
+> **Goldene Regel:** Eine Union spart Speicher, indem sie Felder überlagert –
+> aber sie merkt sich **nicht**, welches Feld gerade gültig ist. Diese Verantwortung
+> liegt bei dir. Im Zweifelsfall: Tagged Union mit `enum` verwenden.
+
+---
+
 </br>
 
-# 2. Aufgaben
+# 3. Aufgaben
 
-## 2.1. Sololearn Funktionen und Zeiger
+## 3.1. Sololearn Funktionen und Zeiger
 
 | **Vorgabe**         | **Beschreibung**                                 |
 | :------------------ | :----------------------------------------------- |
@@ -250,7 +520,7 @@ Starte auf Sololearn den Kurs [**C Mittelstufe**](https://www.sololearn.com/de/l
 
 ---
 
-## 2.2. Aufgabe Strukturelemente untersuchen
+## 3.2. Aufgabe Strukturelemente untersuchen
 
 | **Vorgabe**         | **Beschreibung**                                               |
 | :------------------ | :------------------------------------------------------------- |
@@ -301,7 +571,7 @@ int main(void) {
 
 ---
 
-## 2.3. Aufgabe Studentenverwaltungssystem
+## 3.3. Aufgabe Studentenverwaltungssystem
 
 | **Vorgabe**         | **Beschreibung**                               |
 | :------------------ | :--------------------------------------------- |
@@ -318,7 +588,7 @@ int main(void) {
 **Auftrag:**
 
 - Erstelle ein einfaches Studentenverwaltungssystem, das Informationen über Studenten speichert und ausgibt.
-- Jeder Student hat eine **Martikelnummer**, einen **Namen** und eine **Durchschnittsnote**.
+- Jeder Student hat eine **Matikelnummer**, einen **Namen** und eine **Durchschnittsnote**.
 
 **Anforderung:**
 
@@ -333,7 +603,7 @@ int main(void) {
 
 ---
 
-## 2.4. Aufgabe Studentenverwaltungssystem mit Verschachtelung
+## 3.4. Aufgabe Studentenverwaltungssystem mit Verschachtelung
 
 | **Vorgabe**         | **Beschreibung**                               |
 | :------------------ | :--------------------------------------------- |
@@ -360,5 +630,73 @@ Implementiere das Geburtstagfeld auch in den jeweiligen Funktion (`print..`, `cr
 
 ---
 
+## 3.5. Aufgabe Union analysieren und anwenden
+
+| **Vorgabe**         | **Beschreibung**                                  |
+| :------------------ | :------------------------------------------------ |
+| **Lernziele**       | Kennt den Unterschied zwischen struct und union   |
+|                     | Kann den Speicherbedarf einer Union bestimmen     |
+|                     | Kann eine Union zur Byte-Interpretation einsetzen |
+|                     | Kann das Tagged-Union-Muster anwenden             |
+| **Sozialform**      | Partnerarbeit                                     |
+| **Auftrag**         | siehe unten                                       |
+| **Hilfsmittel**     |                                                   |
+| **Zeitbedarf**      | 25min                                             |
+| **Lösungselemente** | Funktionierendes Programm + schriftliche Analyse  |
+
+**Teil A – Vorhersagen und prüfen:**
+
+Studiere das folgende Programm:
+
+```c
+#include <stdio.h>
+
+union Daten {
+    int   zahl;
+    char  text[8];
+    double kommazahl;
+};
+
+int main(void) {
+    union Daten d;
+
+    printf("Groesse: %zu\n", sizeof(union Daten));
+
+    d.zahl = 100;
+    printf("1: %d\n", d.zahl);
+
+    d.kommazahl = 2.5;
+    printf("2: %d\n", d.zahl);
+    printf("3: %f\n", d.kommazahl);
+
+    return 0;
+}
+```
+
+- Wie gross ist `sizeof(union Daten)`? Schreibe deine Annahme **zuerst auf Papier**.
+- Welche Werte geben die Zeilen 1, 2 und 3 aus? Begründe jede Annahme.
+- Überprüfe deine Annahmen mit einem Programmdurchlauf.
+- Erkläre schriftlich, warum Zeile 2 einen unerwarteten Wert liefert.
+
+**Teil B – Praxisanwendung:**
+
+Ein Temperatursensor sendet seinen Messwert als 4 Bytes über eine serielle Schnittstelle.
+Schreibe ein Programm, das:
+
+1. eine Union definiert, die `float` und `unsigned char bytes[4]` überlagert
+2. einen Messwert (z.B. `18.75f`) setzt und die vier Bytes hexadezimal ausgibt
+3. den umgekehrten Weg zeigt: die vier Bytes einzeln setzen und den `float` auslesen
+
+**Teil C – Tagged Union:**
+
+Erweitere das Studentenverwaltungssystem aus Aufgabe 2.3 um ein Feld `zusatzinfo`,
+das **entweder** eine Telefonnummer (`char[20]`) **oder** eine Matrikelnummer (`int`)
+enthalten kann – gesteuert über ein `enum`.
+
+Implementiere eine Funktion `void zeigeZusatzinfo(const struct Student *s)`,
+die je nach Typ die passende Information ausgibt.
+
+---
+
 © 2026 Lukas Müller – Licensed under CC BY-NC-ND 4.0
-See [LICENSE](..\license.md) file for details.
+See [LICENSE](../license.md) file for details.

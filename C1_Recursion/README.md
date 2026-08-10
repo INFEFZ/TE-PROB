@@ -66,7 +66,7 @@ Wenn eine Funktion aufgerufen wird, erweitert der Compiler den Stack um einen Da
 | :------------------ | :------------------------------------------------- |
 | **Lernziele**       | Verstehen wie eine Rekursion programmiert wird     |
 |                     | Kann ein rekursiver Code analysieren und erläutern |
-|                     | Keine eine Logik rekursiv implementieren           |
+|                     | Eine Logik rekursiv implementieren                 |
 | **Sozialform**      | Einzelarbeit                                       |
 | **Auftrag**         | siehe unten                                        |
 | **Hilfsmittel**     |                                                    |
@@ -107,7 +107,7 @@ int main(void)
 | :------------------ | :------------------------------------------------- |
 | **Lernziele**       | Verstehen wie eine Rekursion programmiert wird     |
 |                     | Kann ein rekursiver Code analysieren und erläutern |
-|                     | Keine eine Logik rekursiv implementieren           |
+|                     | Eine Logik rekursiv implementieren                 |
 | **Sozialform**      | Einzelarbeit                                       |
 | **Auftrag**         | siehe unten                                        |
 | **Hilfsmittel**     |                                                    |
@@ -128,7 +128,7 @@ int main(void)
 | :------------------ | :------------------------------------------------- |
 | **Lernziele**       | Verstehen wie eine Rekursion programmiert wird     |
 |                     | Kann ein rekursiver Code analysieren und erläutern |
-|                     | Keine eine Logik rekursiv implementieren           |
+|                     | Eine Logik rekursiv implementieren                 |
 | **Sozialform**      | Einzelarbeit                                       |
 | **Auftrag**         | siehe unten                                        |
 | **Hilfsmittel**     |                                                    |
