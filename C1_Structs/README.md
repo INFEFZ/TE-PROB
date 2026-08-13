@@ -465,13 +465,13 @@ Ausgabe:
 sizeof(Messwert) = 8 Bytes
 ```
 
-> 💡 **Warum 8 Bytes?** 4 Bytes für das `enum` (`typ`) + 4 Bytes für die Union
+> **Warum 8 Bytes?** 4 Bytes für das `enum` (`typ`) + 4 Bytes für die Union
 > (grösstes Feld). Ein Array aus 3 solchen Elementen kann Werte **unterschiedlichen
 > Typs** aufnehmen – etwas, das mit einem normalen Array nicht möglich wäre.
 
 ## 2.5. Union vs. struct – Vergleichstabelle
 
-| Kriterium           | `struct`               | `union`                                |
+| **Kriterium**       | `struct`               | `union`                                |
 | ------------------- | ---------------------- | -------------------------------------- |
 | Speicherbelegung    | Summe aller Felder     | Grösse des grössten Feldes             |
 | Gleichzeitig gültig | **alle** Felder        | nur **ein** Feld                       |

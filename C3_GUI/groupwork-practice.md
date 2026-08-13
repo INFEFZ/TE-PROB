@@ -474,4 +474,4 @@ Verteilung: 1:0  2:1  3:2  4:2  5:1
 ---
 
 © 2026 Lukas Müller – Licensed under CC BY-NC-ND 4.0
-See [LICENSE](..\license.md) file for details.
+See [LICENSE](../license.md) file for details.

@@ -90,4 +90,4 @@ In dieser Gruppenarbeit sollt ihr die Grundlagen und weiterführende Aspekte der
 ---
 
 © 2026 Lukas Müller – Licensed under CC BY-NC-ND 4.0
-See [LICENSE](..\license.md) file for details.
+See [LICENSE](../license.md) file for details.

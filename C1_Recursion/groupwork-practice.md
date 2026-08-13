@@ -369,4 +369,4 @@ beschreibt das Wachstumsmuster: linear? Quadratisch? Exponentiell?
 ---
 
 © 2026 Lukas Müller – Licensed under CC BY-NC-ND 4.0
-See [LICENSE](..\license.md) file for details.
+See [LICENSE](/.\license.md) file for details.
