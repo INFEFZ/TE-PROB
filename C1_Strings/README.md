@@ -2,262 +2,611 @@
 | --------------------------- | ------------------------ | ----------------------------- |
 | **Elektrotechniker/-in HF** | **Programmiertechnik B** | ![Logo](../x_gitres/logo.png) |
 
-- [1. String (Zeichenketten)](#1-string-zeichenketten)
-  - [1.1. Definition von Strings](#11-definition-von-strings)
-  - [1.2. Deklaration von Strings](#12-deklaration-von-strings)
-  - [1.3. Initialisierung von Strings](#13-initialisierung-von-strings)
-  - [1.4. String-Terminierung (`\0`)](#14-string-terminierung-0)
+- [1. Strings in C – Das zentrale Konzept](#1-strings-in-c--das-zentrale-konzept)
+  - [1.1. Das Problem: Wie merkt C, wo ein String endet?](#11-das-problem-wie-merkt-c-wo-ein-string-endet)
+  - [1.2. Die Lösung: Nullzeichen `'\0'`](#12-die-lösung-nullzeichen-0)
+  - [1.3. String im Speicher visualisiert](#13-string-im-speicher-visualisiert)
+    - [Beispiel 1: Korrekter String](#beispiel-1-korrekter-string)
+    - [Beispiel 2: Zu kleiner Buffer – Buffer Overflow](#beispiel-2-zu-kleiner-buffer--buffer-overflow)
+  - [1.4. Deklaration und Initialisierung](#14-deklaration-und-initialisierung)
+    - [Leeres Array (nicht initialisiert)](#leeres-array-nicht-initialisiert)
+    - [Mit Stringliteral (empfohlen)](#mit-stringliteral-empfohlen)
+    - [Manuelle Initialisierung mit Zeichen-Array](#manuelle-initialisierung-mit-zeichen-array)
   - [1.5. Ein- und Ausgabe von Strings](#15-ein--und-ausgabe-von-strings)
-  - [1.6. Wichtige String-Funktionen in C (aus `<string.h>`)](#16-wichtige-string-funktionen-in-c-aus-stringh)
-  - [1.7. Beispiele zu String-Funktionen](#17-beispiele-zu-string-funktionen)
-  - [1.8. Zusammenfassung](#18-zusammenfassung)
+    - [Ausgabe mit printf()](#ausgabe-mit-printf)
+    - [Unsicher: Einlesen mit scanf()](#unsicher-einlesen-mit-scanf)
+    - [Sicher: Einlesen mit fgets()](#sicher-einlesen-mit-fgets)
+  - [1.6. String-Funktionen und ihre Gefahren](#16-string-funktionen-und-ihre-gefahren)
+    - [Standard-Funktionen aus `<string.h>`](#standard-funktionen-aus-stringh)
+    - [Beispiele – FALSCH vs. RICHTIG](#beispiele--falsch-vs-richtig)
+      - [strlen()](#strlen)
+      - [strcpy() – Buffer Overflow](#strcpy--buffer-overflow)
+      - [strcat() – Buffer Overflow](#strcat--buffer-overflow)
+  - [1.7. Häufige Fehler und ihre Folgen](#17-häufige-fehler-und-ihre-folgen)
+    - [Fehler 1: Nullzeichen vergessen](#fehler-1-nullzeichen-vergessen)
+    - [Fehler 2: Array zu klein](#fehler-2-array-zu-klein)
+    - [Fehler 3: Ungebremste Input-Funktionen](#fehler-3-ungebremste-input-funktionen)
+    - [Fehler 4: Zu grosse Operationen ohne Grössenprüfung](#fehler-4-zu-grosse-operationen-ohne-grössenprüfung)
+  - [1.8. Sichere String-Patterns](#18-sichere-string-patterns)
+    - [Pattern 1: Sichere String-Eingabe](#pattern-1-sichere-string-eingabe)
+    - [Pattern 2: Sichere String-Kopie](#pattern-2-sichere-string-kopie)
+    - [Pattern 3: Sichere String-Verkettung](#pattern-3-sichere-string-verkettung)
+    - [Pattern 4: String-Länge prüfen](#pattern-4-string-länge-prüfen)
+  - [1.9. Zusammenfassung](#19-zusammenfassung)
 - [2. Aufgaben](#2-aufgaben)
-  - [2.1. Zeichenketten Länge](#21-zeichenketten-länge)
-  - [2.2. Zeichenketten rückwärts](#22-zeichenketten-rückwärts)
-  - [2.3. Zeichenketten vergleichen](#23-zeichenketten-vergleichen)
-  - [2.4. Zeichenketten verarbeiten](#24-zeichenketten-verarbeiten)
+  - [2.1. String-Speicher visualisieren](#21-string-speicher-visualisieren)
+  - [2.2. Sichere String-Eingabe](#22-sichere-string-eingabe)
+  - [2.3. String-Funktionen sicher verwenden](#23-string-funktionen-sicher-verwenden)
+  - [2.4. String-Verarbeitung mit Sicherheitsprüfungen](#24-string-verarbeitung-mit-sicherheitsprüfungen)
 
 ---
 
-# 1. String (Zeichenketten)
+</br>
 
-- In der Programmiersprache C gibt es **keine** eigene String-Datentypen wie in modernen Sprachen (z. B. String in Java).
-- Stattdessen werden Zeichenketten (Strings) in C als **Arrays von Zeichen (char)** dargestellt, die mit einem speziellen **Abschlusszeichen** `'\0'` (Null-Byte) terminiert werden.
+# 1. Strings in C – Das zentrale Konzept
 
-## 1.1. Definition von Strings
+## 1.1. Das Problem: Wie merkt C, wo ein String endet?
 
-- Ein String ist in C eine **Abfolge von Zeichen**, die im Speicher als **char**-Array gespeichert wird.
-- Das **letzte Zeichen** eines Strings ist immer das Null-Zeichen **`'\0'`**, das das Ende der Zeichenkette markiert.
+**In modernen Sprachen (Java, Python, C#):** Ein String ist ein eigener Datentyp mit eingebauter Länge:
 
-```c
-char name[] = {'J', 'o', 'h', 'n', '\0'};
+```java
+// Java
+String name = "Anna";  // Java speichert automatisch: Länge = 4
 ```
 
-> Ohne `'\0'` wüsste das Programm nicht, wann die Zeichenkette endet – das ist essentiell für die Stringverarbeitung in C.
-
-## 1.2. Deklaration von Strings
-
-**Leeres Array:**
+**In C:** Es gibt keinen String-Datentyp. Ein String ist nur ein Array aus Zeichen:
 
 ```c
-char wort[10];  // Platz für 9 Zeichen + '\0'
+// C
+char name[] = "Anna";  // Aber wie merkt C, dass das Wort "Anna" ist?
 ```
 
-**Mit Initialisierung:**
+**Das zentrale Problem:**
+
+Wenn du ein Text-Array speicherst, wie weiss C, wo der Text endet? Das Array selbst kennt nur seine maximale Grösse, nicht die tatsächliche Länge der Daten.
 
 ```c
-char wort[] = "Hallo";  // Automatische Grösse: 6 (inkl. '\0')
-
-// Wichtig:
-char wort[] = {'H', 'a', 'l', 'l', 'o'};  // KEIN String, da '\0' fehlt
+char buffer[100];
+scanf("%s", buffer);  // Benutzer tippt "Hallo"
+// Aber: Wie merkt printf() bei Ausgabe, dass es nach 'o' endet?
 ```
 
-## 1.3. Initialisierung von Strings
+> **Diese Frage ist das Fundament für das Verständnis von C-Strings.**
 
-Strings können auf zwei Arten initialisiert werden:
+---
 
-**Mit Stringliteralen (empfohlen):**
+## 1.2. Die Lösung: Nullzeichen `'\0'`
+
+**C-Lösung:** Am Ende jedes Strings steht das **Nullzeichen** `'\0'`.
+
+Das ist nicht das Zeichen "0" – es ist das Byte mit dem Wert 0 (ASCII-Null).
 
 ```c
-char text1[] = "Test";  // Automatisch '\0' am Ende
+char name[] = "Anna";
 ```
 
-**Mit expliziten Zeichen:**
+Im Speicher sieht das so aus:
+
+```bash
+Index:    0     1     2     3     4
+Speicher: ['A']['n']['n']['a']['\0']
+```
+
+Das Nullzeichen ist **Teil des Strings**, aber es ist nicht sichtbar.
+
+**Wichtig:** Der Array muss mindestens **Stringlänge + 1** sein für das Nullzeichen:
 
 ```c
-char text2[] = {'T', 'e', 's', 't', '\0'};  // Manuelle Termination
+char name[5];  // Platz für 4 Zeichen + '\0'
+strcpy(name, "Anna");  // Passt: A, n, n, a, \0
 ```
 
-> **Ein String muss das Nullzeichen '\0' enthalten, sonst verhalten sich String-Funktionen undefiniert.**
-
-## 1.4. String-Terminierung (`\0`)
-
-- Das Zeichen `'\0'` markiert das Ende eines Strings.
-- Alle Funktionen der Standardbibliothek wie `strlen()`, `printf()`, `strcpy()` usw. verlassen sich auf dieses Terminierungszeichen.
-- Wenn ein `char[]` **nicht** mit `'\0'` abgeschlossen ist, führen String-Operationen zu **undefiniertem Verhalten**.
+**Alle String-Funktionen verlassen sich darauf:**
 
 ```c
-char falsch[] = {'H', 'i'};  // Kein '\0' -> kein gültiger String
+strlen("Anna");         // Zählt: A, n, n, a, dann '\0' → Länge = 4
+printf("%s", name);     // Gibt aus: A, n, n, a, dann '\0' → STOP
+strcpy(ziel, name);     // Kopiert: A, n, n, a, dann '\0' → STOP
 ```
 
-> `'\0'` ist gleichbedeutend mit dem Ganzzahlwert 0 und belegt 1 Byte.
+> **Das Nullzeichen ist kein "Feature" – es ist eine Notwendigkeit.** Ohne es würde C nie wissen, wo ein String endet.
+
+---
+
+## 1.3. String im Speicher visualisiert
+
+### Beispiel 1: Korrekter String
+
+```c
+char vorname[10] = "Lisa";
+char nachname[10] = "Müller";
+```
+
+Speicherlayout:
+
+```bash
+vorname:   ['L']['i']['s']['a']['\0'][?][?][?][?][?]
+Index:      0    1    2    3    4    5   6   7   8   9
+
+nachname:  ['M']['ü']['l']['l']['e']['r']['\0'][?][?][?]
+Index:      0    1    2    3    4    5    6   7   8   9
+```
+
+Die `?` sind uninitialisierte Speicherstellen – spielen aber keine Rolle, weil `'\0'` das Ende markiert.
+
+### Beispiel 2: Zu kleiner Buffer – Buffer Overflow
+
+```c
+char name[5];
+scanf("%s", name);
+// Benutzer gibt "Christopher" (11 Zeichen) ein
+```
+
+Speicherlayout während des Schreibens:
+
+```bash
+name:      ['C']['h']['r']['i']['s']['t']['o']['p']['h']['e']['r']['\0']
+Index:      0    1    2    3    4    5    6    7    8    9    10   11
+           ←────────────── Array-Grösse: 5 ──────────→
+```
+
+**Das ist ein KRITISCHER FEHLER!** Die Daten überschreiben den Nachbar-Speicher:
+
+```bash
+name[0-4]:     ['C']['h']['r']['i']['s']  ← Unser Array
+(Nachbar):     ['t']['o']['p']['h']['e']['r']['\0']  ← Speicher danach wird kaputt!
+```
+
+**Konsequenzen:**
+
+- Programmabsturz (Segmentation Fault)
+- Sicherheitslücke (Hacker können Code ausführen)
+- Unvorhersehbares Verhalten (Memory Corruption)
+
+---
+
+## 1.4. Deklaration und Initialisierung
+
+### Leeres Array (nicht initialisiert)
+
+```c
+char wort[10];  // Speicherplatz für 9 Zeichen + '\0'
+// Warnung: Der Inhalt ist undefiniert, bis wir Daten schreiben
+```
+
+### Mit Stringliteral (empfohlen)
+
+```c
+char text[] = "Hallo";  // Compiler bestimmt Grösse: 6 (5 Zeichen + '\0')
+char text[6] = "Hallo"; // Explizite Grösse (muss ≥ Stringlänge + 1 sein)
+```
+
+> **Das Nullzeichen wird automatisch vom Compiler hinzugefügt.**
+
+### Manuelle Initialisierung mit Zeichen-Array
+
+```c
+char text[] = {'H', 'a', 'l', 'l', 'o', '\0'};  // KORREKT: Nullzeichen explizit
+char text[] = {'H', 'a', 'l', 'l', 'o'};        // FALSCH: Kein Nullzeichen!
+```
+
+Wenn das Nullzeichen fehlt:
+
+```c
+char falsch[] = {'H', 'i'};
+printf("%s", falsch);  // Undefined Behavior! 
+// printf() sucht nach '\0', findet es aber nicht und liest Speicher dahinter
+```
+
+---
 
 ## 1.5. Ein- und Ausgabe von Strings
 
-**Ausgabe mit printf():**
+### Ausgabe mit printf()
 
 ```c
 char name[] = "Lisa";
-printf("Name: %s\n", name);  // %s gibt den gesamten String aus
+printf("Name: %s\n", name);  // %s gibt den String aus, stoppt bei '\0'
 ```
 
-**Einlesen mit scanf():**
+### Unsicher: Einlesen mit scanf()
 
 ```c
 char eingabe[100];
-scanf("%s", eingabe);  // Liest bis zum ersten Leerzeichen
+scanf("%s", eingabe);  // GEFÄHRLICH: Keine Längenbegrenzung!
 ```
 
-> `scanf("%s")` liest nur bis zum ersten Leerzeichen.
+**Problem:** Wenn der Benutzer länger tippt, überschreitet er die Array-Grösse → Buffer Overflow.
 
-**Ganze Zeile lesen mit fgets():**
+```c
+scanf("%99s", eingabe);  // Besser: Max. 99 Zeichen + '\0' = 100 Total
+```
+
+### Sicher: Einlesen mit fgets()
 
 ```c
 char zeile[100];
-fgets(zeile, 100, stdin);  // Liest auch Leerzeichen mit
+if (fgets(zeile, 100, stdin) != NULL) {
+    // fgets() liest max. 99 Zeichen + '\0'
+    // Achtung: Enthält auch '\n', falls Platz ist
+    
+    // Zeilenumbruch entfernen (optional)
+    size_t len = strlen(zeile);
+    if (len > 0 && zeile[len-1] == '\n') {
+        zeile[len-1] = '\0';
+    }
+} else {
+    printf("Fehler beim Lesen\n");
+}
 ```
 
-> **fgets() speichert den Zeilenumbruch **\n** mit, wenn Platz ist. Eventuell muss dieser entfernt werden.**
+> **fgets() ist die sichere Wahl**, weil sie eine Längenbegrenzung erzwingt.
 
-## 1.6. Wichtige String-Funktionen in C (aus `<string.h>`)
+---
 
-Um mit Strings in C zu arbeiten, stellt die Standardbibliothek viele Funktionen bereit.
-Diese befinden sich in der Header-Datei: `#include <string.h>`
+## 1.6. String-Funktionen und ihre Gefahren
 
-| **Funktion**               | **Beschreibung**                                    |
-| :------------------------- | :-------------------------------------------------- |
-| `strlen(s)`                | Gibt die Länge von `s` (ohne `\0`) zurück           |
-| `strcpy(ziel, quelle)`     | Kopiert `quelle` nach `ziel`                        |
-| `strncpy(ziel, quelle, n)` | Kopiert max. `n` Zeichen                            |
-| `strcat(ziel, quelle)`     | Hängt `quelle` an `ziel` an                         |
-| `strncat(ziel, quelle, n)` | Hängt max. `n` Zeichen an                           |
-| `strcmp(s1, s2)`           | Vergleicht zwei Strings lexikografisch              |
-| `strncmp(s1, s2, n)`       | Vergleicht die ersten `n` Zeichen                   |
-| `strchr(s, c)`             | Gibt Zeiger auf erstes `c` in `s` zurück            |
-| `strstr(s1, s2)`           | Sucht `s2` in `s1`, Rückgabe: Zeiger auf Fundstelle |
+### Standard-Funktionen aus `<string.h>`
 
-## 1.7. Beispiele zu String-Funktionen
+| **Funktion**               | **Beschreibung**               | **Sicher?**                |
+| -------------------------- | ------------------------------ | -------------------------- |
+| `strlen(s)`                | Länge des Strings (ohne `\0`)  | Ja                         |
+| `strcpy(ziel, quelle)`     | Kopieren ohne Längenbegrenzung | **Nein** – Buffer Overflow |
+| `strncpy(ziel, quelle, n)` | Kopieren mit Limit             | Besser                     |
+| `strcat(ziel, quelle)`     | Anhängen ohne Längenbegrenzung | **Nein** – Buffer Overflow |
+| `strncat(ziel, quelle, n)` | Anhängen mit Limit             | Besser                     |
+| `strcmp(s1, s2)`           | Vergleich                      | Ja                         |
+| `strncmp(s1, s2, n)`       | Vergleich erste n Zeichen      | Ja                         |
+| `strchr(s, c)`             | Erste Stelle von c             | Ja                         |
+| `strstr(s1, s2)`           | Substring suchen               | Ja                         |
+
+### Beispiele – FALSCH vs. RICHTIG
+
+#### strlen()
 
 ```c
-char s[] = "Hallo";
-int laenge = strlen(s);  // Ergebnis: 5
+// RICHTIG
+char name[] = "Anna";
+int len = strlen(name);  // len = 4
+printf("Länge: %d\n", len);
 
-char quelle[] = "Beispiel";
-char ziel[20];
-strcpy(ziel, quelle);
-
-if (strcmp("abc", "abc") == 0) {
-    printf("Strings sind gleich!\n");
-}
-
-char a[20] = "Hallo ";
-char b[] = "Welt";
-strcat(a, b);  // a enthält jetzt "Hallo Welt"
+// FALSCH
+char falsch[] = {'H', 'i'};  // Kein '\0'!
+int len = strlen(falsch);    // Undefined Behavior – liest über Array hinaus
 ```
 
-Viele Standardfunktionen wie `strcpy()` oder `strcat()` sind unsicher, da sie bei zu kleinen Arrays einen **Pufferüberlauf (buffer overflow)** verursachen können. Bessere Alternativen:
+#### strcpy() – Buffer Overflow
 
-- `strncpy()` statt `strcpy()`
-- `strncat()` statt `strcat()`
+```c
+// FALSCH
+char dest[10];
+strcpy(dest, "Dies ist ein sehr langer String");  // Buffer Overflow!
 
-## 1.8. Zusammenfassung
+// RICHTIG
+char dest[10];
+strncpy(dest, "Dies ist ein sehr langer String", 9);  // Max 9 Zeichen
+dest[9] = '\0';  // Sicherstellen, dass Nullzeichen am Ende ist
+```
 
-| **Thema**             | **Wichtigste Punkte**                       |
-| :-------------------- | :------------------------------------------ |
-| **Definition**        | Strings = `char`-Array + `'\0'`             |
-| **Deklaration**       | `char s[10];` oder `char s[] = "Text";`     |
-| **Initialisierung**   | Mit Stringliteral oder manuell mit `'\0'`   |
-| **Termination**       | `'\0'` zwingend notwendig                   |
-| **Ein-/Ausgabe**      | `scanf()`, `fgets()`, `printf("%s")`        |
-| **String-Funktionen** | `strlen`, `strcpy`, `strcmp`, `strcat`, ... |
-| **Sicherheit**        | `strncpy`/`strncat` vermeiden Überläufe     |
+#### strcat() – Buffer Overflow
+
+```c
+// FALSCH
+char full[20] = "Hallo ";
+strcat(full, "das ist ein sehr langer Text");  // Zu viele Zeichen!
+
+// RICHTIG
+char full[20] = "Hallo ";
+strncat(full, "das ist ...", 20 - strlen(full) - 1);  // Berechne verfügbaren Platz
+```
+
+---
+
+## 1.7. Häufige Fehler und ihre Folgen
+
+### Fehler 1: Nullzeichen vergessen
+
+```c
+// FALSCH
+char s[5] = {'H', 'a', 'l', 'l', 'o'};  // Kein '\0'
+strlen(s);   // Undefined Behavior
+printf("%s", s);  // Undefined Behavior – liest über Array hinaus
+```
+
+**Folge:** Speicher wird überlesen, Programme stürzen ab oder zeigen Garbage.
+
+---
+
+### Fehler 2: Array zu klein
+
+```c
+// FALSCH
+char name[5] = "Hello";  // "Hello" = 5 Zeichen + '\0' = 6 Bytes nötig
+// Der String passt nicht! Nullzeichen wird ausserhalb geschrieben.
+
+// RICHTIG
+char name[6] = "Hello";  // 5 + '\0' = 6
+```
+
+---
+
+### Fehler 3: Ungebremste Input-Funktionen
+
+```c
+// FALSCH
+char buffer[100];
+scanf("%s", buffer);  // Benutzer könnte 1000 Zeichen eingeben
+
+gets(buffer);  // ULTRA-GEFÄHRLICH – Immer Buffer Overflow
+
+// RICHTIG
+scanf("%99s", buffer);    // Max 99 + '\0'
+
+fgets(buffer, 100, stdin);  // Max 99 + '\0'
+```
+
+---
+
+### Fehler 4: Zu grosse Operationen ohne Grössenprüfung
+
+```c
+// FALSCH
+char a[10] = "Hallo";
+char b[10] = "Welt";
+strcat(a, b);  // a hat nur 10 Bytes, "HalloWelt" braucht 10 + '\0' = 11!
+
+// RICHTIG
+char a[20] = "Hallo";  // Genug Platz für "Hallo" + "Welt" + '\0'
+strncat(a, b, 20 - strlen(a) - 1);
+```
+
+---
+
+## 1.8. Sichere String-Patterns
+
+### Pattern 1: Sichere String-Eingabe
+
+```c
+#define MAX_LEN 100
+
+char buffer[MAX_LEN];
+
+// Sichere Eingabe mit fgets()
+if (fgets(buffer, MAX_LEN, stdin) != NULL) {
+    // Zeilenumbruch entfernen
+    size_t len = strlen(buffer);
+    if (len > 0 && buffer[len-1] == '\n') {
+        buffer[len-1] = '\0';
+    }
+    printf("Du hast eingegeben: %s\n", buffer);
+} else {
+    printf("Fehler beim Lesen\n");
+    return -1;
+}
+```
+
+### Pattern 2: Sichere String-Kopie
+
+```c
+// Alte Weise (unsicher)
+strcpy(dest, src);
+
+// Neue Weise (sicher)
+strncpy(dest, src, sizeof(dest) - 1);
+dest[sizeof(dest) - 1] = '\0';
+```
+
+### Pattern 3: Sichere String-Verkettung
+
+```c
+char full[100] = "Hallo ";
+char addon[] = "Welt";
+
+// Berechne verfügbaren Platz
+size_t available = sizeof(full) - strlen(full) - 1;
+strncat(full, addon, available);
+
+// oder noch sicherer: prüfe vorher
+if (strlen(full) + strlen(addon) < sizeof(full)) {
+    strcat(full, addon);
+} else {
+    printf("Warnung: String würde zu lang\n");
+}
+```
+
+### Pattern 4: String-Länge prüfen
+
+```c
+#define MIN_LEN 3
+#define MAX_LEN 50
+
+char password[MAX_LEN];
+fgets(password, MAX_LEN, stdin);
+
+size_t len = strlen(password);
+if (len < MIN_LEN) {
+    printf("Zu kurz: min. %d Zeichen\n", MIN_LEN);
+    return -1;
+} else if (len > MAX_LEN - 1) {
+    printf("Zu lang: max. %d Zeichen\n", MAX_LEN - 1);
+    return -1;
+}
+```
+
+---
+
+## 1.9. Zusammenfassung
+
+| **Konzept**                 | **Wichtigste Punkte**                                               |
+| --------------------------- | ------------------------------------------------------------------- |
+| **Was ist ein String?**     | Array aus `char` mit `'\0'` am Ende                                 |
+| **Warum Nullzeichen?**      | C braucht ein Endezeichen, weil es keine eingebaute Länge speichert |
+| **Array-Grösse**            | Mindestens `Stringlänge + 1` für `'\0'`                             |
+| **Gefahr: Buffer Overflow** | Zu viele Daten in Array schreiben → Speicher-Corruption             |
+| **Sichere Eingabe**         | `fgets()` statt `scanf()` oder `gets()`                             |
+| **Sichere Funktionen**      | `strncpy()`, `strncat()` statt `strcpy()`, `strcat()`               |
+| **Immer prüfen**            | Zeilenumbruch entfernen, Längenbegrenzung nutzen                    |
 
 ---
 
 # 2. Aufgaben
 
-## 2.1. Zeichenketten Länge
+## 2.1. String-Speicher visualisieren
 
-| **Vorgabe**         | **Beschreibung**                                                 |
-| :------------------ | :--------------------------------------------------------------- |
-| **Lernziele**       | Verstehen wie Strings deklariert und initialisiert werden können |
-|                     | Kann Strings von der Konsole einlesen und ausgeben               |
-|                     | Kann String-Funktionen einsetzen                                 |
-| **Sozialform**      | Einzelarbeit                                                     |
-| **Auftrag**         | siehe unten                                                      |
-| **Hilfsmittel**     |                                                                  |
-| **Zeitbedarf**      | 20min                                                            |
-| **Lösungselemente** | Funktionierendes Programm                                        |
+| **Vorgabe**         | **Beschreibung**                                          |
+| :------------------ | :-------------------------------------------------------- |
+| **Lernziele**       | Kann beschreiben, wie Strings im Speicher angeordnet sind |
+|                     | Versteht die Rolle des Nullzeichens                       |
+|                     | Kann Buffer-Grössen richtig berechnen                     |
+| **Sozialform**      | Einzelarbeit                                              |
+| **Auftrag**         | siehe unten                                               |
+| **Hilfsmittel**     | Papier/Zeichenprogramm, Editor                            |
+| **Zeitbedarf**      | 25min                                                     |
+| **Lösungselemente** | Speicher-Visualisierung mit Adressen und Werten           |
 
-Schreibe ein C-Programm, das Folgendes tut:
+Schreibe ein C-Programm:
 
-- Lese zwei Zeichenkette (max. 100 Zeichen) vom Benutzer ein.
-- Gib die längere Zeichenkette inkl. deren Länge (Anzahl Zeichen) in der Konsole aus.
+```c
+#include <stdio.h>
+#include <string.h>
 
----
+int main() {
+    char vorname[10] = "Anna";
+    char nachname[10] = "Müller";
+    char platz[20];
+    
+    printf("Länge von vorname: %d\n", (int)strlen(vorname));
+    printf("Länge von nachname: %d\n", (int)strlen(nachname));
+    
+    printf("Adresse von vorname: %p\n", (void *)vorname);
+    printf("Adresse von nachname: %p\n", (void *)nachname);
+    
+    return 0;
+}
+```
 
-## 2.2. Zeichenketten rückwärts
+Führe das Programm aus und dokumentiere:
 
-| **Vorgabe**         | **Beschreibung**                                                 |
-| :------------------ | :--------------------------------------------------------------- |
-| **Lernziele**       | Verstehen wie Strings deklariert und initialisiert werden können |
-|                     | Kann Strings von der Konsole einlesen und ausgeben               |
-|                     | Kann Stringfunktionen einsetzen                                  |
-| **Sozialform**      | Einzelarbeit                                                     |
-| **Auftrag**         | siehe unten                                                      |
-| **Hilfsmittel**     |                                                                  |
-| **Zeitbedarf**      | 30min                                                            |
-| **Lösungselemente** | Funktionierendes Programm                                        |
-
-Schreibe ein C-Programm, das Folgendes tut:
-
-- Lese eine Zeichenkette (max. 100 Zeichen) vom Benutzer ein.
-- Schreibe zwei Funktionen, welche die Zeichenkette rückwärts aus ausgibt, sowohl durch direkte Übergabe des Arrays als auch durch Übergabe über einen Pointer.
-  - `ausgabe_mit_array(char str[]) {}`
-  - `ausgabe_mit_pointer(char* ptr) {}`
-
----
-
-## 2.3. Zeichenketten vergleichen
-
-| **Vorgabe**         | **Beschreibung**                                                 |
-| :------------------ | :--------------------------------------------------------------- |
-| **Lernziele**       | Verstehen wie Strings deklariert und initialisiert werden können |
-|                     | Kann Strings von der Konsole einlesen und ausgeben               |
-|                     | Kann Stringfunktionen einsetzen                                  |
-| **Sozialform**      | Einzelarbeit                                                     |
-| **Auftrag**         | siehe unten                                                      |
-| **Hilfsmittel**     |                                                                  |
-| **Zeitbedarf**      | 30min                                                            |
-| **Lösungselemente** | Funktionierendes Programm                                        |
-
-Schreibe ein C-Programm, das Folgendes tut:
-
-- Lese eine Zeichenkette vom Benutzer ein.
-- Kopiere die Zeichenkette in eine andere Zeichenkette.
-- Vergleiche die beiden Zeichenkette, um sicherzustellen, dass die Kopie erfolgreich war.
-- Gib das Ergebnis des Vergleichs sowie die ursprüngliche und die kopierte Zeichenkette aus.
+1. Speicher-Layout aller drei Arrays (Index 0–19, mit Inhalt und `\0`)
+2. Berechne für jede Variable: Wie viel Platz ist noch frei?
+3. Erkläre: Warum braucht "Anna" (4 Zeichen) ein Array der Grösse 5?
 
 ---
 
-## 2.4. Zeichenketten verarbeiten
+## 2.2. Sichere String-Eingabe
 
-| **Vorgabe**         | **Beschreibung**                                                 |
-| :------------------ | :--------------------------------------------------------------- |
-| **Lernziele**       | Verstehen wie Strings deklariert und initialisiert werden können |
-|                     | Kann Strings von der Konsole einlesen und ausgeben               |
-|                     | Kann String-Funktionen einsetzen                                 |
-| **Sozialform**      | Einzelarbeit                                                     |
-| **Auftrag**         | siehe unten                                                      |
-| **Hilfsmittel**     |                                                                  |
-| **Zeitbedarf**      | 30min                                                            |
-| **Lösungselemente** | Funktionierendes Programm                                        |
+| **Vorgabe**         | **Beschreibung**                                      |
+| :------------------ | :---------------------------------------------------- |
+| **Lernziele**       | Kann sichere String-Eingabe mit fgets() nutzen        |
+|                     | Versteht die Gefahr von scanf() ohne Längenbegrenzung |
+|                     | Kann Zeilenumbrüche entfernen                         |
+| **Sozialform**      | Einzelarbeit                                          |
+| **Auftrag**         | siehe unten                                           |
+| **Hilfsmittel**     | Editor, Compiler                                      |
+| **Zeitbedarf**      | 20min                                                 |
+| **Lösungselemente** | Funktionierendes Programm, das sichere Eingabe zeigt  |
 
-Schreibe ein C-Programm, das Folgendes tut:
+Schreibe zwei Versionen eines Eingabe-Programms:
 
-- Liest zwei Zeichenketten (Strings) vom Benutzer ein.
-- Gibt beide Strings auf der Konsole aus.
-- Vergleicht die beiden Strings miteinander:
-  - Falls sie gleich sind, soll "Die Strings sind gleich." ausgegeben werden.
-  - Falls sie unterschiedlich sind, soll "Die Strings sind verschieden." ausgegeben werden.
-  - Hängt den zweiten String an den ersten an und gibt das Ergebnis aus.
-- Gibt die Länge des neuen (verketteten) Strings aus.
+**Version 1 (unsicher):**
 
-**Zusatzbedingung:**
+```c
+char buffer[10];
+scanf("%s", buffer);  // Keine Längenbegrenzung – warum ist das falsch?
+printf("Du hast eingegeben: %s\n", buffer);
+```
 
-- Verwende die Funktionen aus der C-Standardbibliothek: `strcmp`, `strcat`, `strlen`.
-- Benutze `fgets()` zum Einlesen der Strings, um auch Leerzeichen zu unterstützen.
-- Entferne den Zeilenumbruch `\n`, der durch `fgets()` mit eingelesen wird.
+**Version 2 (sicher):**
+
+```c
+char buffer[10];
+if (fgets(buffer, 10, stdin) != NULL) {
+    // Entferne Zeilenumbruch
+    size_t len = strlen(buffer);
+    if (len > 0 && buffer[len-1] == '\n') {
+        buffer[len-1] = '\0';
+    }
+    printf("Du hast eingegeben: %s\n", buffer);
+}
+```
+
+Teste beide:
+
+- Normale Eingabe ("Hallo")
+- Lange Eingabe ("Das ist ein sehr langer Text")
+
+Beobachte und dokumentiere: Was passiert bei der unsicheren Version?
+
+---
+
+## 2.3. String-Funktionen sicher verwenden
+
+| **Vorgabe**         | **Beschreibung**                            |
+| :------------------ | :------------------------------------------ |
+| **Lernziele**       | Kann strcpy() vs. strncpy() unterscheiden   |
+|                     | Kann Längenbegrenzungen richtig anwenden    |
+|                     | Versteht Buffer Overflow und seine Folgen   |
+| **Sozialform**      | Partnerarbeit                               |
+| **Auftrag**         | siehe unten                                 |
+| **Hilfsmittel**     | Editor, Compiler, die Fehler-Beispiele oben |
+| **Zeitbedarf**      | 30min                                       |
+| **Lösungselemente** | Korrigiertes Programm mit Erklärung         |
+
+Hier ist Code mit 3 Buffer-Overflow-Fehlern. Finde und behebe sie:
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    // Fehler 1: Zu kleine Array
+    char name[5];
+    strcpy(name, "Christopher");  // 12 Zeichen in 5 Bytes – Overflow!
+    
+    // Fehler 2: strcat ohne Längenbegrenzung
+    char full[20] = "Hallo ";
+    char addon[] = "das ist ein Text";
+    strcat(full, addon);  // Passt nicht!
+    
+    // Fehler 3: scanf ohne Limit
+    char input[10];
+    scanf("%s", input);  // Benutzer könnte 100 Zeichen eingeben
+    
+    printf("%s\n", full);
+    return 0;
+}
+```
+
+Schreibe die sichere Version mit `strncpy()`, `strncat()`, und `fgets()`.
+
+---
+
+## 2.4. String-Verarbeitung mit Sicherheitsprüfungen
+
+| **Vorgabe**         | **Beschreibung**                                        |
+| :------------------ | :------------------------------------------------------ |
+| **Lernziele**       | Kann komplette String-Operationen sicher implementieren |
+|                     | Kann Längen vorab prüfen                                |
+|                     | Versteht sichere String-Verkettung                      |
+| **Sozialform**      | Einzelarbeit                                            |
+| **Auftrag**         | siehe unten                                             |
+| **Hilfsmittel**     | Editor, die Pattern oben                                |
+| **Zeitbedarf**      | 30min                                                   |
+| **Lösungselemente** | Funktionierendes Programm mit Sicherheitsprüfungen      |
+
+Schreibe ein Programm, das folgendes tut:
+
+1. Lese zwei Strings sichere (max. 50 Zeichen je)
+2. Gib beide aus
+3. Vergleiche mit `strcmp()`
+4. Verkettet beide mit `strcat()` – ABER: Prüfe vorher, ob genug Platz ist
+5. Wenn nicht genug Platz: Fehlermeldung statt Crash
+
+**Zusatz-Anforderung:**
+
+- Verwende `fgets()` für Eingabe (nicht `scanf()`)
+- Entferne Zeilenumbrüche
+- Nutze `strlen()` zum Platz-Berechnen
 
 ---
 

@@ -21,9 +21,9 @@
 
 ---
 
-## 1. Sinn und Zweck von Enums
+## 1.1. Sinn und Zweck von Enums
 
-### Das Problem ohne Enum
+### 1.1.1. Das Problem ohne Enum
 
 Stell dir folgenden Code vor, der einen Wochentag verarbeitet:
 
@@ -47,7 +47,7 @@ if (tag == 0) {
 
 > Dieses Problem nennt man **„Magic Numbers"** – Zahlen im Code, deren Bedeutung nicht aus sich selbst heraus erkennbar ist.
 
-### Die Lösung: `enum`
+### 1.1.2. Die Lösung: `enum`
 
 ```c
 typedef enum {
@@ -63,11 +63,11 @@ if (tag == MONTAG) {
 
 Jetzt ist sofort klar, was gemeint ist – **ohne** einen Kommentar zu brauchen.
 
-### Definition
+### 1.1.3. Definition
 
 > Ein **enum** (Enumeration, „Aufzählungstyp") ist ein **benutzerdefinierter Datentyp**, der aus einer **benannten Menge von Konstanten** besteht. Intern sind es ganze Zahlen (`int`), aber im Code erscheinen sie als sprechende Namen.
 
-### Vorteile im Überblick
+### 1.1.4. Vorteile im Überblick
 
 | Vorteil                   | Erklärung                                                      |
 | ------------------------- | -------------------------------------------------------------- |
@@ -79,9 +79,9 @@ Jetzt ist sofort klar, was gemeint ist – **ohne** einen Kommentar zu brauchen.
 
 ---
 
-## 2. Enum vs. die Alternativen – wo sollen Enums eingesetzt werden?
+## 1.2. Enum vs. die Alternativen – wo sollen Enums eingesetzt werden?
 
-### 2.1 Vergleich: `enum` vs. `#define` vs. `int`
+### 1.2.1. 2.1 Vergleich: `enum` vs. `#define` vs. `int`
 
 ```c
 // Variante 1: reine int-Konstanten mit #define
@@ -105,7 +105,7 @@ int tag = 2;  // keine Information, was 2 bedeutet
 | Im Debugger sichtbar als Name                  | Nein      | Ja (meist) | Nein  |
 | Automatische Werte-Vergabe                     | Nein      | Ja         | Nein  |
 
-### 2.2 Faustregel: Wann ein Enum verwenden?
+### 1.2.2. 2.2 Faustregel: Wann ein Enum verwenden?
 
 Verwende ein `enum`, wenn du eine **feste, begrenzte Menge** von benannten Zuständen oder Kategorien hast:
 
@@ -129,9 +129,9 @@ Verwende ein `enum`, wenn du eine **feste, begrenzte Menge** von benannten Zust�
 
 ---
 
-## 3. Deklaration und Initialisierung
+## 1.3. Deklaration und Initialisierung
 
-### 3.1 Grundsyntax
+### 1.3.1. 3.1 Grundsyntax
 
 ```c
 enum Name {
@@ -151,7 +151,7 @@ enum Ampelfarbe {
 enum Ampelfarbe aktuelleFarbe = ROT;
 ```
 
-### 3.2 Mit `typedef` – die übliche Praxis in C
+### 1.3.2. 3.2 Mit `typedef` – die übliche Praxis in C
 
 Ohne `typedef` muss man immer `enum Ampelfarbe` schreiben. Mit `typedef` reicht der kurze Name:
 
@@ -172,7 +172,7 @@ Ampelfarbe farbe = ROT;               // kein "enum" mehr nötig
 
 > **Konvention:** In modernem C-Code wird praktisch immer `typedef enum { ... } Name;` verwendet.
 
-### 3.3 Automatische Wertevergabe
+### 1.3.3. 3.3 Automatische Wertevergabe
 
 Enum-Konstanten erhalten automatisch aufsteigende `int`-Werte, beginnend bei `0`:
 
@@ -188,7 +188,7 @@ typedef enum {
 } Wochentag;
 ```
 
-### 3.4 Eigene Startwerte und Sprünge
+### 1.3.4. 3.4 Eigene Startwerte und Sprünge
 
 Man kann den Startwert und einzelne Werte explizit festlegen – die folgenden Werte zählen automatisch weiter:
 
@@ -211,7 +211,7 @@ typedef enum {
 
 > Wenn Monate als `1..12` natürlicher sind (wie im echten Kalender), startet man bewusst bei `1` statt beim Standard `0`.
 
-### 3.5 Mehrere Enum-Werte mit gleichem Zahlenwert
+### 1.3.5. 3.5 Mehrere Enum-Werte mit gleichem Zahlenwert
 
 ```c
 typedef enum {
@@ -224,9 +224,9 @@ typedef enum {
 
 ---
 
-## 4. Zugriff und Verwendung
+## 1.4. Zugriff und Verwendung
 
-### 4.1 Enum als Funktionsparameter und Rückgabewert
+### 1.4.1. 4.1 Enum als Funktionsparameter und Rückgabewert
 
 ```c
 typedef enum { ROT, GELB, GRUEN } Ampelfarbe;
@@ -259,7 +259,7 @@ int main(void) {
 }
 ```
 
-### 4.2 Enum in `switch`-Anweisungen
+### 1.4.2. 4.2 Enum in `switch`-Anweisungen
 
 `enum` und `switch` ergänzen sich besonders gut – der Compiler kann sogar warnen, wenn ein Fall vergessen wurde (mit `-Wswitch`):
 
@@ -286,9 +286,9 @@ gcc -Wall -Wswitch programm.c
 
 ---
 
-## 5. Praktische Beispiele zur Förderung der Lesbarkeit
+## 1.5. Praktische Beispiele zur Förderung der Lesbarkeit
 
-### Beispiel 1 – Zustandsmaschine (State Machine)
+### 1.5.1. Beispiel 1 – Zustandsmaschine (State Machine)
 
 ```c
 typedef enum {
@@ -330,7 +330,7 @@ void verarbeiteZustand(int zustand) {
 }
 ```
 
-### Beispiel 2 – Fehlercodes statt Zahlen
+### 1.5.2. Beispiel 2 – Fehlercodes statt Zahlen
 
 ```c
 typedef enum {
@@ -358,7 +358,7 @@ int main(void) {
 }
 ```
 
-### Beispiel 3 – Spielkarten / Himmelsrichtungen (Kombination zweier Enums)
+### 1.5.3. Beispiel 3 – Spielkarten / Himmelsrichtungen (Kombination zweier Enums)
 
 ```c
 typedef enum { HERZ, KARO, PIK, KREUZ } Farbe;
@@ -388,9 +388,9 @@ int main(void) {
 
 ---
 
-## 6. Konvertierungen
+## 1.6. Konvertierungen
 
-### 6.1 `enum` → `int` (implizit erlaubt)
+### 1.6.1. 6.1 `enum` → `int` (implizit erlaubt)
 
 Da ein `enum`-Wert intern ein `int` ist, funktioniert die Umwandlung automatisch:
 
@@ -403,7 +403,7 @@ int zahl = farbe;          // funktioniert automatisch: zahl = 1
 printf("%d\n", farbe);     // funktioniert direkt: gibt "1" aus
 ```
 
-### 6.2 `int` → `enum` (explizites Casting empfohlen)
+### 1.6.2. 6.2 `int` → `enum` (explizites Casting empfohlen)
 
 Die Umwandlung in die andere Richtung ist **nicht automatisch typsicher** – C prüft nicht, ob der Wert gültig ist:
 
@@ -419,7 +419,7 @@ Ampelfarbe kaputt = (Ampelfarbe)ungueltig;  // compiliert! Aber 99 ist kein gül
 
 > **Wichtige Einschränkung:** C **prüft zur Laufzeit nicht**, ob ein `int`-Wert tatsächlich einem gültigen `enum`-Wert entspricht. Das ist die Verantwortung der Entwicklerin/des Entwicklers – z.B. durch eine Validierungsfunktion.
 
-### 6.3 `enum` → `string` (für lesbare Ausgabe)
+### 1.6.3. 6.3 `enum` → `string` (für lesbare Ausgabe)
 
 C bietet **keine eingebaute Funktion**, um einen `enum`-Wert automatisch in einen Namen umzuwandeln (anders als z.B. in Java oder C#). Das muss man selbst implementieren – typischerweise mit einem String-Array oder `switch`:
 
@@ -460,7 +460,7 @@ const char *statusName(HttpStatus status) {
 }
 ```
 
-### 6.4 `string` → `enum` (Eingabe verarbeiten)
+### 1.6.4. 6.4 `string` → `enum` (Eingabe verarbeiten)
 
 Auch hier gibt es keine automatische Konvertierung – man vergleicht Strings manuell:
 
@@ -479,7 +479,7 @@ Ampelfarbe parseFarbe(char *text) {
 
 > **Guter Stil:** Einen eigenen `UNGUELTIG`/`UNKNOWN`-Wert im `enum` vorzusehen, ist eine bewährte Praxis für Fehlerfälle bei Konvertierungen.
 
-### 6.5 Zusammenfassung Konvertierungen
+### 1.6.5. 6.5 Zusammenfassung Konvertierungen
 
 | **Richtung**      | **Automatisch?**            | **Risiko**                    |
 | ----------------- | --------------------------- | ----------------------------- |
@@ -490,7 +490,7 @@ Ampelfarbe parseFarbe(char *text) {
 
 ---
 
-## 7. Zusammenfassung
+## 1.7. Zusammenfassung
 
 ```console
 ┌──────────────────────────────────────────────────────────────────┐
@@ -509,15 +509,15 @@ Ampelfarbe parseFarbe(char *text) {
 └────────────────────────┴─────────────────────────────────────────┘
 ```
 
-### Die goldene Regel
+### 1.7.1. Die goldene Regel
 
 > **Wenn eine feste Liste von benannten Möglichkeiten benötigt wird, ist `enum` fast immer die richtige Wahl.** Es macht aus rätselhaften Zahlen sprechende Namen – und damit den Code für dich und andere sofort verständlicher.
 
 ---
 
-# Aufgaben
+# 2. Aufgaben
 
-## Aufgabe Erste eigene Enum
+## 2.1. Aufgabe Erste eigene Enum
 
 | **Vorgabe**         | **Beschreibung**                                            |
 | :------------------ | :---------------------------------------------------------- |
@@ -547,7 +547,7 @@ Winter: Schlitten fahren
 
 ---
 
-## Aufgabe 2 – Ampelsteuerung mit Zustandswechsel
+## 2.2. Aufgabe 2 – Ampelsteuerung mit Zustandswechsel
 
 | **Vorgabe**         | **Beschreibung**                                            |
 | :------------------ | :---------------------------------------------------------- |
@@ -568,7 +568,7 @@ Implementiere:
 2. `const char *farbname(Ampelfarbe f)` – gibt den Namen als String zurück
 3. Eine Simulation in `main()`, die 8 Schritte lang die Ampel durchschaltet
 
-### Erwartete Ausgabe
+### 2.2.1. Erwartete Ausgabe
 
 ```console
 Schritt 1: ROT

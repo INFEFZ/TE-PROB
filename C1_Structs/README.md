@@ -537,7 +537,7 @@ Studiere das folgende Programm:
 
 - Welche Codezeilen werden einen Fehler erzeugen? Überprüfe Ihre Annahmen mit Hilfe des Compilers.
 - Korrigiere die Fehler, sodass das Programm lauffähig wird.
-- Was wird nun ausgegeben werden? Überprüfe Ihre Annahmen miteinem Programmdurchlauf.
+- Was wird nun ausgegeben werden? Überprüfe Ihre Annahmen mit einem Programmdurchlauf.
 
 ```c
 #include <stdio.h>
