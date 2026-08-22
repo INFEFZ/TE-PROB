@@ -493,20 +493,20 @@ Ampelfarbe parseFarbe(char *text) {
 ## 1.7. Zusammenfassung
 
 ```console
-┌──────────────────────────────────────────────────────────────────┐
-│                    Enum in C – Übersicht                         │
-├────────────────────────┬─────────────────────────────────────────┤
-│ Zweck                  │ Lesbare Namen statt Magic Numbers       │
-│ Deklaration            │ typedef enum { A, B, C } Name;          │
-│ Automatische Werte     │ Start bei 0, dann +1 pro Eintrag        │
-│ Eigene Werte           │ enum { A = 5, B, C }  → B=6, C=7        │
-│ enum → int             │ automatisch (implizit)                  │
+┌───────────────────────────────────────────────────────────────────┐
+│                    Enum in C – Übersicht                          │
+├────────────────────────┬──────────────────────────────────────────┤
+│ Zweck                  │ Lesbare Namen statt Magic Numbers        │
+│ Deklaration            │ typedef enum { A, B, C } Name;           │
+│ Automatische Werte     │ Start bei 0, dann +1 pro Eintrag         │
+│ Eigene Werte           │ enum { A = 5, B, C }  → B=6, C=7         │
+│ enum → int             │ automatisch (implizit)                   │
 │ int → enum             │ Cast nötig, NICHT geprüft!               │
-│ enum → String          │ Array-Index oder switch (manuell)       │
-│ String → enum          │ strcmp-Vergleiche (manuell)             │
+│ enum → String          │ Array-Index oder switch (manuell)        │
+│ String → enum          │ strcmp-Vergleiche (manuell)              │
 │ Einsatzgebiet          │ Feste Menge benannter Zustände/Kategorien│
-│ Kein Einsatzgebiet     │ Laufzeitwerte, Messdaten, freie Zahlen  │
-└────────────────────────┴─────────────────────────────────────────┘
+│ Kein Einsatzgebiet     │ Laufzeitwerte, Messdaten, freie Zahlen   │
+└────────────────────────┴──────────────────────────────────────────┘
 ```
 
 ### 1.7.1. Die goldene Regel
@@ -517,7 +517,7 @@ Ampelfarbe parseFarbe(char *text) {
 
 # 2. Aufgaben
 
-## 2.1. Aufgabe Erste eigene Enum
+## 2.1. Aufgabe Jahreszeit
 
 | **Vorgabe**         | **Beschreibung**                                            |
 | :------------------ | :---------------------------------------------------------- |
@@ -547,7 +547,7 @@ Winter: Schlitten fahren
 
 ---
 
-## 2.2. Aufgabe 2 – Ampelsteuerung mit Zustandswechsel
+## 2.2. Aufgabe Ampelsteuerung mit Zustandswechsel
 
 | **Vorgabe**         | **Beschreibung**                                            |
 | :------------------ | :---------------------------------------------------------- |
