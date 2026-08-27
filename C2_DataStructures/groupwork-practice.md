@@ -62,7 +62,7 @@ Jede Gruppe muss für ihre Datenstruktur folgende Punkte bearbeiten:
   - Quiz kann interaktiv durchgeführt werden (z.B. Kahoot, Mentimeter oder einfache Fragen an die Klasse)
 - **Abgabe**
   - Präsentation (Markdown) und alle Codebeispiele werden als **GitHub Link (öffentliches Repository)** zur Verfügung gestellt.
-  - Termin: **30.08.2025, 09:00 Uhr** (spätere Abgaben werden nicht berücksichtigt).
+  - Termin: **27.08.2026, 17:45 Uhr** (spätere Abgaben werden nicht berücksichtigt).
   
 ## Bewertungskriterien
 
