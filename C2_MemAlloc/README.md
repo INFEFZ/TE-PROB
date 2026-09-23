@@ -38,6 +38,7 @@
     - [1.7.3. Visualisierung des Problems](#173-visualisierung-des-problems)
     - [1.7.4. Weitere typische Leak-Ursachen](#174-weitere-typische-leak-ursachen)
     - [1.7.5. Warum sind Memory Leaks gefährlich?](#175-warum-sind-memory-leaks-gefährlich)
+    - [1.7.6. Dr. Memory](#176-dr-memory)
   - [1.8. Was muss speziell bei dynamischem Speicher beachtet werden?](#18-was-muss-speziell-bei-dynamischem-speicher-beachtet-werden)
     - [1.8.1. Checkliste für sicheren Umgang mit `malloc`/`free`](#181-checkliste-für-sicheren-umgang-mit-mallocfree)
     - [1.8.2. Use-After-Free – Zugriff auf bereits freigegebenen Speicher](#182-use-after-free--zugriff-auf-bereits-freigegebenen-speicher)
@@ -639,13 +640,26 @@ free(p);   // gibt nur den LETZTEN Block frei
 | Programmabsturz              | Bei vollständig erschöpftem Speicher: `malloc()` gibt `NULL` zurück oder das Programm wird vom Betriebssystem beendet |
 | Schwer zu finden             | Leaks fallen oft erst nach **langer** Laufzeit auf (z.B. Server, die wochenlang laufen)                               |
 
-> **Werkzeug-Tipp:** Programme wie **Valgrind** (`valgrind --leak-check=full ./programm`) können Memory Leaks systematisch aufspüren und zeigen genau, wo Speicher reserviert, aber nie freigegeben wurde.
+> **Werkzeug-Tipp:** Unter Linux oder macOS können Programme wie **Valgrind** (`valgrind --leak-check=full ./programm`) Memory Leaks systematisch aufspüren und zeigen genau, wo Speicher reserviert, aber nie freigegeben wurde.
 
 ![memory leaks](./x_gitres/memory-leaks.png)
 
-[Memory Leak Finder Dr. Memory](https://drmemory.org/)
+### 1.7.6. Dr. Memory
 
 ![Dr. Memory](./x_gitres/dr-memory.png)
+
+Dr. Memory (läuft nativ unter Windows, funktioniert mit MinGW-gcc)
+
+[Memory Leak Finder Dr. Memory](https://drmemory.org/)
+
+**Beispiel:**
+
+```bash
+gcc -g -gdwarf-2 -o main.exe main.c
+drmemory -- main.exe
+```
+
+Dr. Memory meldet am Ende unter LEAK, ob Speicher nicht freigegeben wurde. Die Option -gdwarf-2 sorgt dafür, dass Dr. Memory die Debug-Informationen von MinGW lesen kann, damit die Meldungen Dateiname und Zeilennummer enthalten.
 
 ---
 
@@ -890,3 +904,4 @@ Das Programm soll die folgenden Schritte ausführen:
 - Stelle sicher, dass das Programm den zugewiesenen Speicher überprüft und ggf. eine Fehlermeldung ausgibt, wenn die Speicherzuweisung fehlschlägt.
 - Berechne den Durchschnittswert der Elemente im Array korrekt.
 - Vergesse nicht den zugewiesenen Speicher am Ende des Programms freizugeben.
+- Dokumentiere jede Zeile als Code-Kommentar in eigenen Worten.
